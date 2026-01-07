@@ -1,0 +1,79 @@
+/* MAIN STRIP */
+.premium-strip {
+  position: relative;
+  width: 100%;
+  background: #af4004;
+  overflow: hidden;
+  padding: 34px 0;
+}
+
+/* SCROLL TRACK */
+.premium-track {
+  display: flex;
+  width: max-content;
+  animation: premium-scroll 28s linear infinite;
+}
+
+/* SERVICE ITEM */
+.premium-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 60px;
+  white-space: nowrap;
+}
+
+/* DOT SEPARATOR */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #cfae70, #f5e3b0);
+  box-shadow: 0 0 8px rgba(207, 174, 112, 0.6);
+}
+
+/* TEXT */
+.text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* FADE EDGES */
+.fade {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+/* ANIMATION */
+@keyframes premium-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* PAUSE ON HOVER (PREMIUM FEEL) */
+.premium-strip:hover .premium-track {
+  animation-play-state: paused;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .text {
+    font-size: 14px;
+  }
+
+  .premium-item {
+    margin-right: 40px;
+  }
+}
