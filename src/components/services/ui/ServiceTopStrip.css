@@ -1,0 +1,62 @@
+.service-top-strip {
+  background: linear-gradient(
+    90deg,
+    #373737 0%,
+    #8b8c8e 100%
+  );
+  border-bottom: 1px solid rgba(184, 177, 177, 0.258);
+}
+
+.service-top-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 32px; /* increased height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -80px;
+}
+
+/* LEFT — Service Name */
+.service-name {
+  font-size: 40px;          /* bigger */
+  font-weight: 600;         /* bold but not aggressive */
+  color: #f8fafc;
+  letter-spacing: 0.2px;
+}
+
+/* RIGHT — Contact CTA */
+.service-contact-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.service-contact-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .service-top-strip{
+    margin: 0;
+    padding-top: 70px;
+  }
+  .service-top-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .service-name {
+    font-size: 18px;
+  }
+}

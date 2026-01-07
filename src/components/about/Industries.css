@@ -1,0 +1,171 @@
+.industries {
+  padding: 80px 60px;
+  background: #fff;
+}
+
+.industries-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.industries-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.industries-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.industries-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #f4b400;
+  border-radius: 50%;
+}
+
+/* ROW */
+.industries-row {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* CARD */
+.industry-card {
+  min-width: 110px;
+  height: 470px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Expanded */
+.industry-card.active {
+  min-width: 280px;
+}
+
+/* Vertical content */
+.industry-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  font-size: 26px;
+}
+
+.label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Preview Image */
+.industry-preview {
+  position: absolute;
+  inset: 0;
+}
+
+.industry-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industry-preview p {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Hide scrollbar – Chrome, Edge, Safari */
+.industries-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar – Firefox */
+.industries-row {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar – IE / old Edge */
+.industries-row {
+  -ms-overflow-style: none;
+}
+
+/* Wrapper */
+.industries-scroll-wrapper {
+  position: relative;
+}
+
+/* Hide on desktop */
+.scroll-indicator {
+  display: none;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px !important;
+  }
+
+  .scroll-indicator .track {
+    width: 90px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+  }
+
+  .scroll-indicator .thumb {
+    width: 35%;
+    height: 100%;
+    background: #f4b400;
+    border-radius: 10px;
+    transform: translateX(0);
+    transition: transform 0.12s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-title {
+    font-size: 26px;
+  }
+
+  .industries-subtitle {
+    font-size: 15px;
+  }
+}

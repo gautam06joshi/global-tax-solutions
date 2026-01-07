@@ -1,0 +1,330 @@
+/* WhyChooseUs.css
+   Plain CSS equivalent of the Tailwind styles used previously.
+   Keeps spacing, colors, blur, borders and responsive behavior.
+*/
+
+:root{
+  --primary: #0b2545;        /* deep blue */
+  --secondary: #16324a;      /* teal-ish */
+  --accent: #06b6d4;
+  --accent-80: rgba(6,182,212,0.8);
+  --white: #fff;
+  --muted: rgba(255,255,255,0.85);
+  --card-shadow: #0b2545;
+}
+
+/* Section base and gradient background */
+.why-section {
+  position: relative;
+  padding-top: 0px; /* 80px triangle + spacing */
+  padding-bottom: 6rem;
+  overflow: visible;    /* changed from hidden -> allow divider to overlap next section */
+  color: var(--white);
+  background: #373737;
+  overflow: visible ;
+}
+
+
+/* the subtle pattern overlay (same data-URI as original) */
+.why-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: 0 0;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+/* container */
+.why-inner {
+  position: relative;
+  z-index: 10;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .why-inner { padding: 0 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .why-inner { padding: 0 2rem; }
+}
+
+/* Header */
+.why-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  color: var(--white);
+}
+
+.why-eyebrow {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.why-title {
+  margin: 1rem 0 0.75rem;
+  font-size: 2.25rem;
+  line-height: 1.05;
+  font-weight: 700;
+  color: var(--white);
+}
+
+@media (min-width: 1024px) {
+  .why-title { font-size: 3rem; }
+}
+
+.why-lead {
+  margin: 0.25rem 0 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.125rem;
+}
+
+/* Stats grid */
+.why-stats-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .why-stats-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.why-stat { }
+.why-stat-value {
+  font-size: 2.25rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .why-stat-value { font-size: 2.5rem; }
+}
+.why-stat-label { color: rgba(255,255,255,0.8); font-size: 0.875rem; }
+
+/* Reasons grid (cards) */
+.why-reasons-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .why-reasons-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .why-reasons-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Each reason card */
+.why-reason {
+  background: rgba(255,255,255,0.08); /* bg-white/10 */
+  border: 1px solid rgba(255,255,255,0.2); /* border-white/20 */
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.why-reason:hover {
+  background: rgba(255,255,255,0.12); /* hover effect */
+}
+
+/* top row inside card: icon + metric */
+.reason-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.reason-icon-wrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-80));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: white;
+}
+
+.reason-metric {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* title & desc */
+.reason-title {
+  margin: 0.5rem 0 0.5rem;
+  color: var(--white);
+  font-size: 1.125rem;
+}
+.reason-desc {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Certifications wrapper */
+.why-certs {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 3rem;
+}
+
+.certs-header { text-align: center; margin-bottom: 1.25rem; }
+.certs-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--white);
+}
+.certs-lead { margin: 0; color: rgba(255,255,255,0.85); }
+
+/* certifications grid */
+.certs-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .certs-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+
+.cert-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.cert-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.cert-name {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.95);
+  text-align: center;
+}
+
+/* trust badge */
+.why-trust { text-align: center; margin-top: 1.5rem; }
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 9999px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+}
+.trust-icon { width: 1.25rem; height: 1.25rem; color: var(--accent); }
+.trust-text { color: rgba(255,255,255,0.95); font-size: 0.95rem; }
+
+/* Responsive spacing tweaks */
+@media (min-width: 640px) {
+  .why-header { margin-bottom: 5rem; }
+  .why-reasons-grid { gap: 2.25rem; }
+}
+@media (min-width: 1024px) {
+  .why-header { margin-bottom: 6rem; }
+  .why-reason { padding: 2.25rem; }
+  .why-inner { max-width: 1280px; }
+}
+
+/* Full-width divider triangle for WhyChooseUs */
+.why-divider {
+  color: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;           /* aligns top edge of triangle with bottom of why-section */
+  width: 100%;
+  height: 80px;        /* little height as requested — change this to 60/100 if you want less/more */
+  pointer-events: none;
+  z-index: 5;          /* sits above background but below main content (main content uses z-index:10) */
+  overflow: visible;
+}
+
+/* make SVG fill container */
+.why-divider .why-divider-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Top inverted triangle divider */
+.why-divider-top {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;       /* control triangle height */
+  pointer-events: none;
+  z-index: 5;         /* below content, above background */
+}
+
+.why-divider-top .why-divider-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+@media (max-width: 768px){
+  .why-title {
+
+  color: rgba(255,255,255,0.9) !important;
+  
+}
+
+.reason-title {
+  color: #ffffff !important;
+
+}
+
+
+}

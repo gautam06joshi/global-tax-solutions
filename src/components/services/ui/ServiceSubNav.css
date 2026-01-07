@@ -1,0 +1,46 @@
+.service-subnav {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  padding: 14px 32px;
+  transition: box-shadow 0.2s ease;
+}
+
+/* 🔥 When stuck */
+.service-subnav.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Buttons */
+.service-subnav button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #64748b;
+  cursor: pointer;
+  padding-bottom: 6px;
+  white-space: nowrap;
+}
+
+.service-subnav button.active {
+  color: #f15405;
+  border-bottom: 2px solid #c74605;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-subnav {
+    overflow-x: auto;
+    gap: 18px;
+    padding: 12px 16px;
+  }
+}

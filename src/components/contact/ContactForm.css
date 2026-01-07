@@ -1,0 +1,104 @@
+/* Layout */
+.contact-wrapper {
+  padding: 140px 0;
+  background: #ffffff;
+}
+
+.contact-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* Left text */
+.contact-copy h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.contact-copy p {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 460px;
+}
+
+/* Card */
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Fields */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.field.small {
+  width: 120px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.field label span {
+  color: #dc2626;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: none;
+  border-bottom: 1px solid #d1d5db;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #7c3aed;
+}
+
+/* Phone row */
+.phone-row {
+  display: flex;
+  gap: 24px;
+}
+
+/* Button */
+.submit-btn {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #0f172a;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}

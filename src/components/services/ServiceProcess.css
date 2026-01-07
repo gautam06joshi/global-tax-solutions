@@ -1,0 +1,193 @@
+/* =========  FLUID TYPE SCALE  ========= */
+:root {
+  --step--2: clamp(0.78rem, 0.73rem + 0.26vw, 0.88rem);
+  --step--1: clamp(0.94rem, 0.88rem + 0.29vw, 1.06rem);
+  --step-0: clamp(1.13rem, 1.05rem + 0.37vw, 1.27rem);
+  --step-1: clamp(1.35rem, 1.25rem + 0.48vw, 1.52rem);
+  --step-2: clamp(1.62rem, 1.49rem + 0.64vw, 1.83rem);
+  --step-3: clamp(1.94rem, 1.77rem + 0.85vw, 2.2rem);
+  --step-4: clamp(2.33rem, 2.11rem + 1.12vw, 2.63rem);
+}
+
+/* =========  RESET / BASE  ========= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* =========  SECTION  ========= */
+.process-showcase {
+  padding: clamp(4rem, 8vw, 9rem) 0;
+  background: #f8fafc;
+}
+.process-heading {
+  max-width: 720px;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+  padding: 0 1rem;
+}
+.process-eyebrow {
+  display: inline-block;
+  font-size: var(--step--2);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+.process-heading h2 {
+  font-size: var(--step-3);
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+.process-heading p {
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: #334155;
+}
+
+/* =========  LAYOUT  ========= */
+.process-showcase__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+/* desktop: side-by-side */
+@media (min-width: 769px) {
+  .process-showcase__container {
+    grid-template-columns: 1.1fr 1.4fr;
+  }
+}
+
+/* =========  LEFT – steps  ========= */
+.process-left {
+  background: linear-gradient(180deg, #4b494e, #1e1429);
+  border-radius: 22px;
+  padding: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+}
+.process-left__header h2 {
+  font-size: var(--step-1);
+  margin: 0.75rem 0 0.5rem;
+}
+.process-left__header p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+.process-steps {
+  margin-top: 2rem;
+}
+.process-step {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+.step-index {
+  opacity: 0.6;
+  font-weight: 600;
+  font-size: var(--step-0);
+  flex-shrink: 0;
+}
+.step-content h4 {
+  font-size: var(--step-0);
+}
+.step-sub {
+  font-size: var(--step--2);
+  opacity: 0.6;
+  display: block;
+  margin-top: 0.25rem;
+}
+.step-progress {
+  height: 3px;
+  background: #c084fc;
+  margin-top: 0.75rem;
+  border-radius: 3px;
+}
+
+/* =========  RIGHT – card  ========= */
+.process-right {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: clamp(2rem, 4vw, 3rem);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+.process-top {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.process-media img {
+  width: clamp(80px, 20vw, 120px);
+  height: clamp(80px, 20vw, 120px);
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f1f5f9;
+}
+.process-intro h3 {
+  font-size: var(--step-1);
+  margin: 0.5rem 0 0.25rem;
+  color: #0f172a;
+}
+.process-short {
+  font-size: var(--step--1);
+  color: #475569;
+  line-height: 1.5;
+}
+.process-step-meta {
+  font-size: var(--step--2);
+  letter-spacing: 0.14em;
+  color: #64748b;
+  font-weight: 600;
+}
+.process-detail {
+  margin-top: 1.5rem;
+  font-size: var(--step-0);
+  line-height: 1.8;
+  color: #334155;
+}
+.process-point {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 0.75rem;
+}
+.process-point .dot {
+  width: 6px;
+  height: 6px;
+  background: #1e3a8a;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+.process-cta {
+  margin-top: 2rem;
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: clamp(0.75rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 1.75rem);
+  border-radius: 10px;
+  border: none;
+  font-size: var(--step--1);
+  font-weight: 500;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .process-cta {
+    width: auto;
+  }
+}

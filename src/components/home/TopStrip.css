@@ -1,0 +1,84 @@
+.top-strip {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  background-color: #bb400c !important;
+}
+
+.top-strip__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 CENTER CONTENT */
+  
+}
+
+
+/* LEFT */
+.top-strip__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-strip__logo {
+  height: 36px !important;
+}
+
+.logo-image{
+    height: 36px;
+    margin-left: -25px;
+    
+}
+
+.top-strip__name {
+  font-weight: 600;
+  color: #e65a1f; /* orange tone */
+  font-size: 18px;
+}
+
+/* RIGHT */
+.top-strip__right {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* slightly larger for elegance */
+  flex-wrap: wrap; /* safety for smaller screens */
+}
+
+
+.top-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+}
+
+/* SOCIALS */
+.top-strip__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.top-strip__socials a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* LANGUAGE */
+.top-strip__lang {
+  border: 1px solid #d1d5db;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ===================== MOBILE LAYOUT (PROFESSIONAL) ===================== */
+@media (max-width: 768px) {
+
+  .top-strip{
+    display: none;
+  }
+}

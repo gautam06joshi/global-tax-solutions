@@ -1,0 +1,407 @@
+/* -------------------------------------------------------------------------- */
+/* File: Hero.css                                                            */
+/* Place this file alongside Hero.jsx and import it in Hero.jsx (already done)*/
+/* This CSS aims to replicate the Tailwind look from the original TSX file. */
+
+:root {
+  --primary: rgba(10, 25, 47, 1); /* fallback */
+  --accent: #06b6d4; /* cyan-ish accent used in original */
+  --accent-foreground: #042f2e;
+  --emerald: #10b981;
+  --white: #000000;
+}
+
+/* Utility resets for the hero section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: visible;      /* ✅ allow triangle to show below hero */
+  color: var(--white);
+  margin-top: -100px !important;       /* 80px triangle + spacing */
+  
+}
+
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px; /* roughly max-w-7xl */
+  margin: 0 auto;
+  padding: 5rem 1rem;
+}
+
+.hero__grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  grid-template-columns: 1fr;
+  
+}
+
+@media (min-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr 1fr; /* lg:grid-cols-2 */
+  }
+}
+
+/* Left column */
+.hero__left {
+  color: var(--white) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  
+}
+
+.badge__icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--accent);
+}
+
+.badge__text {
+  font-size: 0.875rem;
+  color: #000000;
+}
+
+.hero__title {
+  font-size: 2.5rem; /* approx text-5xl */
+  line-height: 1.02;
+  margin: 0;
+  color: #000000;
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 3.5rem; /* lg:text-6xl */
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero__title {
+    font-size: 4rem; /* xl:text-7xl approx */
+  }
+}
+
+.hero__subtitle {
+  font-size: 1.125rem;
+  color: #000000;
+  max-width: 680px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  box-shadow: 0 10px 25px rgba(2,6,23,0.5);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.btn__icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.btn--primary:hover .btn__icon {
+  transform: translateX(4px);
+}
+
+.btn--ghost {
+  background: rgba(255,255,255,0.08);
+  color: #000;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.btn--ghost:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Stats */
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .stat { text-align: left; }
+}
+
+.stat__top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.stat__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--accent);
+}
+
+.stat__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat__label {
+  font-size: 0.875rem;
+  color: #000000;
+}
+
+/* Right column decorative card */
+.hero__right {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__right { display: block; }
+}
+
+.card--decor {
+  position: relative;
+}
+
+.card {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  transform: rotate(6deg);
+  background: linear-gradient(180deg, rgba(6,182,212,0.12), transparent 60%);
+  z-index: -1;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card__item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 0.75rem;
+}
+
+.card__icon-wrap {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__icon-wrap.accent { background: var(--accent); }
+.card__icon-wrap.emerald { background: var(--emerald); }
+
+.card__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #fff;
+}
+
+.card__title { color: #8e3a09; font-weight: 600; }
+.card__subtitle { color: #000; font-size: 0.875rem; }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  
+}
+
+.scroll-indicator__outer {
+  width: 1.5rem;
+  height: 2.5rem;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.4rem;
+}
+
+.scroll-indicator__dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  background: #000;
+  border-radius: 9999px;
+}
+
+
+.hero__divider {
+  position: absolute;
+  top: 49.4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;            /* top edge of chevron aligns with bottom of hero */
+  width: 100%;
+  height: 50px !important;        /* chevron visual height on desktop (adjustable) */
+  pointer-events: none;
+  overflow: visible;
+  z-index: 8;           /* above hero overlay/bg but below hero content (content uses z-index:10) */
+}
+
+/* Make sure this is above overlay — lower overlay z-index if needed */
+.hero__overlay {
+  z-index: 2;           /* overlay sits under the divider */
+}
+
+/* hero content stays above the divider */
+.hero__content { z-index: 10; }
+
+/* SVG fills the wrapper */
+.hero__divider .hero__divider-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* If you want the divider to intrude more into the next section, move it downward */
+@media (min-width: 1024px) {
+  /* push the chevron lower so it overlaps the next section by 20px */
+  .hero__divider { height: 200px; bottom: -20px; }
+}
+
+/* Hide on very small screens if desired */
+
+/* ===================== MOBILE LAYOUT (PROFESSIONAL) ===================== */
+@media (max-width: 768px) {
+
+  .hero {
+
+
+    min-height: auto;
+
+  }
+
+  .hero__content {
+    padding: 8rem 2rem;
+  }
+
+  /* Center everything on mobile */
+  .hero__left {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Badge */
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  /* Title */
+  .hero__title {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  /* Subtitle */
+  .hero__subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Buttons → stacked & full width */
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Stats → 2 rows instead of 3 columns */
+  .hero__stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat__top {
+    justify-content: center;
+  }
+
+  /* Hide scroll indicator on mobile */
+  .scroll-indicator {
+    display: none;
+  }
+
+  
+}
+
+

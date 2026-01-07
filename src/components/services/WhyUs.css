@@ -1,0 +1,218 @@
+/* ======================================================
+   COLOR SYSTEM
+====================================================== */
+:root {
+  --black: #0b0b0b;
+  --orange: #f97316;
+  --white: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+/* ======================================================
+   SECTION
+====================================================== */
+.whyus {
+  padding:  0;
+  padding-bottom: 140px;
+  background: var(--white);
+}
+
+/* ======================================================
+   CONTAINER
+====================================================== */
+.whyus-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+.whyus-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 90px;
+}
+
+.whyus-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.whyus-title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+.whyus-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* ======================================================
+   GRID
+====================================================== */
+.whyus-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+/* ======================================================
+   COLUMN STACK (LAYOUT OFFSET ONLY — NO TRANSFORMS)
+====================================================== */
+.whyus-col {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.whyus-col.up {
+  margin-top: -40px;
+}
+
+.whyus-col.down {
+  margin-top: 40px;
+}
+
+.whyus-col.center {
+  margin-top: -70px;
+}
+
+/* ======================================================
+   CARD BASE (GPU OPTIMIZED)
+====================================================== */
+.whyus-card {
+  position: relative;
+  background: #c5c4c4 !important;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 52px 28px;
+  min-height: 160px;
+  display: flex;
+  align-items: flex-end;
+
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+
+  transition: box-shadow 0.35s ease;
+}
+
+.whyus-card:hover {
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* ======================================================
+   ROW-BASED ANIMATION CONTROL
+====================================================== */
+
+/* ===============================
+   MAGNET MOTION SYSTEM
+================================ */
+
+/* UPPER ROW – LEADING MAGNET (slower) */
+.whyus-col .whyus-card:first-child {
+  animation: magnetLead 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* LOWER ROW – FOLLOWER (slower + resistance) */
+.whyus-col .whyus-card:last-child {
+  animation: magnetFollow 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 0.5s;
+}
+
+
+
+/* ======================================================
+   SMOOTH PROFESSIONAL KEYFRAMES
+====================================================== */
+@keyframes magnetLead {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-25px); }
+  55%  { transform: translateY(14px); }
+  80%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes magnetFollow {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-15px); }
+  55%  { transform: translateY(20px); }
+  80%  { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+/* ======================================================
+   NUMBER
+====================================================== */
+.whyus-number {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: rgba(249, 115, 22, 0.15);
+}
+
+/* ======================================================
+   TEXT
+====================================================== */
+.whyus-card h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+@media (max-width: 1200px) {
+  .whyus-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .whyus-col.up,
+  .whyus-col.down,
+  .whyus-col.center {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyus {
+    padding: 100px 0;
+  }
+
+  .whyus-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyus-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .whyus-header {
+    margin-bottom: 60px;
+  }
+
+  /* Disable animation on very small devices for performance */
+  .whyus-card {
+    animation: none !important;
+  }
+}

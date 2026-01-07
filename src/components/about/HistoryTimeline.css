@@ -1,0 +1,80 @@
+/* ➜ remove the old absolute positioning / translateY / z-index rules */
+
+.history-section {
+  background: #fff;
+  padding-top: 120px;
+}
+
+.history-title {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0f172a;
+  z-index: 10;
+  background: #fff;
+  padding: 20px 0;
+  margin-bottom: 80px;
+}
+
+/* ➜ each sticky wrapper is the same height */
+.history-sticky {
+  position: sticky;
+  top: 0;
+  height: 620px; /* fallback until JS measures */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ➜ cards simply sit one after another – no overlap */
+.history-slide {
+  width: 100vw;
+  background: #fff;
+  padding: 80px 0;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+  margin-bottom: -120px; /* ➜ negative margin creates the “stack” illusion */
+}
+
+.history-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.history-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.history-image {
+  transform: translateX(-140px);
+}
+
+/* mobile unchanged */
+@media (max-width: 768px) {
+  .history-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .history-slide {
+    padding: 60px 24px;
+  }
+  .history-image img {
+    height: 280px;
+  }
+  .history-image {
+    transform: none;              /* ✅ remove desktop offset */
+    display: flex;
+    justify-content: center;      /* ✅ center image */
+  }
+
+}

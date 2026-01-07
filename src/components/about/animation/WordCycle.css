@@ -1,0 +1,19 @@
+.word-cycle {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: inherit;
+  white-space: nowrap;
+  border-right: 1px solid currentColor;
+  padding-right: 6px;
+  animation: caret 1.2s steps(1) infinite;
+}
+
+@keyframes caret {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: currentColor;
+  }
+}

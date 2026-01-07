@@ -1,0 +1,145 @@
+/* --------------  FLUID TYPE SCALE  -------------- */
+:root {
+  --step--2: clamp(0.78rem, 0.73rem + 0.26vw, 0.88rem);
+  --step--1: clamp(0.94rem, 0.88rem + 0.29vw, 1.06rem);
+  --step-0: clamp(1.13rem, 1.05rem + 0.37vw, 1.27rem);
+  --step-1: clamp(1.35rem, 1.25rem + 0.48vw, 1.52rem);
+  --step-2: clamp(1.62rem, 1.49rem + 0.64vw, 1.83rem);
+  --step-3: clamp(1.94rem, 1.77rem + 0.85vw, 2.2rem);
+}
+
+/* --------------  RESET  -------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --------------  SECTION  -------------- */
+.service-long-content {
+  background: #ffffff;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+/*  NUMBERED PARAGRAPHS  */
+.service-long-text-block.numbered {
+  counter-reset: benefit;          /* create a counter */
+}
+.service-long-text-block.numbered p {
+  position: relative;
+  padding-left: 2rem;              /* space for the number */
+}
+.service-long-text-block.numbered p::before {
+  counter-increment: benefit;
+  content: counter(benefit) ")";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+
+/*  SINGLE PARAGRAPH AFTER IMAGES  */
+.service-long-summary {
+  max-width: 880px;
+  margin: clamp(2rem, 5vw, 3rem) auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+.service-long-summary p {
+  font-size: var(--step-0);
+  line-height: 1.75;
+  color: #334155;
+}
+
+/*  SINGLE SERVICE IMAGE  */
+.service-long-single-img {
+  max-width: 380px;
+  height: auto;
+  margin: clamp(2rem, 5vw, 3rem) auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+.service-long-single-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+/* wrapper keeps heading centred; content below is edge-to-edge */
+.service-long-content-container {
+  max-width: 1200px; /* only for header */
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+/* --------------  HEADER  -------------- */
+.service-long-content-header {
+  max-width: 640px;
+  margin: 0 auto clamp(3rem, 6vw, 4rem);
+  text-align: center;
+}
+.service-long-eyebrow {
+  display: inline-block;
+  font-size: var(--step--2);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+.service-long-content-title {
+  font-size: var(--step-3);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #0f172a;
+}
+
+/* --------------  EDGE-TO-EDGE FLOW  -------------- */
+.service-long-flow {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --------------  TEXT BLOCKS  -------------- */
+.service-long-text-block {
+  max-width: 880px; /* comfortable line-length */
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+.service-long-text-block p {
+  font-size: var(--step-0);
+  line-height: 1.75;
+  color: #334155;
+}
+.service-long-text-block p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* --------------  3-IMAGE ROW  -------------- */
+.service-long-image-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  margin: clamp(2rem, 5vw, 3rem) 0;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+.service-long-image-row img {
+  width: 100%;
+  height: clamp(120px, 20vw, 200px);
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+/* --------------  MOBILE < 768px  -------------- */
+@media (max-width: 768px) {
+  .service-long-image-row {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+}

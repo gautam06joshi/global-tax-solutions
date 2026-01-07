@@ -1,0 +1,403 @@
+/* Theme variables with fallbacks - replace values if your project already defines them */
+:root{
+  --primary: #b04b1c !important;            /* BRAND ORANGE */
+  --accent: #b04b1c !important;             /* Same orange for CTAs */
+  --border: rgba(0,0,0,0.08) !important;
+
+  --foreground: #1F1F1F !important;         /* Dark charcoal text */
+  --muted-foreground: #6B7280 !important;   /* Soft gray */
+
+  --accent-foreground: #FFFFFF !important;  /* White text on orange */
+}
+
+
+/* Header container that matches:
+   fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm
+*/
+.site-header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #FFFFFF;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  height: 80px;
+  z-index: 100;
+}
+
+
+
+/* max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 */
+.site-container{
+  max-width: 80rem; /* ~1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+/* Adjust padding at breakpoints similar to sm:6 lg:8 */
+@media (min-width: 640px){
+  .site-container { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 1024px){
+  .site-container { padding-left: 2rem; padding-right: 2rem; }
+}
+
+/* flex justify-between items-center h-20 */
+.header-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem; /* h-20 */
+}
+
+
+/* text-primary font-serif tracking-tight */
+.brand{
+  color: var(--primary);
+  font-family: serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* text-xs text-muted-foreground tracking-wider */
+.brand-sub{
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  letter-spacing: 0.05em;
+}
+
+/* Desktop nav - hidden lg:flex items-center space-x-8 */
+.nav-desktop{
+  display: none;
+  align-items:center;
+  gap:4rem; /* space-x-8 */
+}
+@media (min-width: 1024px){
+  .nav-desktop { display:flex; }
+}
+
+/* nav link styles mapping:
+   text-foreground hover:text-accent transition-colors duration-200
+*/
+.nav-link{
+  background: none;
+  border: none;
+  color: var(--foreground);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 200ms ease;
+}
+.nav-link:hover{
+  color: #F26522;
+}
+
+/* Contact area - hidden lg:flex items-center space-x-4 */
+.contact-area{
+  display:none;
+  align-items:center;
+  gap:1rem; /* space-x-4 */
+}
+@media (min-width: 1024px){
+  .contact-area{ display:flex; }
+}
+
+/* Phone block: flex items-center space-x-2 text-primary */
+.phone-block{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  color: #000;
+}
+.phone-icon{
+  width:1rem;
+  height:1rem;
+}
+.phone-text{
+  font-size:0.875rem;
+  color: #000;
+}
+
+/* CTA button: bg-accent text-accent-foreground px-6 py-2.5 rounded-lg hover:bg-accent/90 transition-all duration-200 shadow-md hover:shadow-lg */
+.cta-button{
+  background: #b04b1c;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(242,101,34,0.25);
+  padding: 0.625rem 1.5rem; /* py-2.5 px-6 */
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.08);
+  transition: background 200ms ease, box-shadow 200ms ease;
+}
+.cta-button:hover{
+  background: #E85C1C;
+  box-shadow: 0 10px 24px rgba(37,99,235,0.10);
+}
+
+/* Mobile menu button: lg:hidden text-primary p-2 */
+.mobile-toggle{
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.5rem;
+  background:none;
+  border:none;
+  color: var(--primary);
+  cursor: pointer;
+}
+.mobile-icon{
+  width:1.5rem;
+  height:1.5rem;
+}
+@media (min-width: 1024px){
+  .mobile-toggle{ display:none; }
+}
+
+/* Mobile menu area: lg:hidden border-t border-border py-4 */
+.mobile-menu{
+  border-top: 1px solid var(--border);
+  padding: 1rem 0;
+}
+@media (min-width: 1024px){
+  .mobile-menu { display: none; }
+}
+
+/* mobile nav layout styles */
+.mobile-nav{
+  display:flex;
+  flex-direction:column;
+  gap:1rem; /* space-y-4 */
+}
+
+/* mobile links: text-foreground hover:text-accent transition-colors duration-200 text-left py-2 */
+.mobile-link{
+  background:none;
+  border:none;
+  color: var(--foreground);
+  text-align:left;
+  padding: 0.5rem 0;
+  cursor:pointer;
+  transition: color 200ms ease;
+}
+.mobile-link:hover{
+  color: var(--accent);
+}
+
+/* mobile contact block: flex items-center space-x-2 text-primary pt-4 border-t border-border */
+.mobile-contact{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  color: var(--primary);
+  padding-top:1rem;
+  border-top:1px solid var(--border);
+}
+
+/* mobile CTA slightly adjusted (same visual) */
+.mobile-cta{
+  margin-top: 0.75rem;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.08);
+}
+
+/* small accessibility focus outlines for buttons */
+button:focus{
+  outline: 2px solid rgba(37,99,235,0.18);
+  outline-offset: 2px;
+}
+
+/* ===== SERVICES MEGA MENU ===== */
+
+.services-mega-wrapper {
+  position: static;
+}
+
+/* Full-width dropdown */
+.services-mega {
+  position: fixed;
+  top: 80px; /* EXACTLY header height */
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+  z-index: 90; /* BELOW header */
+}
+
+
+/* Inner container */
+.mega-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+}
+
+/* Column */
+.mega-col h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Service item */
+/* Clickable service item */
+.mega-item {
+  position: relative;
+  background: none;
+  border: none;
+  padding-left: 18px; /* space for arrow */
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+/* Arrow (hidden by default) */
+.mega-item::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 14px;
+  color: #94a3b8; /* subtle slate */
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Show arrow on hover */
+.mega-item:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Title */
+.mega-item strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+/* Description */
+.mega-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Optional: underline title on hover */
+.mega-item:hover strong {
+  text-decoration: underline;
+}
+
+
+
+/* CTA column */
+.mega-cta p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.services-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+
+.site-header {
+  pointer-events: auto;
+}
+
+.services-mega {
+  pointer-events: auto;
+}
+
+/* ================= MOBILE CENTER LOGO ================= */
+
+
+
+@media (max-width: 768px) {
+  .site-header{
+    position: fixed;
+  }
+  .header-row {
+    position: relative;
+  }
+
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .mobile-logo img {
+    height: 34px;          /* perfect mobile size */
+    width: auto;
+    object-fit: contain;
+  }
+
+  .mobile-menu{
+  background-color: #ffffff;
+  margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+}
+
+/* Mobile Services Dropdown */
+.mobile-services-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-services-dropdown {
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-sub-link {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+.mobile-sub-link:hover {
+  color: var(--accent);
+}
