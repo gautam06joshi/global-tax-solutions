@@ -1,12 +1,13 @@
-import Banking from "../../../assets/banking.jpg"
-import Education from "../../../assets/education.jpg"
-import Healthcare from "../../../assets/healthcare.png"
-import Consumergoods from "../../../assets/consumergoods.jpg";
-import Capitalmarket from "../../../assets/capitalmarket.png";
-import TravelLogistics from "../../../assets/travellogistic.png";
-import Technology from "../../../assets/technology.png";
-import Construction from "../../../assets/construction.png";
-import Finance from "../../../assets/finance.png";
+import Banking from "../../../assets/banking.webp"
+import Education from "../../../assets/education.webp"
+import Healthcare from "../../../assets/healthcare.webp"
+import Consumergoods from "../../../assets/consumergoods.webp";
+import Capitalmarket from "../../../assets/capitalmarket.webp";
+import TravelLogistics from "../../../assets/travellogistic.webp";
+import Technology from "../../../assets/technology.webp";
+import Construction from "../../../assets/construction.webp";
+import Finance from "../../../assets/finance.webp";
+import Retail from "../../../assets/retail.webp";
 
 export const industries = [
   {
@@ -67,6 +68,6 @@ export const industries = [
     id: 10,
     title: "Retail",
     icon: "🏬",
-    image: "/images/retail.jpg",
+    image: Retail,
   },
 ];
