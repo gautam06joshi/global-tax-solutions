@@ -8,7 +8,7 @@ export const servicesData = {
     title: "Accurate Bookkeeping That Keeps You In Control",
     highlight: "Financial Statements",
     subtitle:
-      "Accurate bookkeeping and structured financial reporting that give you full visibility into your business finances. Our approach ensures compliance, audit readiness, and confidence in every financial decision you make.",
+      "Keep your finances clear, organized, and easy to understand. We help you track every transaction properly so you always know where your money is going. Our approach removes confusion, reduces errors, and gives you a clear picture of your business health. With clean records and structured reporting, decision-making becomes easier. You stay informed, confident, and in control at all times.",
     cta: "Get Started",
     image: officeFront,
 
@@ -106,7 +106,7 @@ longSummary:
     title: "Stress-Free Payroll With Complete",
     highlight: "Statutory Compliance",
     subtitle:
-      "End-to-end payroll management ensuring accurate salary processing, statutory compliance, and timely employee payments while reducing administrative burden.",
+      "Managing payroll doesn’t have to be stressful or time-consuming. We take care of salaries, deductions, and monthly processing so everything runs smoothly. Employees get paid correctly and on time without confusion. Clear records and structured processes reduce mistakes and delays. You save time while maintaining trust and consistency across your organization.",
     cta: "Get Started",
     image: officeFront,
 
@@ -205,7 +205,7 @@ longSummary:
     title: "Accurate Employee Tax",
     highlight: "T4 Preparation",
     subtitle:
-      "Professional preparation and filing of employee T4 slips to meet regulatory deadlines, reduce errors, and ensure full compliance.",
+      "Handling employee tax documents can feel overwhelming, especially during deadlines. We make the process simple by preparing accurate and well-organized T4 slips. Every detail is carefully checked to avoid corrections later. Employees receive their documents on time without follow-ups. You stay relaxed knowing everything is handled properly.",
     cta: "Get Started",
     image: officeFront,
 
@@ -307,7 +307,7 @@ longSummary:
     title: "Strategic Corporate Tax",
     highlight: "Return Filing",
     subtitle:
-      "Comprehensive corporate tax return services designed to minimize liabilities while ensuring full regulatory compliance and accurate reporting.",
+      "Corporate tax filing becomes easier when everything is planned and organized. We review your financial data carefully to ensure correct reporting. The process is smooth, structured, and focused on accuracy. Deadlines are met without last-minute pressure. You get clarity, confidence, and peace of mind throughout the filing process.",
     cta: "Get Started",
     image: officeFront,
 
@@ -407,7 +407,7 @@ longSummary:
     title: "Accurate & Timely",
     highlight: "Personal Tax Returns",
     subtitle:
-      "Personalized tax return filing tailored to your income profile, ensuring accuracy, maximum deductions, and complete peace of mind.",
+      "Personal tax filing doesn’t need to be confusing or stressful. We simplify the entire process by reviewing your income and expenses clearly. Every detail is handled carefully to avoid mistakes. The experience is smooth, transparent, and easy to follow. You can relax knowing your return is done correctly and on time.",
     cta: "Get Started",
     image: officeFront,
 
@@ -507,7 +507,7 @@ longSummary:
     title: "Reliable GST &",
     highlight: "WCB Returns",
     subtitle:
-      "Compliant preparation and submission of GST and WCB returns with accurate documentation and timely filings.",
+      "Regular tax returns require accuracy and consistency to avoid unnecessary issues. We help you organize your transactions and prepare returns correctly. Everything is reviewed carefully before submission. Timely filing becomes routine instead of stressful. You stay compliant while keeping your records clean and simple.",
     cta: "Get Started",
     image: officeFront,
 
@@ -609,7 +609,7 @@ longSummary:
     title: "Complete Support for",
     highlight: "Business Incorporation",
     subtitle:
-      "End-to-end incorporation services covering structure selection, registration, compliance setup, and statutory documentation.",
+      "Starting a business should feel exciting, not confusing. We guide you through each step of setting up your business smoothly. From choosing the right structure to completing registrations, everything is handled clearly. The process is simple, organized, and easy to understand. You start your business with confidence and clarity.",
     cta: "Get Started",
     image: officeFront,
 
@@ -709,7 +709,7 @@ longSummary:
     title: "Smart Tax Planning for",
     highlight: "Long-Term Savings",
     subtitle:
-      "Strategic tax planning services designed to minimize tax exposure while aligning with your long-term financial and business goals.",
+      "Smart tax planning helps you keep more of what you earn. We look at your income and expenses to find better ways to manage taxes. Planning is done thoughtfully and clearly, without complexity. Regular reviews help you stay on track as things change. You gain long-term clarity, balance, and financial comfort.",
     cta: "Get Started",
     image: officeFront,
 

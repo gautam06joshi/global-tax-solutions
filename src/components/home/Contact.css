@@ -79,6 +79,9 @@
 
 .map-box {
   margin-top: 24px;
+  width: 500px !important;
+  height: 240px !important;
+  overflow: hidden;
 }
 
 .office-map {
