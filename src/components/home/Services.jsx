@@ -18,97 +18,97 @@ export function Services() {
     {
       slug: "bookkeeping-financial-statements",
       icon: FileText,
-      title: "Bookkeeping & Financial Statements",
+      title: "Bookkeeping & Financial Insights",
       description:
-        "Accurate bookkeeping and structured financial reporting that give you complete visibility into your business finances.",
+        "Guidance and insights that help you understand bookkeeping records and financial statements with clarity.",
       features: [
-        "Monthly & annual bookkeeping",
-        "Financial statements & reporting",
-        "Audit-ready and compliant records",
+        "Understanding monthly & annual records",
+        "Financial statement interpretation",
+        "Record organization best practices",
       ],
     },
     {
       slug: "payroll-management",
       icon: Users,
-      title: "Payroll Management",
+      title: "Payroll Guidance",
       description:
-        "End-to-end payroll processing designed to ensure accurate payments and full statutory compliance.",
+        "Clear guidance on payroll structures, deductions, and obligations to support informed decision-making.",
       features: [
-        "Employee payroll processing",
-        "Statutory deductions & remittances",
-        "Payroll compliance management",
+        "Payroll structure understanding",
+        "Deductions & contribution guidance",
+        "Payroll process clarity",
       ],
     },
     {
       slug: "t4-preparation",
       icon: Shield,
-      title: "T4 Preparation",
+      title: "T4 & Information Slip Guidance",
       description:
-        "Professional preparation and filing of T4 slips to meet regulatory requirements accurately and on time.",
+        "Advisory support to help you understand T4 requirements, timelines, and reporting expectations.",
       features: [
-        "T4 & T4A preparation",
-        "Employee tax form filing",
-        "CRA-compliant submissions",
+        "T4 & T4A requirement guidance",
+        "Employee reporting understanding",
+        "CRA reporting awareness",
       ],
     },
     {
       slug: "corporate-tax-returns",
       icon: Building2,
-      title: "Corporate Tax Returns",
+      title: "Corporate Tax Advisory",
       description:
-        "Strategic corporate tax filing services designed to minimize liabilities while ensuring full compliance.",
+        "Strategic guidance to help corporations understand tax obligations and planning considerations.",
       features: [
-        "Corporate tax return filing",
-        "Tax liability optimization",
-        "CRA compliance support",
+        "Corporate tax structure guidance",
+        "Tax planning considerations",
+        "Compliance awareness support",
       ],
     },
     {
       slug: "personal-tax-returns",
       icon: Calculator,
-      title: "Personal Tax Returns",
+      title: "Personal Tax Advisory",
       description:
-        "Accurate and timely personal tax filing tailored to your income profile and financial goals.",
+        "Personalized guidance to help individuals understand income reporting, deductions, and credits.",
       features: [
-        "Personal income tax filing",
-        "Deductions & credits review",
-        "Error-free submissions",
+        "Personal tax understanding",
+        "Deductions & credits overview",
+        "Tax planning clarity",
       ],
     },
     {
       slug: "gst-wcb-returns",
       icon: FileText,
-      title: "GST & WCB Returns",
+      title: "GST & WCB Advisory",
       description:
-        "Compliant preparation and submission of GST and WCB returns to avoid penalties and delays.",
+        "Clear explanations of GST and WCB obligations to help you stay informed and prepared.",
       features: [
-        "GST return filing",
-        "WCB reporting & compliance",
-        "On-time statutory submissions",
+        "GST reporting understanding",
+        "WCB obligation awareness",
+        "Filing timeline guidance",
       ],
     },
     {
       slug: "business-incorporation",
       icon: Building2,
-      title: "Business Incorporation",
+      title: "Business Incorporation Guidance",
       description:
-        "Complete incorporation support from business structure selection to registration and compliance.",
+        "Advisory support to help you understand incorporation options and business structure choices.",
       features: [
         "Business structure guidance",
-        "Company registration support",
-        "Startup compliance assistance",
+        "Incorporation option clarity",
+        "Startup planning insights",
       ],
     },
     {
       slug: "tax-planning",
       icon: TrendingUp,
-      title: "Tax Planning",
+      title: "Tax Planning Advisory",
       description:
-        "Proactive tax planning strategies focused on long-term savings, efficiency, and business growth.",
+        "Forward-looking tax planning guidance focused on efficiency, preparedness, and long-term goals.",
       features: [
-        "Strategic tax planning",
-        "Long-term savings strategies",
-        "Future-focused advisory",
+        "Strategic planning discussions",
+        "Long-term tax awareness",
+        "Future-focused guidance",
       ],
     },
   ];
@@ -116,16 +116,17 @@ export function Services() {
   return (
     <section id="services" className="services-section">
       <div className="services-container">
-
         <div className="services-header">
-          <motion.span className="services-label">Our Services</motion.span>
+          <motion.span className="services-label">
+            Our Services
+          </motion.span>
 
           <motion.h2 className="services-title">
-            Comprehensive Tax Solutions for Every Need
+            Practical Tax Guidance for Every Stage
           </motion.h2>
 
           <motion.p className="services-subtitle">
-            From tax planning to audit support, our expert team provides the full spectrum of tax and financial services to keep you compliant and competitive.
+            From tax planning insights to business guidance, we provide clear advisory support to help you understand your options and move forward with confidence.
           </motion.p>
         </div>
 
@@ -165,14 +166,13 @@ export function Services() {
 
         <div className="services-cta">
           <div className="cta-box">
-            <h3>Ready to Optimize Your Tax Strategy?</h3>
+            <h3>Ready to Plan with Confidence?</h3>
             <p>
-              Schedule a consultation with our expert team and discover how we can help you achieve your financial goals.
+              Book a consultation and gain clarity on tax matters, planning strategies, and next steps tailored to your situation.
             </p>
-            <button>Schedule Free Consultation</button>
+            <button>Schedule Consultation</button>
           </div>
         </div>
-
       </div>
     </section>
   );

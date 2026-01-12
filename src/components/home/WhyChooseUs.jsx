@@ -8,75 +8,75 @@ export function WhyChooseUs() {
   const reasons = [
     {
       icon: Award,
-      title: "Certified Experts",
+      title: "Experienced Advisors",
       description:
-        "Our team consists of certified CPAs and tax specialists with decades of combined experience.",
-      metric: "50+ CPAs",
+        "Our team brings years of hands-on tax advisory experience across personal and business scenarios.",
+      metric: "10+ Years",
     },
     {
       icon: Shield,
-      title: "100% Compliance",
+      title: "Trusted Guidance",
       description:
-        "We maintain a perfect compliance record, ensuring your taxes are accurate and audit-proof.",
-      metric: "0 Penalties",
+        "We focus on clear, reliable insights that help clients feel confident in their tax decisions.",
+      metric: "Clear Advice",
     },
     {
       icon: Clock,
-      title: "Year-Round Support",
-      description: "Tax planning doesn't stop in April. We provide continuous support throughout the year.",
-      metric: "24/7 Access",
+      title: "Year-Round Insight",
+      description:
+        "Tax considerations evolve throughout the year, and we support proactive planning at every stage.",
+      metric: "All Year",
     },
     {
       icon: TrendingUp,
-      title: "Proven Results",
+      title: "Strategic Perspective",
       description:
-        "Our clients save an average of 30% on their tax liability through strategic planning.",
-      metric: "30% Savings",
+        "Our advisory approach emphasizes planning, awareness, and long-term financial clarity.",
+      metric: "Forward Focus",
     },
     {
       icon: Users,
-      title: "Client Satisfaction",
-      description: "Over 98% of our clients return year after year, trusting us with their financial future.",
-      metric: "98% Retention",
+      title: "Client Relationships",
+      description:
+        "We build long-term relationships by understanding each client’s unique financial situation.",
+      metric: "Client First",
     },
     {
       icon: CheckCircle,
-      title: "Guaranteed Accuracy",
+      title: "Thoughtful Approach",
       description:
-        "We stand behind our work with a 100% accuracy guarantee and will cover any penalties.",
-      metric: "100% Accuracy",
+        "Every consultation is handled with care, attention to detail, and practical insight.",
+      metric: "Quality Focus",
     },
   ];
 
   const certifications = [
-    { name: "CPA Certified", icon: Award },
-    { name: "IRS Approved", icon: Shield },
-    { name: "BBB Accredited", icon: Award },
-    { name: "QuickBooks ProAdvisor", icon: CheckCircle },
+    { name: "Tax Advisory Specialists", icon: Award },
+    { name: "Canada-Focused Guidance", icon: Shield },
+    { name: "Business & Personal Tax Insight", icon: Award },
+    { name: "Consultation-Based Services", icon: CheckCircle },
   ];
 
   const stats = [
-    { value: "25+", label: "Years in Business" },
-    { value: "5,000+", label: "Clients Served" },
-    { value: "$50M+", label: "Tax Savings Generated" },
-    { value: "100%", label: "Client Satisfaction" },
+    { value: "2015", label: "Established In" },
+    { value: "Canada-Wide", label: "Clients Supported" },
+    { value: "Thousands", label: "Advisory Sessions" },
+    { value: "Trusted", label: "Client Relationships" },
   ];
 
   return (
-
     <section className="why-section" aria-labelledby="why-heading">
-
       <div className="why-divider-top" aria-hidden="true">
-    <svg
-      viewBox="0 0 1920 80"
-      preserveAspectRatio="none"
-      className="why-divider-svg"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* inverted triangle */}
-      <polygon points="960,0 1920,80 0,80" fill="#373737" />
-    </svg>
-  </div>
+        <svg
+          viewBox="0 0 1920 80"
+          preserveAspectRatio="none"
+          className="why-divider-svg"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon points="960,0 1920,80 0,80" fill="#373737" />
+        </svg>
+      </div>
+
       {/* subtle pattern background */}
       <div className="why-pattern" aria-hidden="true" />
 
@@ -100,7 +100,7 @@ export function WhyChooseUs() {
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
-            The TaxSolutions Advantage
+            The Global Tax Solutions Advantage
           </motion.h2>
 
           <motion.p
@@ -110,8 +110,8 @@ export function WhyChooseUs() {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Experience the difference of working with a firm that combines expertise,
-            integrity, and innovation to deliver exceptional results.
+            Discover the value of working with a tax consultation firm focused on
+            clarity, understanding, and informed decision-making.
           </motion.p>
         </div>
 
@@ -165,7 +165,7 @@ export function WhyChooseUs() {
           })}
         </div>
 
-        {/* Certifications */}
+        {/* Trust Indicators */}
         <motion.div
           className="why-certs"
           initial={{ opacity: 0, y: 20 }}
@@ -174,8 +174,10 @@ export function WhyChooseUs() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <div className="certs-header">
-            <h3 className="certs-title">Trusted &amp; Certified</h3>
-            <p className="certs-lead">Recognized by leading industry organizations</p>
+            <h3 className="certs-title">Built on Trust & Clarity</h3>
+            <p className="certs-lead">
+              A consultation-first approach designed to support confident decisions
+            </p>
           </div>
 
           <div className="certs-grid">
@@ -208,25 +210,24 @@ export function WhyChooseUs() {
         >
           <div className="trust-badge">
             <Shield className="trust-icon" />
-            <span className="trust-text">Your Financial Security is Our Top Priority</span>
+            <span className="trust-text">
+              Clear Guidance. Thoughtful Advice. Confident Decisions.
+            </span>
           </div>
         </motion.div>
       </div>
 
-        {/* Full-width triangle divider (sits at bottom of WhyChooseUs) */}
-  <div className="why-divider" aria-hidden="true">
-    <svg
-      viewBox="0 0 1920 80"
-      preserveAspectRatio="none"
-      className="why-divider-svg"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <polygon points="0,0 1920,0 960,80" fill="#373737" />
-    </svg>
-  </div>
-
-
-      
+      {/* Bottom Divider */}
+      <div className="why-divider" aria-hidden="true">
+        <svg
+          viewBox="0 0 1920 80"
+          preserveAspectRatio="none"
+          className="why-divider-svg"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon points="0,0 1920,0 960,80" fill="#373737" />
+        </svg>
+      </div>
     </section>
   );
 }

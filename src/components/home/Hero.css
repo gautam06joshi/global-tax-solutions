@@ -29,22 +29,36 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  overflow: hidden;
 
-  background-image: url("../../assets/calgary.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  
+}
 
-  background-attachment: fixed; /* 👈 PARALLAX */
+/* Background video */
+.hero__bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* 👇 THIS IS THE KEY */
+  transform: scale(1.15) translateY(-6%);
 }
 
 
+
+
+
+/* Dark overlay stays */
 .hero__bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* adjust 0.4–0.6 if needed */
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
 }
+
 
 
 .hero__content {
@@ -430,3 +444,15 @@
   color: rgba(255,255,255,0.65);
   z-index: 9;
 }
+
+@media (max-width: 768px) {
+  .hero__bg-video {
+    display: none;
+  }
+
+  .hero__bg {
+    background: url("../../assets/calgary.jpg") center / cover no-repeat;
+  }
+}
+
+

@@ -6,28 +6,29 @@ const slides = [
   {
     year: "2012",
     title: "The Foundation",
-    text: `Our journey began with a clear purpose — to simplify complex financial and compliance challenges for businesses of all sizes…`,
+    text: `Global Tax Solutions was built on a simple belief — understanding finances should feel empowering, not overwhelming. In our early years, we focused on helping individuals and business owners gain clarity around tax structures, financial responsibilities, and long-term considerations. By translating complex rules into clear, practical insights, we helped clients move forward with confidence and direction.`,
     image: officeFront,
   },
   {
     year: "2015",
     title: "Strengthening Expertise",
-    text: `As our client base grew, so did our commitment to depth and specialization…`,
+    text: `As client needs evolved, so did our advisory depth. We expanded our focus across personal taxation, small business guidance, and strategic planning conversations. This phase marked a shift from answering questions to shaping understanding — helping clients recognize patterns, anticipate outcomes, and approach financial decisions with greater awareness and preparedness.`,
     image: officeFront,
   },
   {
     year: "2019",
     title: "Expanding Our Reach",
-    text: `With a strong foundation in place, we expanded our services and geographic presence…`,
+    text: `With a strong advisory framework in place, we began supporting clients across Canada. Digital consultation allowed us to extend our reach while maintaining a personalized experience. During this period, our work increasingly centered on forward-looking guidance — helping individuals and businesses navigate change, growth, and regulatory complexity with calm, informed decision-making.`,
     image: officeFront,
   },
   {
     year: "2023",
     title: "Looking Ahead",
-    text: `Today, we continue to evolve with changing regulations, technologies, and business environments…`,
+    text: `Today, Global Tax Solutions continues to adapt to evolving regulations, economic shifts, and client expectations. Our focus remains on insight, education, and thoughtful guidance. Looking ahead, we are committed to deepening our advisory approach, refining how we communicate complexity, and supporting confident financial decisions in an increasingly dynamic environment.`,
     image: officeFront,
   },
 ];
+
 
 export default function HistoryTimeline() {
   const sectionRef = useRef(null);

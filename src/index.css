@@ -141,7 +141,7 @@
     line-height: inherit;
     width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+
   }
 
   hr {
@@ -371,7 +371,7 @@
     color: var(--foreground);
     width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+ 
   }
 
   * {
@@ -391,7 +391,7 @@
     font-family: Inter, sans-serif;
     width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -1878,6 +1878,7 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .app,

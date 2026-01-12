@@ -1,80 +1,209 @@
-/* ➜ remove the old absolute positioning / translateY / z-index rules */
+/* =======================
+   History Timeline
+   ======================= */
 
 .history-section {
-  background: #fff;
-  padding-top: 120px;
+  background: #ffffff;
+  padding: 120px 0 80px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
 }
+
+/* =======================
+   Section Title
+   ======================= */
 
 .history-title {
   position: sticky;
   top: 0;
+  z-index: 10;
+
   text-align: center;
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+
   color: #0f172a;
-  z-index: 10;
-  background: #fff;
-  padding: 20px 0;
-  margin-bottom: 80px;
+  background: #ffffff;
+
+  padding: 28px 0;
+  margin-bottom: 90px;
+
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
-/* ➜ each sticky wrapper is the same height */
+/* =======================
+   Sticky Wrapper
+   ======================= */
+
 .history-sticky {
   position: sticky;
   top: 0;
-  height: 620px; /* fallback until JS measures */
+  height: 620px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ➜ cards simply sit one after another – no overlap */
+/* =======================
+   Slide Card
+   ======================= */
+
 .history-slide {
-  width: 100vw;
-  background: #fff;
-  padding: 80px 0;
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
-  margin-bottom: -120px; /* ➜ negative margin creates the “stack” illusion */
+  width: 100%;
+  background: #ffffff;
+
+  padding: 96px 0;
+  margin-bottom: -140px;
+
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.04);
+
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
 }
+
+/* =======================
+   Inner Grid
+   ======================= */
 
 .history-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
+
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 120px;
+  gap: 50px;
   align-items: center;
+}
+
+/* =======================
+   Image Styling
+   ======================= */
+
+.history-image {
+  transform: translateX(-60px); /* was -140px */
 }
 
 .history-image img {
   width: 100%;
   height: 420px;
   object-fit: cover;
-  border-radius: 18px;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 50px rgba(15, 23, 42, 0.18),
+    0 8px 18px rgba(15, 23, 42, 0.12);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.history-image {
-  transform: translateX(-140px);
+/* subtle hover polish (no animation logic changed) */
+.history-image img:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 35px 70px rgba(15, 23, 42, 0.22),
+    0 12px 28px rgba(15, 23, 42, 0.16);
 }
 
-/* mobile unchanged */
+/* =======================
+   Content Styling
+   ======================= */
+
+/* =======================
+   Content Styling Upgrade
+   ======================= */
+
+.history-content {
+  position: relative;
+}
+
+.history-content span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #64748b;
+}
+
+/* subtle accent line */
+.history-content span::after {
+  content: "";
+  width: 36px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #0f172a,
+    rgba(15, 23, 42, 0.2)
+  );
+}
+
+.history-content h3 {
+  font-size: 2.35rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+
+  color: #0f172a;
+  margin-bottom: 26px;
+}
+
+.history-content p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+
+  color: #334155;
+
+  max-width: 600px;
+}
+
+/* optional: editorial feel */
+.history-content p::first-letter {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+
+/* =======================
+   Mobile Optimization
+   ======================= */
+
 @media (max-width: 768px) {
+  .history-title {
+    font-size: 2.2rem;
+    padding: 20px 0;
+    margin-bottom: 60px;
+  }
+
   .history-inner {
     grid-template-columns: 1fr;
+    gap: 48px;
     text-align: center;
-    gap: 40px;
   }
+
   .history-slide {
-    padding: 60px 24px;
+    padding: 72px 24px;
   }
+
+  .history-image {
+    transform: none;
+    display: flex;
+    justify-content: center;
+  }
+
   .history-image img {
     height: 280px;
   }
-  .history-image {
-    transform: none;              /* ✅ remove desktop offset */
-    display: flex;
-    justify-content: center;      /* ✅ center image */
-  }
 
+  .history-content p {
+    max-width: 100%;
+  }
 }

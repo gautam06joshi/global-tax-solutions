@@ -34,7 +34,7 @@ export function Hero() {
           <div className="about-hero-metadata">
             <div>
               <strong>Established</strong>
-              <span>1998</span>
+              <span>2015</span>
             </div>
             <div>
               <strong>Global Presence</strong>
@@ -42,7 +42,7 @@ export function Hero() {
             </div>
             <div>
               <strong>Professionals</strong>
-              <span>500+ Advisors</span>
+              <span>50+ Advisors</span>
             </div>
           </div>
         </motion.div>

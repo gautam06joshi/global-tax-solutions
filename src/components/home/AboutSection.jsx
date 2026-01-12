@@ -8,27 +8,27 @@ export function AboutSection() {
   const values = [
     {
       icon: Award,
-      title: "Excellence",
+      title: "Experience",
       description:
-        "Committed to delivering the highest quality tax solutions with precision and expertise.",
+        "Providing knowledgeable tax guidance built on years of practical experience across personal and business tax matters.",
     },
     {
       icon: Target,
-      title: "Integrity",
+      title: "Clarity",
       description:
-        "Building lasting relationships through honest, transparent, and ethical practices.",
+        "Breaking down complex tax rules into clear, easy-to-understand insights you can act on with confidence.",
     },
     {
       icon: Users,
-      title: "Client-Focused",
+      title: "Client Understanding",
       description:
-        "Your success is our priority. We provide personalized attention to every client.",
+        "Focused on listening, understanding your situation, and delivering advice that fits your goals.",
     },
     {
       icon: TrendingUp,
-      title: "Innovation",
+      title: "Strategic Insight",
       description:
-        "Leveraging cutting-edge technology and strategies to optimize your tax outcomes.",
+        "Helping you plan ahead with thoughtful tax strategies designed to support long-term financial decisions.",
     },
   ];
 
@@ -47,13 +47,13 @@ export function AboutSection() {
             <div className="image-wrap">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1758519288417-d359ac3c494d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjB0ZWFtJTIwY29uc3VsdGluZ3xlbnwxfHx8fDE3NjQ3NTk4ODl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Corporate team consulting"
+                alt="Professional tax consultation discussion"
                 className="hero-image"
               />
               <div className="image-gradient" />
             </div>
 
-            {/* Floating Stats Card */}
+            {/* Floating Info Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -66,8 +66,8 @@ export function AboutSection() {
                   <Award className="card-icon" />
                 </div>
                 <div className="card-texts">
-                  <div className="card-title">Top Rated</div>
-                  <div className="card-sub">Industry Leader Since 1998</div>
+                  <div className="card-title">Established 2015</div>
+                  <div className="card-sub">Calgary-Based Tax Advisors</div>
                 </div>
               </div>
             </motion.div>
@@ -89,7 +89,7 @@ export function AboutSection() {
                 transition={{ delay: 0.2 }}
                 className="eyebrow"
               >
-                <span>About TaxSolutions</span>
+                <span>About Global Tax Solutions</span>
               </motion.div>
 
               <motion.h2
@@ -99,7 +99,7 @@ export function AboutSection() {
                 transition={{ delay: 0.3 }}
                 className="heading"
               >
-                Trusted Tax Expertise for Over 25 Years
+                Trusted Tax Guidance Built on Experience & Clarity
               </motion.h2>
 
               <motion.p
@@ -109,11 +109,11 @@ export function AboutSection() {
                 transition={{ delay: 0.4 }}
                 className="lead"
               >
-                Since 1998, TaxSolutions has been the trusted partner for
-                businesses and individuals navigating complex tax landscapes.
-                Our team of certified professionals combines deep industry
-                knowledge with innovative strategies to deliver exceptional
-                results.
+                Global Tax Solutions is a Calgary-based tax consultation firm
+                supporting individuals, families, and businesses across Canada.
+                We help clients navigate the Canadian tax landscape by providing
+                clear explanations, informed guidance, and practical planning
+                insights.
               </motion.p>
 
               <motion.p
@@ -123,10 +123,10 @@ export function AboutSection() {
                 transition={{ delay: 0.5 }}
                 className="lead"
               >
-                We pride ourselves on building lasting relationships with our
-                clients, providing personalized attention and strategic guidance
-                that goes beyond traditional tax preparation. Your financial
-                success is our mission.
+                Our approach is centered on education and understanding.
+                By explaining how tax rules apply to your specific situation,
+                we empower you to make confident decisions and move forward
+                with greater clarity.
               </motion.p>
             </div>
 
@@ -161,7 +161,7 @@ export function AboutSection() {
               })}
             </motion.div>
 
-            {/* Certifications */}
+            {/* Trust Indicators */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -172,15 +172,15 @@ export function AboutSection() {
               <div className="cert-row">
                 <div className="cert-item">
                   <Award className="cert-icon" />
-                  <span>CPA Certified</span>
+                  <span>Tax Consultation & Advisory</span>
                 </div>
                 <div className="cert-item">
                   <Award className="cert-icon" />
-                  <span>IRS Approved</span>
+                  <span>Canada-Wide Client Support</span>
                 </div>
                 <div className="cert-item">
                   <Award className="cert-icon" />
-                  <span>BBB Accredited</span>
+                  <span>Clear & Transparent Guidance</span>
                 </div>
               </div>
             </motion.div>

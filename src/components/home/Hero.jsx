@@ -1,11 +1,12 @@
 // File: Hero.jsx
-// Place this file in your React project (e.g. src/components/Hero.jsx)
-// Make sure to also include the companion CSS file Hero.css in the same folder
+// Advisory & Consultation focused hero section
+// Company: Global Tax Solutions (Calgary, Canada)
 
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Shield, TrendingUp, Users } from 'lucide-react';
 import './Hero.css';
+import heroVideo from "../../assets/hero-bg-compressed.mp4";
 
 export function Hero() {
   const scrollToSection = (sectionId) => {
@@ -13,18 +14,31 @@ export function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+
+    
   };
 
   return (
     <section id="home" className="hero">
-      {/* Background Image with Overlay */}
-      <div className="hero__bg">
-      </div>
+      {/* Background */}
+      {/* Background */}
+<div className="hero__bg">
+  <video
+    className="hero__bg-video"
+    src={heroVideo}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+  />
+</div>
+
 
       {/* Content */}
       <div className="hero__content">
         <div className="hero__grid">
-          {/* Left Column - Text Content */}
+          {/* Left Column */}
           <div className="hero__left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -33,7 +47,9 @@ export function Hero() {
               className="badge"
             >
               <Shield className="badge__icon" />
-              <span className="badge__text">Trusted by 5,000+ Clients Nationwide</span>
+              <span className="badge__text">
+                Trusted Tax Advisory & Consultation Since 2015
+              </span>
             </motion.div>
 
             <motion.h1
@@ -42,7 +58,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="hero__title"
             >
-              Expert Tax Solutions You Can Trust
+              Clear, Reliable Tax Guidance for Confident Decisions
             </motion.h1>
 
             <motion.p
@@ -51,7 +67,11 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="hero__subtitle"
             >
-              Navigate complex tax landscapes with confidence. Our certified professionals deliver strategic tax planning, consulting, and compliance solutions tailored to your business needs.
+              Global Tax Solutions is a Calgary-based tax consultation firm
+              providing clear, practical guidance to individuals, families,
+              and businesses across Canada. We help you understand tax rules,
+              obligations, and planning strategies — so you can make informed
+              decisions with confidence.
             </motion.p>
 
             <motion.div
@@ -60,13 +80,19 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="hero__actions"
             >
-              <button onClick={() => scrollToSection('contact')} className="btn btn--primary">
-                <span>Book Consultation</span>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="btn btn--primary"
+              >
+                <span>Book a Consultation</span>
                 <ArrowRight className="btn__icon" />
               </button>
 
-              <button onClick={() => scrollToSection('services')} className="btn btn--ghost">
-                Our Services
+              <button
+                onClick={() => scrollToSection('services')}
+                className="btn btn--ghost"
+              >
+                Advisory Services
               </button>
             </motion.div>
 
@@ -80,17 +106,21 @@ export function Hero() {
               <div className="stat">
                 <div className="stat__top">
                   <TrendingUp className="stat__icon" />
-                  <div className="stat__value">25+</div>
+                  <div className="stat__value">10+</div>
                 </div>
-                <div className="stat__label">Years Experience</div>
+                <div className="stat__label">
+                  Years of Advisory Experience
+                </div>
               </div>
 
               <div className="stat">
                 <div className="stat__top">
                   <Users className="stat__icon" />
-                  <div className="stat__value">5K+</div>
+                  <div className="stat__value">Canada-Wide</div>
                 </div>
-                <div className="stat__label">Satisfied Clients</div>
+                <div className="stat__label">
+                  Individuals & Businesses Served
+                </div>
               </div>
 
               <div className="stat">
@@ -98,12 +128,14 @@ export function Hero() {
                   <Shield className="stat__icon" />
                   <div className="stat__value">100%</div>
                 </div>
-                <div className="stat__label">Compliance Rate</div>
+                <div className="stat__label">
+                  Advice-Only & Transparent
+                </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Column - Decorative Element */}
+          {/* Right Column */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -118,8 +150,12 @@ export function Hero() {
                       <Shield className="card__icon" />
                     </div>
                     <div>
-                      <div className="card__title">Certified Professionals</div>
-                      <div className="card__subtitle">CPA & Tax Specialists</div>
+                      <div className="card__title">
+                        Tax Consultation & Guidance
+                      </div>
+                      <div className="card__subtitle">
+                        Education & Clarity
+                      </div>
                     </div>
                   </div>
 
@@ -128,8 +164,12 @@ export function Hero() {
                       <TrendingUp className="card__icon" />
                     </div>
                     <div>
-                      <div className="card__title">Strategic Planning</div>
-                      <div className="card__subtitle">Maximize Your Savings</div>
+                      <div className="card__title">
+                        Strategic Tax Advisory
+                      </div>
+                      <div className="card__subtitle">
+                        Understand Your Options
+                      </div>
                     </div>
                   </div>
 
@@ -138,8 +178,12 @@ export function Hero() {
                       <Users className="card__icon" />
                     </div>
                     <div>
-                      <div className="card__title">Personalized Service</div>
-                      <div className="card__subtitle">Tailored Solutions</div>
+                      <div className="card__title">
+                        Client-Focused Approach
+                      </div>
+                      <div className="card__subtitle">
+                        No Filing • No Representation
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -156,14 +200,15 @@ export function Hero() {
         transition={{ delay: 1, duration: 1 }}
         className="scroll-indicator"
       >
-        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="scroll-indicator__outer">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="scroll-indicator__outer"
+        >
           <motion.div className="scroll-indicator__dot" />
         </motion.div>
       </motion.div>
-
-      
     </section>
-    
   );
 }
 
