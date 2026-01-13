@@ -47,6 +47,8 @@
   padding: 0 1rem;
 }
 
+
+
 @media (min-width: 640px) {
   .why-inner { padding: 0 1.5rem; }
 }
@@ -77,6 +79,7 @@
   line-height: 1.05;
   font-weight: 700;
   color: var(--white);
+
 }
 
 @media (min-width: 1024px) {
@@ -87,6 +90,7 @@
   margin: 0.25rem 0 0;
   color: rgba(255,255,255,0.9);
   font-size: 1.125rem;
+  padding-top: 22px;
 }
 
 /* Stats grid */
@@ -100,17 +104,23 @@
 
 @media (min-width: 1024px) {
   .why-stats-grid { grid-template-columns: repeat(4, 1fr); }
+  
 }
 
-.why-stat { }
+.why-stat { 
+  margin-top: -35px;
+
+}
 .why-stat-value {
+  
   font-size: 2.25rem;
   color: var(--accent);
   margin-bottom: 0.25rem;
   font-weight: 700;
 }
 @media (min-width: 1024px) {
-  .why-stat-value { font-size: 2.5rem; }
+  .why-stat-value { font-size: 2.5rem; 
+  }
 }
 .why-stat-label { color: rgba(255,255,255,0.8); font-size: 0.875rem; }
 
@@ -120,6 +130,7 @@
   gap: 2rem;
   grid-template-columns: 1fr;
   margin-bottom: 4rem;
+  
 }
 
 @media (min-width: 768px) {
@@ -170,8 +181,9 @@
 
 .reason-metric {
   font-size: 1.5rem;
-  color: var(--accent);
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 /* title & desc */
@@ -179,6 +191,7 @@
   margin: 0.5rem 0 0.5rem;
   color: var(--white);
   font-size: 1.125rem;
+  font-weight: 700;
 }
 .reason-desc {
   margin: 0;

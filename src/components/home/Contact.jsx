@@ -137,6 +137,20 @@ export function Contact() {
           </a>
         </div>
 
+        <div className="contact-cta-second">
+          <div className="cta-box">
+            <h3>Need Immediate Assistance?</h3>
+            <p>
+              Call us now for urgent tax matters or speak directly with one of our
+            certified tax professionals.
+            </p>
+            <button>
+              <span><Phone/></span>
+              <span>tel:1-800-TAX-HELP</span>
+              </button>
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -56,7 +56,7 @@ export default function HistoryTimeline() {
               <div className="history-image">
                 <img src={s.image} alt={s.title} />
               </div>
-              <div className="history-content">
+              <div className="history-content" data-year={s.year}>
                 <span>{s.year}</span>
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>

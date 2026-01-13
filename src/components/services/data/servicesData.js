@@ -4,803 +4,828 @@ export const servicesData = {
   /* ================= ACCOUNTING & COMPLIANCE ================= */
 
   "bookkeeping-financial-statements": {
-    eyebrow: "Accounting & Compliance",
-    title: "Accurate Bookkeeping That Keeps You In Control",
-    highlight: "Financial Statements",
-    subtitle:
-      "Keep your finances clear, organized, and easy to understand. We help you track every transaction properly so you always know where your money is going. Our approach removes confusion, reduces errors, and gives you a clear picture of your business health. With clean records and structured reporting, decision-making becomes easier. You stay informed, confident, and in control at all times.",
-    cta: "Get Started",
-    image: officeFront,
+  eyebrow: "Accounting & Compliance",
+  title: "Accurate Bookkeeping That Keeps You In Control",
+  highlight: "Financial Statements",
+  subtitle:
+    "Gain complete clarity and confidence in your financial data with advisory-led bookkeeping and financial statement support. We help businesses understand how their financial information is structured, interpreted, and used for decision-making. Our approach focuses on clarity, accuracy, and alignment with accounting standards, ensuring that your financial records reflect the true performance of your business. With structured financial insights and consistent reporting, you stay informed, prepared, and in control of your financial direction at every stage.",
+  cta: "Get Started",
+  image: officeFront,
 
-    process: [
-      {
-        step: "01",
-        title: "Initial Assessment",
-        desc: `
-We review your existing bookkeeping systems and financial records to understand your current position.
+  process: [
+    {
+      step: "01",
+      title: "Initial Financial Assessment",
+      desc: `
+We begin with a comprehensive advisory review of your existing financial records and bookkeeping framework to understand how your data is currently organized and reported.
 
-- Review of historical financial data
-- Identification of gaps and inconsistencies
-- Compliance and risk assessment
-- Clear action plan for improvement
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "System Setup & Structuring",
-        desc: `
-We design a clean and scalable accounting structure aligned with statutory requirements.
+- Review of existing financial statements and records
+- Evaluation of bookkeeping structure and data flow
+- Identification of reporting gaps and inconsistencies
+- Advisory recommendations for improved clarity and alignment
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Financial Structure & Framework Design",
+      desc: `
+We guide you in building a clean, compliant, and scalable financial structure that supports long-term reporting and analysis needs.
 
-- Chart of accounts setup
-- Ledger and reporting structure design
-- Compliance-focused configuration
-- Audit-ready framework creation
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Ongoing Bookkeeping",
-        desc: `
-We handle day-to-day bookkeeping with accuracy and consistency.
+- Advisory-led chart of accounts design
+- Financial reporting framework setup
+- Alignment with accounting and compliance standards
+- Structuring data for audit and stakeholder review
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Ongoing Financial Oversight",
+      desc: `
+We provide continuous advisory oversight to ensure your bookkeeping remains accurate, consistent, and meaningful.
 
-- Transaction recording
-- Account reconciliation
-- Error monitoring and correction
-- Real-time financial visibility
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Financial Reporting",
-        desc: `
-We deliver clear financial reports to support business decisions and filings.
+- Review and validation of recorded transactions
+- Reconciliation guidance and issue identification
+- Monitoring for discrepancies and data accuracy
+- Ongoing insights into financial trends and patterns
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Financial Reporting & Insights",
+      desc: `
+We help you interpret and understand your financial statements so they become tools for decision-making rather than just reports.
 
-- Balance sheet and P&L preparation
-- Reporting for audits and filings
-- Management insights
-- Transparent and reliable reporting
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our bookkeeping and financial statement services are designed to give you complete clarity over your business finances.",
-  "We ensure that every transaction is recorded accurately and consistently, following applicable accounting standards.",
-  "By maintaining clean and structured records, we help reduce compliance risks and eliminate last-minute surprises.",
-  "Our team focuses on accuracy, transparency, and audit readiness at every stage of the process.",
-  "You gain reliable financial reports that support better planning and informed decision-making.",
-  "This service allows business owners to focus on growth while we handle the financial foundation.",
-  "We work closely with you to understand your business operations and reporting requirements.",
-  "Regular reviews ensure your records stay up to date and aligned with regulatory expectations.",
-  "Our approach supports long-term scalability as your business grows.",
-  "The result is confidence, control, and financial clarity."
-],
-longSummary:
-  "Accurate bookkeeping is the foundation of strong financial decision-making. We ensure your records are maintained with precision, consistency, and full compliance with accounting standards. Our structured approach delivers clear financial statements, audit readiness, and complete visibility into your business performance. With reliable data and timely reporting, you gain confidence, control, and clarity while focusing on growth.",
+- Review and advisory on balance sheet and P&L statements
+- Financial insights for management and stakeholders
+- Reporting clarity for compliance and strategic planning
+- Actionable interpretation of financial results
+      `,
+      image: officeFront,
+    },
+  ],
+
+  longContent: [
+    "Our bookkeeping and financial statement advisory services are designed to help businesses understand their financial position with clarity and confidence.",
+    "We focus on how financial data is structured, reviewed, and interpreted rather than just how it is recorded.",
+    "By maintaining well-organized and transparent financial records, businesses gain stronger control over cash flow, performance tracking, and planning.",
+    "Our advisory-driven approach helps reduce uncertainty and supports better financial governance.",
+    "We ensure that financial statements align with applicable accounting standards and regulatory expectations.",
+    "Through regular reviews and structured frameworks, we help businesses stay prepared for audits, investor discussions, and internal reviews.",
+    "Our team works closely with leadership to understand business goals and reporting priorities.",
+    "We translate financial data into clear insights that support informed strategic decisions.",
+    "As your business grows, our frameworks adapt to ensure continued accuracy and scalability.",
+    "The outcome is reliable financial information that supports confident decision-making and long-term stability."
+  ],
+
+  longSummary:
+    "Accurate and well-structured financial records are essential for confident business decisions. Our advisory-focused bookkeeping and financial statement services provide clarity, consistency, and transparency across your financial data. We help businesses understand how their financial information is organized, reviewed, and reported, ensuring alignment with accounting standards and regulatory expectations. With clear insights and structured reporting, you gain greater control, audit readiness, and the confidence to plan for growth.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "What does your bookkeeping service include?",
-    a: "Our bookkeeping service includes transaction recording, account reconciliation, financial statement preparation, and compliance-focused record maintenance."
-  },
-  {
-    q: "How often are financial reports provided?",
-    a: "Reports can be provided monthly, quarterly, or annually based on your business needs and reporting requirements."
-  },
-  {
-    q: "Will my books be audit-ready?",
-    a: "Yes, we maintain clean and structured records designed to meet audit and regulatory standards."
-  },
-  {
-    q: "Do you support growing businesses?",
-    a: "Absolutely. Our bookkeeping systems are scalable and designed to support business growth without disruption."
-  }
-]
-  },
+    {
+      q: "What does your bookkeeping and financial statement advisory cover?",
+      a: "We provide advisory support on financial record structuring, reporting frameworks, statement reviews, and ongoing financial oversight to improve clarity and accuracy."
+    },
+    {
+      q: "How frequently can financial reviews be conducted?",
+      a: "Financial reviews can be conducted monthly, quarterly, or annually depending on your business needs and reporting objectives."
+    },
+    {
+      q: "Will this help with audit and compliance readiness?",
+      a: "Yes, our advisory frameworks are designed to support clean records, structured reporting, and preparedness for audits and regulatory reviews."
+    },
+    {
+      q: "Is this suitable for growing or scaling businesses?",
+      a: "Absolutely. Our financial frameworks are designed to scale alongside your business, supporting growth without compromising clarity or control."
+    }
+  ]
+},
 
   "payroll-management": {
-    eyebrow: "Accounting & Compliance",
-    title: "Stress-Free Payroll With Complete",
-    highlight: "Statutory Compliance",
-    subtitle:
-      "Managing payroll doesn’t have to be stressful or time-consuming. We take care of salaries, deductions, and monthly processing so everything runs smoothly. Employees get paid correctly and on time without confusion. Clear records and structured processes reduce mistakes and delays. You save time while maintaining trust and consistency across your organization.",
-    cta: "Get Started",
-    image: officeFront,
+  eyebrow: "Accounting & Compliance",
+  title: "Stress-Free Payroll With Complete",
+  highlight: "Statutory Compliance",
+  subtitle:
+    "Payroll is more than salary processing—it is a critical function that affects employee trust, compliance posture, and operational stability. Our payroll advisory services help organizations design, review, and manage payroll structures that are accurate, compliant, and easy to oversee. We focus on clarity, consistency, and regulatory alignment so payroll cycles run smoothly and employees receive transparent, reliable outcomes. With structured guidance and ongoing oversight, payroll becomes predictable, controlled, and stress-free.",
+  cta: "Get Started",
+  image: officeFront,
 
-    process: [
-      {
-        step: "01",
-        title: "Employee Data Collection",
-        desc: `
-We collect and verify employee payroll information to ensure accuracy.
+  process: [
+    {
+      step: "01",
+      title: "Employee Payroll Data Review",
+      desc: `
+We begin by reviewing and validating employee payroll-related data to ensure it is structured correctly and aligned with statutory requirements.
 
-- Salary structure verification
-- Employee statutory applicability review
-- Benefits and exemptions assessment
-- Secure data handling
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "Payroll Structuring",
-        desc: `
-We structure payroll components for compliance and efficiency.
+- Review of employee compensation structures
+- Assessment of statutory applicability and classifications
+- Evaluation of benefits, allowances, and exemptions
+- Secure handling and organization of payroll information
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Payroll Structure & Compliance Framework",
+      desc: `
+We advise on designing a clear and compliant payroll structure that supports accuracy, transparency, and long-term scalability.
 
-- Earnings and deduction design
-- Tax-efficient structuring
-- Labor law compliance
-- Clear payroll documentation
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Monthly Payroll Processing",
-        desc: `
-We process payroll accurately and on schedule every month.
+- Structuring earnings and deduction components
+- Alignment with labor laws and statutory frameworks
+- Documentation of payroll policies and structures
+- Advisory guidance for consistency across payroll cycles
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Monthly Payroll Oversight",
+      desc: `
+We provide ongoing oversight and validation of monthly payroll processes to ensure accuracy and timely execution.
 
-- Salary calculation
-- Payslip generation
-- Timely disbursement
-- Deduction accuracy checks
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Compliance & Reporting",
-        desc: `
-We manage statutory filings and payroll reporting.
+- Review of salary calculations and deductions
+- Validation of payslips and payroll summaries
+- Monitoring of payroll timelines and cycles
+- Identification and resolution of discrepancies
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Statutory Compliance & Payroll Reporting",
+      desc: `
+We support payroll compliance through structured reporting and regulatory alignment.
 
-- PF, ESI, and TDS filings
-- Payroll registers and reports
-- Audit-ready documentation
-- Penalty risk prevention
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our payroll management service ensures your employees are paid accurately and on time, every cycle.",
-  "We handle complex salary calculations, deductions, and statutory requirements with precision.",
-  "This reduces administrative burden and minimizes the risk of compliance errors.",
-  "Our structured payroll process ensures consistency and transparency across all payroll activities.",
-  "We stay aligned with current labor and tax regulations to prevent penalties.",
-  "Your payroll data is handled securely and confidentially at all times.",
-  "Clear payslips and records improve employee confidence and trust.",
-  "We support businesses of all sizes with scalable payroll solutions.",
-  "Monthly reviews help identify discrepancies before they become issues.",
-  "This service delivers peace of mind and operational efficiency."
-],
-longSummary:
-  "Our payroll management service removes complexity from salary processing and statutory compliance. We ensure accurate calculations, timely payments, and adherence to all labor and tax regulations. With structured payroll systems and secure data handling, employee confidence remains high and compliance risks stay low. This allows you to run payroll smoothly without administrative stress.",
+- Advisory oversight of PF, ESI, and TDS compliance
+- Review of payroll registers and statutory reports
+- Documentation readiness for audits and inspections
+- Ongoing monitoring of compliance-related risks
+      `,
+      image: officeFront,
+    },
+  ],
+
+  longContent: [
+    "Our payroll management advisory services help businesses maintain accurate, compliant, and transparent payroll systems.",
+    "We focus on how payroll data is structured, reviewed, and governed rather than just processed.",
+    "Clear payroll frameworks reduce errors, delays, and employee-related concerns.",
+    "Our approach supports timely salary cycles and consistent statutory alignment.",
+    "We help organizations stay updated with changing labor and payroll regulations.",
+    "Strong payroll governance minimizes compliance risks and operational disruptions.",
+    "Secure handling of payroll data ensures confidentiality and data integrity.",
+    "Employees benefit from clear payslips and consistent payroll outcomes.",
+    "Our services are designed to scale as headcount and complexity increase.",
+    "The result is predictable payroll operations, stronger compliance confidence, and internal peace of mind."
+  ],
+
+  longSummary:
+    "Payroll accuracy and statutory compliance are essential for employee trust and organizational stability. Our payroll management advisory services provide structured guidance, oversight, and compliance alignment across payroll operations. We help businesses maintain accurate salary structures, transparent reporting, and audit-ready documentation while staying aligned with labor regulations. With a clear and controlled payroll framework, organizations achieve consistency, efficiency, and confidence without operational stress.",
+
   benefitImage: officeFront,
-  faqs: [
-  {
-    q: "Do you handle statutory payroll compliance?",
-    a: "Yes, we manage PF, ESI, TDS, and all applicable statutory filings accurately and on time."
-  },
-  {
-    q: "How do you ensure payroll accuracy?",
-    a: "We follow structured payroll processes with validation checks to ensure accurate salary calculations and deductions."
-  },
-  {
-    q: "Is employee data kept confidential?",
-    a: "Yes, all payroll data is handled securely with strict confidentiality controls."
-  },
-  {
-    q: "Can you support businesses of any size?",
-    a: "Yes, our payroll services are scalable and suitable for small, medium, and growing organizations."
-  }
-]
 
-  },
+  faqs: [
+    {
+      q: "What does your payroll advisory service include?",
+      a: "Our payroll advisory services include payroll structuring guidance, compliance oversight, payroll reviews, reporting support, and ongoing regulatory alignment."
+    },
+    {
+      q: "How do you support statutory compliance?",
+      a: "We provide structured advisory oversight to ensure payroll processes align with PF, ESI, TDS, and applicable labor regulations."
+    },
+    {
+      q: "How is payroll accuracy maintained?",
+      a: "Accuracy is ensured through structured payroll frameworks, validation checks, and regular review of payroll data and reports."
+    },
+    {
+      q: "Is this suitable for growing organizations?",
+      a: "Yes, our payroll frameworks are designed to scale seamlessly as employee count, compensation structures, and compliance requirements grow."
+    }
+  ]
+},
+
 
   "t4-preparation": {
-    eyebrow: "Accounting & Compliance",
-    title: "Accurate Employee Tax",
-    highlight: "T4 Preparation",
-    subtitle:
-      "Handling employee tax documents can feel overwhelming, especially during deadlines. We make the process simple by preparing accurate and well-organized T4 slips. Every detail is carefully checked to avoid corrections later. Employees receive their documents on time without follow-ups. You stay relaxed knowing everything is handled properly.",
-    cta: "Get Started",
-    image: officeFront,
+  eyebrow: "Accounting & Compliance",
+  title: "Accurate Employee Tax",
+  highlight: "T4 Preparation",
+  subtitle:
+    "Year-end employee reporting requires accuracy, structure, and complete regulatory alignment. Our T4 preparation advisory services help organizations review, validate, and compile employee earnings information in a clear and compliant manner. We focus on ensuring that reported figures are consistent, well-documented, and aligned with payroll records. With a structured approach and careful review, T4 reporting becomes organized, predictable, and free from last-minute pressure.",
+  cta: "Get Started",
+  image: officeFront,
 
-    process: [
-      {
-        step: "01",
-        title: "Employee Earnings Review",
-        desc: `
-We review employee earnings and deductions for accuracy.
+  process: [
+    {
+      step: "01",
+      title: "Employee Earnings & Data Review",
+      desc: `
+We begin by reviewing employee compensation data to ensure consistency and completeness across payroll records.
 
-- Salary and bonus verification
-- Benefit and allowance review
-- Deduction reconciliation
-- Data consistency checks
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "T4 Preparation",
-        desc: `
-We prepare accurate T4 slips as per regulations.
+- Review of salaries, bonuses, and taxable benefits
+- Validation of allowances and reimbursements
+- Reconciliation of deductions and contributions
+- Consistency checks across payroll and reporting data
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "T4 Structuring & Preparation",
+      desc: `
+We advise on the accurate structuring and preparation of T4 slips in alignment with reporting standards.
 
-- Correct income reporting
-- Deduction classification
-- Compliance validation
-- Error prevention checks
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Submission & Distribution",
-        desc: `
-We file T4 slips and distribute them to employees.
+- Classification of income and benefits
+- Validation of statutory deductions
+- Compliance checks against reporting guidelines
+- Error identification and prevention review
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Submission Oversight & Employee Distribution",
+      desc: `
+We support timely submission and structured distribution of T4 slips to ensure smooth year-end communication.
 
-- CRA submission
-- Employee access setup
-- Filing confirmation
-- Deadline compliance
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Record Maintenance",
-        desc: `
-We maintain records for audits and future reference.
+- Review of filing readiness and completeness
+- Oversight of regulatory submission timelines
+- Guidance on employee access and distribution
+- Confirmation of submission status
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Documentation & Record Retention",
+      desc: `
+We help maintain organized and audit-ready documentation for ongoing compliance and future reference.
 
-- Secure document storage
-- Audit-ready files
-- Historical data access
-- Compliance support
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our T4 preparation service ensures accurate reporting of employee earnings and deductions.",
-  "We carefully review payroll data to eliminate inconsistencies before filing.",
-  "This helps businesses meet regulatory deadlines without stress.",
-  "Each T4 slip is prepared in accordance with current tax requirements.",
-  "We ensure correct classification of income and deductions.",
-  "Employees receive timely access to their tax documents.",
-  "Our process minimizes the risk of rework or corrections.",
-  "We maintain proper records for audits and future reference.",
-  "This service supports compliance while saving valuable time.",
-  "You can rely on us for accurate and timely submissions."
-],
-longSummary:
-  "We provide precise and compliant T4 preparation services to meet all regulatory requirements. Every earning, deduction, and benefit is carefully reviewed to eliminate errors and inconsistencies. Our structured process ensures timely submissions and accurate employee reporting. With audit-ready records and deadline control, you stay fully compliant without last-minute pressure.",
+- Secure organization of T4 records
+- Documentation readiness for audits or reviews
+- Historical data retention and accessibility
+- Ongoing compliance support and guidance
+      `,
+      image: officeFront,
+    },
+  ],
+
+  longContent: [
+    "Our T4 preparation advisory services are designed to help businesses manage employee tax reporting with confidence and clarity.",
+    "We focus on reviewing and validating payroll data before it is finalized for reporting purposes.",
+    "A structured review process helps eliminate inconsistencies and reporting gaps.",
+    "Our approach supports alignment with current reporting requirements and regulatory expectations.",
+    "Careful classification of earnings and deductions ensures accurate employee reporting.",
+    "Employees benefit from clear, timely, and reliable year-end documentation.",
+    "Organized reporting reduces the likelihood of amendments or follow-up queries.",
+    "We help maintain well-documented records for audits and future reference.",
+    "Our advisory support reduces administrative strain during year-end reporting periods.",
+    "The result is accurate, compliant, and well-organized T4 reporting with minimal disruption."
+  ],
+
+  longSummary:
+    "Accurate T4 preparation is essential for regulatory compliance and employee confidence. Our advisory-led T4 preparation services focus on reviewing payroll data, validating reporting accuracy, and ensuring alignment with statutory requirements. Through structured oversight and documentation readiness, we help organizations complete year-end employee reporting smoothly and on time. With clear records and controlled processes, compliance becomes predictable and stress-free.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "What is included in your T4 preparation service?",
-    a: "We review payroll data, prepare accurate T4 slips, file them with authorities, and distribute them to employees."
-  },
-  {
-    q: "Do you ensure compliance with tax regulations?",
-    a: "Yes, all T4 slips are prepared in accordance with current tax laws and reporting standards."
-  },
-  {
-    q: "Can you handle corrections or amendments?",
-    a: "Yes, we assist with corrections or amendments if required after filing."
-  },
-  {
-    q: "Will records be available for audits?",
-    a: "We maintain organized and audit-ready records for future reference."
-  }
-]
+    {
+      q: "What does your T4 preparation advisory service include?",
+      a: "Our service includes payroll data review, earnings validation, T4 structuring guidance, compliance checks, and documentation support."
+    },
+    {
+      q: "How do you ensure reporting accuracy?",
+      a: "Accuracy is maintained through structured reviews, reconciliation of payroll records, and validation against reporting guidelines."
+    },
+    {
+      q: "Can you assist if amendments are required?",
+      a: "Yes, we provide advisory support for reviewing and managing amendments when reporting adjustments are necessary."
+    },
+    {
+      q: "Are records maintained for future audits?",
+      a: "Yes, we help organize and retain audit-ready records for regulatory reviews and future reference."
+    }
+  ]
+},
 
-
-  },
 
   /* ================= TAX SERVICES ================= */
 
-  "corporate-tax-returns": {
-    eyebrow: "Tax Services",
-    title: "Strategic Corporate Tax",
-    highlight: "Return Filing",
-    subtitle:
-      "Corporate tax filing becomes easier when everything is planned and organized. We review your financial data carefully to ensure correct reporting. The process is smooth, structured, and focused on accuracy. Deadlines are met without last-minute pressure. You get clarity, confidence, and peace of mind throughout the filing process.",
-    cta: "Get Started",
-    image: officeFront,
+ "corporate-tax-returns": {
+  eyebrow: "Tax Services",
+  title: "Strategic Corporate Tax",
+  highlight: "Return Filing",
+  subtitle:
+    "Corporate tax reporting requires strategic planning, accurate interpretation of financial data, and strict regulatory alignment. Our corporate tax return advisory services help organizations review, structure, and validate their tax positions with clarity and confidence. We focus on ensuring that reported figures are accurate, well-supported, and aligned with applicable tax regulations. With a structured and advisory-led approach, corporate tax filing becomes predictable, controlled, and free from last-minute uncertainty.",
+  cta: "Get Started",
+  image: officeFront,
 
-    process: [
-      {
-        step: "01",
-        title: "Financial Review",
-        desc: `
-We analyze corporate financial statements to assess tax exposure.
+  process: [
+    {
+      step: "01",
+      title: "Corporate Financial & Tax Review",
+      desc: `
+We begin with a detailed advisory review of corporate financial statements to understand tax exposure and reporting considerations.
 
-- Revenue and expense review
-- Deduction identification
-- Risk assessment
-- Compliance evaluation
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "Tax Calculation",
-        desc: `
-We calculate corporate tax liabilities accurately.
+- Review of revenue streams and expense classifications
+- Assessment of taxable income positions
+- Identification of compliance and reporting risks
+- Evaluation of documentation and data readiness
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Tax Position & Liability Assessment",
+      desc: `
+We provide strategic guidance on corporate tax calculations to ensure accuracy and regulatory alignment.
 
-- Allowance and credit application
-- Depreciation assessment
-- Compliance checks
-- Error prevention
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Return Filing",
-        desc: `
-We prepare and submit corporate tax returns on time.
+- Review of applicable deductions and allowances
+- Assessment of credits and depreciation treatment
+- Validation of tax computation logic
+- Compliance-focused accuracy checks
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Return Preparation Oversight",
+      desc: `
+We oversee the preparation and finalization of corporate tax returns to ensure correctness and timely submission.
 
-- Accurate form preparation
-- Statutory filing
-- Confirmation tracking
-- Deadline management
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Post-Filing Support",
-        desc: `
-We provide ongoing support after filing.
+- Review of statutory forms and disclosures
+- Validation of reported figures and classifications
+- Filing readiness and deadline alignment
+- Confirmation and submission tracking
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Post-Filing Advisory Support",
+      desc: `
+We continue to support organizations after filing through structured advisory and compliance guidance.
 
-- Notice handling
-- Audit assistance
-- Record maintenance
-- Compliance guidance
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our corporate tax return services are designed to ensure accuracy and compliance.",
-  "We review financial statements to assess tax exposure and opportunities.",
-  "Our team applies applicable deductions and credits carefully.",
-  "This helps minimize liabilities while remaining fully compliant.",
-  "We manage complex corporate tax filings with precision.",
-  "Deadlines are tracked and met consistently.",
-  "We reduce the risk of errors that can lead to notices or penalties.",
-  "Post-filing support is provided when required.",
-  "Clear documentation ensures audit readiness.",
-  "This service provides confidence in your corporate tax obligations."
-],
-longSummary:
-  "Our corporate tax return services focus on accuracy, compliance, and strategic tax efficiency. We analyze financial data to identify eligible deductions and credits while ensuring correct reporting. Returns are prepared and filed within statutory timelines to reduce risk of notices or penalties. With post-filing support and clear documentation, your corporate tax obligations remain well-managed.",
+- Assistance with regulatory notices and queries
+- Audit and assessment support
+- Record organization and retention guidance
+- Ongoing corporate tax compliance advisory
+      `,
+      image: officeFront,
+    },
+  ],
+
+  longContent: [
+    "Our corporate tax return advisory services are designed to help organizations manage tax reporting with confidence and control.",
+    "We focus on understanding how financial data translates into tax positions rather than only the filing outcome.",
+    "Structured financial and tax reviews help identify reporting risks early in the process.",
+    "Our advisory approach supports accurate classification of income, expenses, and allowances.",
+    "Careful validation reduces the likelihood of errors, notices, or follow-up queries.",
+    "We help organizations remain aligned with evolving corporate tax regulations.",
+    "Timely planning ensures filing deadlines are met without operational pressure.",
+    "Clear documentation strengthens audit readiness and internal governance.",
+    "Post-filing advisory support provides continuity beyond submission.",
+    "The result is compliant, well-supported corporate tax reporting that stands up to scrutiny."
+  ],
+
+  longSummary:
+    "Corporate tax reporting requires more than calculations—it demands strategic review, regulatory alignment, and documentation discipline. Our corporate tax return advisory services focus on reviewing financial data, validating tax positions, and overseeing accurate return preparation. Through structured planning and post-filing support, we help organizations manage corporate tax obligations with clarity, confidence, and reduced compliance risk.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "How do you minimize corporate tax liabilities?",
-    a: "We identify eligible deductions, credits, and allowances while ensuring full regulatory compliance."
-  },
-  {
-    q: "Do you handle complex corporate filings?",
-    a: "Yes, we manage complex filings with structured review and validation processes."
-  },
-  {
-    q: "What happens after the return is filed?",
-    a: "We provide post-filing support including notice handling and audit assistance if required."
-  },
-  {
-    q: "Are deadlines monitored?",
-    a: "Yes, all statutory deadlines are tracked carefully to avoid penalties."
-  }
-]
+    {
+      q: "How do you support corporate tax efficiency?",
+      a: "We provide advisory reviews to identify eligible deductions, allowances, and credits while ensuring full regulatory alignment."
+    },
+    {
+      q: "Can you handle complex corporate tax structures?",
+      a: "Yes, we support complex corporate tax scenarios through structured reviews, validation, and advisory oversight."
+    },
+    {
+      q: "What support is available after filing?",
+      a: "We provide post-filing advisory support for regulatory notices, audits, and ongoing compliance guidance."
+    },
+    {
+      q: "How are deadlines managed?",
+      a: "Filing timelines are monitored closely to ensure submissions are completed accurately and within statutory deadlines."
+    }
+  ]
+},
 
 
-  },
+ "personal-tax-returns": {
+  eyebrow: "Tax Services",
+  title: "Accurate & Timely",
+  highlight: "Personal Tax Returns",
+  subtitle:
+    "Personal tax reporting requires careful review, accurate interpretation, and clear guidance rather than guesswork. Our personal tax advisory services help individuals understand their income, deductions, and overall tax position with confidence. We focus on reviewing financial information, identifying reporting considerations, and providing structured advice so tax decisions are well-informed and compliant. With a calm, transparent approach, personal tax obligations become clear, predictable, and manageable.",
+  cta: "Get Started",
+  image: officeFront,
 
-  "personal-tax-returns": {
-    eyebrow: "Tax Services",
-    title: "Accurate & Timely",
-    highlight: "Personal Tax Returns",
-    subtitle:
-      "Personal tax filing doesn’t need to be confusing or stressful. We simplify the entire process by reviewing your income and expenses clearly. Every detail is handled carefully to avoid mistakes. The experience is smooth, transparent, and easy to follow. You can relax knowing your return is done correctly and on time.",
-    cta: "Get Started",
-    image: officeFront,
+  process: [
+    {
+      step: "01",
+      title: "Income & Documentation Review",
+      desc: `
+We begin with a detailed review of your income sources and supporting documentation to establish a clear and accurate tax position.
 
-    process: [
-      {
-        step: "01",
-        title: "Income Review",
-        desc: `
-We review all income sources and documentation.
+- Review of employment, investment, and other income sources
+- Assessment of supporting tax documents
+- Identification of applicable deductions and allowances
+- Consistency checks across financial records
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Tax Position & Liability Assessment",
+      desc: `
+We provide advisory guidance on tax calculations to help you understand your potential tax liability and available savings opportunities.
 
-- Salary and investment review
-- Additional income assessment
-- Deduction identification
-- Documentation verification
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "Tax Computation",
-        desc: `
-We compute taxes accurately while optimizing savings.
+- Review of eligible deductions and credits
+- Evaluation of tax treatment for different income types
+- Compliance-focused accuracy checks
+- Clear explanation of tax outcomes and implications
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Return Review & Filing Readiness",
+      desc: `
+We support the review and readiness of personal tax returns to ensure accuracy and regulatory alignment before submission.
 
-- Deduction application
-- Credit utilization
-- Compliance checks
-- Liability calculation
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Return Filing",
-        desc: `
-We file your tax return securely and on time.
+- Validation of return data and disclosures
+- Review for completeness and consistency
+- Deadline awareness and filing guidance
+- Secure handling of personal tax information
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Post-Filing Advisory & Planning Support",
+      desc: `
+We continue to support you after filing through advisory guidance and forward-looking tax planning insights.
 
-- Error-free submission
-- Filing confirmation
-- Deadline adherence
-- Secure data handling
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Post-Filing Assistance",
-        desc: `
-We assist with notices and future planning.
+- Assistance with tax notices or clarification requests
+- Documentation organization and record guidance
+- Review of filing history and outcomes
+- Advisory input for future tax planning
+      `,
+      image: officeFront,
+    },
+  ],
 
-- Notice response
-- Documentation support
-- Filing history maintenance
-- Advisory guidance
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our personal tax return services are tailored to your income profile.",
-  "We review all income sources and applicable deductions carefully.",
-  "This ensures accurate filing and maximum legitimate savings.",
-  "Our process is simple, secure, and transparent.",
-  "We help reduce errors that may trigger notices.",
-  "Timely filing ensures peace of mind.",
-  "Your information is handled with strict confidentiality.",
-  "We stay updated with changing tax regulations.",
-  "Post-filing assistance is available when needed.",
-  "This service removes stress from personal tax compliance."
-],
-longSummary:
-  "We offer personalized personal tax return services tailored to your income and financial profile. Every income source and deduction is reviewed carefully to ensure accurate filing and optimized savings. Our secure and transparent process minimizes errors and compliance risks. With timely submissions and post-filing support, personal tax compliance becomes simple and stress-free.",
+  longContent: [
+    "Our personal tax advisory services are designed to help individuals approach tax reporting with clarity and confidence.",
+    "We focus on understanding your income structure and financial situation rather than simply producing a return.",
+    "Structured reviews help identify deductions, credits, and reporting considerations early.",
+    "Our advisory approach reduces the likelihood of errors or follow-up queries.",
+    "Clear explanations ensure you understand how your tax position is determined.",
+    "We help individuals stay aligned with current tax regulations and reporting requirements.",
+    "Secure handling of personal information is maintained at every stage.",
+    "Our process removes uncertainty from personal tax compliance.",
+    "Post-filing advisory support ensures continuity beyond submission.",
+    "The result is accurate, compliant, and well-understood personal tax reporting."
+  ],
+
+  longSummary:
+    "Personal tax reporting is most effective when supported by clear advice and structured review. Our personal tax advisory services help individuals understand their income, deductions, and tax position through careful analysis and compliance-focused guidance. By reviewing documentation, validating reporting accuracy, and providing post-filing advisory support, we make personal tax compliance predictable, transparent, and stress-free.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "How do you ensure accurate personal tax filing?",
-    a: "We review all income sources, deductions, and documentation thoroughly before filing."
-  },
-  {
-    q: "Can you help maximize deductions?",
-    a: "Yes, we apply all eligible deductions and credits as per current regulations."
-  },
-  {
-    q: "Is my personal information secure?",
-    a: "Yes, your data is handled with strict confidentiality and secure processes."
-  },
-  {
-    q: "Do you provide post-filing support?",
-    a: "Yes, we assist with notices, clarifications, and future tax planning."
-  }
-]
+    {
+      q: "What does your personal tax advisory service include?",
+      a: "We provide income and documentation review, tax position assessment, return readiness guidance, and post-filing advisory support."
+    },
+    {
+      q: "Do you help identify eligible deductions and credits?",
+      a: "Yes, we review your financial information to identify applicable deductions and credits in line with current regulations."
+    },
+    {
+      q: "Is my personal information kept confidential?",
+      a: "Absolutely. All personal tax information is handled securely with strict confidentiality protocols."
+    },
+    {
+      q: "Do you provide support after filing?",
+      a: "Yes, we offer advisory support for notices, clarifications, and future personal tax planning."
+    }
+  ]
+},
 
 
-  },
+"gst-wcb-returns": {
+  eyebrow: "Tax Services",
+  title: "Reliable GST &",
+  highlight: "WCB Returns",
+  subtitle:
+    "Indirect tax reporting requires consistency, accurate interpretation, and disciplined record review. Our GST and WCB advisory services help organizations understand their transactional data, reporting obligations, and compliance position with clarity. We focus on reviewing, validating, and structuring information so returns are well-supported and aligned with regulatory requirements. With a clear advisory framework, ongoing compliance becomes predictable and well-controlled rather than reactive.",
+  cta: "Get Started",
+  image: officeFront,
 
-  "gst-wcb-returns": {
-    eyebrow: "Tax Services",
-    title: "Reliable GST &",
-    highlight: "WCB Returns",
-    subtitle:
-      "Regular tax returns require accuracy and consistency to avoid unnecessary issues. We help you organize your transactions and prepare returns correctly. Everything is reviewed carefully before submission. Timely filing becomes routine instead of stressful. You stay compliant while keeping your records clean and simple.",
-    cta: "Get Started",
-    image: officeFront,
+  process: [
+    {
+      step: "01",
+      title: "GST & WCB Transaction Review",
+      desc: `
+We begin with a structured advisory review of transactions relevant to GST and WCB reporting.
 
-    process: [
-      {
-        step: "01",
-        title: "Transaction Review",
-        desc: `
-We review GST and WCB applicable transactions.
+- Review of sales, purchases, and payroll-related data
+- Assessment of GST and WCB applicability
+- Identification of classification or reporting gaps
+- Compliance-focused transaction validation
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Return Structuring & Validation",
+      desc: `
+We provide advisory guidance on structuring GST and WCB return data accurately and consistently.
 
-- Sales and purchase review
-- Eligibility verification
-- Error identification
-- Compliance assessment
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "Return Preparation",
-        desc: `
-We prepare accurate GST and WCB returns.
+- Review of tax calculations and reporting logic
+- Alignment of supporting documentation
+- Validation checks for consistency and completeness
+- Identification of potential compliance risks
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Filing Readiness & Deadline Oversight",
+      desc: `
+We support filing readiness by ensuring returns are reviewed, complete, and aligned with statutory timelines.
 
-- Correct tax calculation
-- Documentation alignment
-- Validation checks
-- Compliance assurance
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Submission",
-        desc: `
-We submit returns within statutory deadlines.
+- Review of return completeness prior to submission
+- Guidance on filing timelines and requirements
+- Confirmation of reporting accuracy
+- Support for resolving identified discrepancies
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Documentation & Ongoing Compliance Support",
+      desc: `
+We help maintain organized and audit-ready records to support ongoing GST and WCB compliance.
 
-- Government portal filing
-- Acknowledgment tracking
-- Deadline compliance
-- Error resolution
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Record Maintenance",
-        desc: `
-We maintain records for audits and future filings.
+- Structured organization of tax records
+- Documentation readiness for audits or reviews
+- Historical data accessibility
+- Ongoing compliance monitoring and advisory guidance
+      `,
+      image: officeFront,
+    },
+  ],
 
-- Secure record storage
-- Audit support
-- Historical data access
-- Compliance monitoring
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our GST and WCB return services ensure accurate and timely statutory filings.",
-  "We review transactions to confirm correct tax treatment.",
-  "This reduces the risk of underreporting or overpayment.",
-  "Returns are prepared in line with regulatory requirements.",
-  "We track deadlines to avoid penalties and interest.",
-  "Documentation is maintained for audit purposes.",
-  "Our process ensures consistency across reporting periods.",
-  "We support businesses with ongoing compliance needs.",
-  "Clear records simplify future filings.",
-  "This service provides compliance confidence."
-],
-longSummary:
-  "Our GST and WCB return services ensure accurate calculation, proper documentation, and timely statutory filings. We review transactions carefully to confirm correct tax treatment and compliance. Deadlines are tracked closely to prevent penalties or interest. With organized records and audit-ready documentation, ongoing compliance becomes seamless.",
+  longContent: [
+    "Our GST and WCB advisory services are designed to help organizations manage indirect tax compliance with confidence.",
+    "We focus on reviewing transactional data and reporting structures rather than executing filings.",
+    "Early identification of classification issues helps reduce reporting risks.",
+    "Structured review processes support consistent compliance across reporting periods.",
+    "Our advisory approach helps avoid underreporting, overreporting, and documentation gaps.",
+    "Clear validation ensures tax positions are well-supported and defensible.",
+    "Organized records simplify future reporting and regulatory interactions.",
+    "We help businesses stay aligned with evolving GST and WCB regulations.",
+    "Ongoing advisory support ensures compliance remains proactive rather than reactive.",
+    "The result is reliable, well-documented, and controlled indirect tax reporting."
+  ],
+
+  longSummary:
+    "GST and WCB compliance requires accurate interpretation of transactional data and disciplined reporting structures. Our advisory-led GST and WCB services focus on reviewing transactions, validating tax positions, and ensuring filing readiness in line with regulatory expectations. Through structured oversight and organized documentation, we help organizations maintain consistent compliance, reduce risk, and stay prepared for audits or reviews.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "What returns do you handle under this service?",
-    a: "We prepare and file GST and WCB returns in line with statutory requirements."
-  },
-  {
-    q: "How do you avoid filing errors?",
-    a: "We review transactions carefully and validate calculations before submission."
-  },
-  {
-    q: "Do you maintain records for audits?",
-    a: "Yes, we maintain proper documentation and records for audits and future filings."
-  },
-  {
-    q: "Are filing deadlines monitored?",
-    a: "Yes, all deadlines are tracked to prevent penalties or interest."
-  }
-]
+    {
+      q: "What does your GST and WCB advisory service include?",
+      a: "We provide transaction reviews, return structuring guidance, compliance validation, and documentation support for GST and WCB reporting."
+    },
+    {
+      q: "Do you submit GST or WCB returns on behalf of clients?",
+      a: "We operate strictly in an advisory capacity, providing review, validation, and guidance while execution remains with the client or their designated provider."
+    },
+    {
+      q: "How do you help reduce compliance risk?",
+      a: "By identifying classification issues, validating calculations, and ensuring documentation consistency before submission."
+    },
+    {
+      q: "Are records maintained for audits?",
+      a: "Yes, we support the organization and retention of audit-ready records for future reviews or regulatory requirements."
+    }
+  ]
+},
 
-
-  },
 
   /* ================= BUSINESS ADVISORY ================= */
 
-  "business-incorporation": {
-    eyebrow: "Business Advisory",
-    title: "Complete Support for",
-    highlight: "Business Incorporation",
-    subtitle:
-      "Starting a business should feel exciting, not confusing. We guide you through each step of setting up your business smoothly. From choosing the right structure to completing registrations, everything is handled clearly. The process is simple, organized, and easy to understand. You start your business with confidence and clarity.",
-    cta: "Get Started",
-    image: officeFront,
+ "business-incorporation": {
+  eyebrow: "Business Advisory",
+  title: "Complete Support for",
+  highlight: "Business Incorporation",
+  subtitle:
+    "Incorporating a business is a strategic decision that shapes taxation, compliance, ownership, and long-term growth. Our business incorporation advisory services help founders and business owners understand their options clearly and make informed decisions at every stage. We provide structured guidance on business structure, regulatory requirements, and setup considerations so the incorporation journey is well-planned, transparent, and aligned with future objectives. With the right advisory support, businesses start on a strong and compliant foundation.",
+  cta: "Get Started",
+  image: officeFront,
 
-    process: [
-      {
-        step: "01",
-        title: "Business Structure Advisory",
-        desc: `
-We help you select the right business structure.
+  process: [
+    {
+      step: "01",
+      title: "Business Structure Advisory",
+      desc: `
+We provide strategic guidance to help you evaluate and select the most suitable business structure.
 
-- Sole proprietorship vs corporation
-- Tax implications analysis
-- Compliance considerations
-- Growth alignment
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "Registration & Documentation",
-        desc: `
-We manage all incorporation documentation and filings.
+- Advisory comparison of sole proprietorships, partnerships, and corporations
+- Assessment of tax, compliance, and liability implications
+- Alignment of structure with business goals and scale plans
+- Clear explanation of long-term regulatory considerations
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Incorporation Planning & Documentation Guidance",
+      desc: `
+We guide you through the documentation and planning requirements involved in the incorporation process.
 
-- Name registration
-- Legal document preparation
-- Government filings
-- Approval tracking
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Statutory Setup",
-        desc: `
-We set up statutory and tax registrations.
+- Advisory support on required legal and incorporation documents
+- Review of name selection and registration considerations
+- Guidance on incorporation timelines and regulatory steps
+- Validation of documentation readiness before submission
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Statutory & Regulatory Setup Advisory",
+      desc: `
+We provide advisory guidance on statutory and tax-related registrations required after incorporation.
 
-- GST and payroll setup
-- Compliance registration
-- Authority coordination
-- Account configuration
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Post-Incorporation Support",
-        desc: `
-We support you after incorporation.
+- Overview of GST, payroll, and other statutory registrations
+- Compliance requirement mapping based on business activity
+- Advisory input on regulatory authority interactions
+- Structuring registrations for operational clarity
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Post-Incorporation Advisory Support",
+      desc: `
+We continue to support businesses after incorporation through ongoing advisory and compliance guidance.
 
-- Compliance guidance
-- Filing reminders
-- Advisory support
-- Growth planning assistance
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our business incorporation services support you from idea to registration.",
-  "We help you choose the most suitable business structure.",
-  "All required documentation and filings are handled accurately.",
-  "This reduces delays and registration errors.",
-  "We ensure statutory and tax registrations are completed correctly.",
-  "Our guidance helps you avoid early compliance mistakes.",
-  "Post-incorporation support ensures a smooth transition.",
-  "We align setup decisions with long-term business goals.",
-  "Clear documentation supports future growth.",
-  "This service provides a strong foundation for your business."
-],
-longSummary:
-  "We provide end-to-end support for business incorporation, from structure selection to final registration. Our guidance helps you choose the most suitable legal and tax framework for long-term growth. All documentation, filings, and statutory setups are handled accurately. This ensures a smooth, compliant start and a strong foundation for your business.",
+- Advisory support on early-stage compliance obligations
+- Guidance on reporting and filing timelines
+- Review of governance and documentation practices
+- Strategic input for future growth and expansion planning
+      `,
+      image: officeFront,
+    },
+  ],
+
+  longContent: [
+    "Our business incorporation advisory services are designed to help founders make informed and confident setup decisions.",
+    "We focus on explaining structural, regulatory, and compliance implications before incorporation occurs.",
+    "Clear advisory guidance helps avoid early-stage mistakes that can be costly later.",
+    "We assist clients in understanding documentation and regulatory requirements clearly.",
+    "Our approach aligns incorporation decisions with long-term business strategy.",
+    "Advisory support ensures compliance obligations are understood from day one.",
+    "Post-incorporation guidance helps businesses transition smoothly into operations.",
+    "Well-structured incorporation supports scalability and governance.",
+    "Clear records and planning simplify future regulatory interactions.",
+    "The result is a compliant, well-planned, and strategically structured business foundation."
+  ],
+
+  longSummary:
+    "Business incorporation is a foundational decision that requires clarity, planning, and strategic foresight. Our incorporation advisory services help businesses evaluate structure options, understand regulatory requirements, and prepare for statutory obligations with confidence. Through structured guidance and post-incorporation advisory support, we help organizations establish a strong, compliant foundation aligned with their long-term growth objectives.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "Do you help choose the right business structure?",
-    a: "Yes, we advise on structure selection based on tax, compliance, and growth considerations."
-  },
-  {
-    q: "What registrations are included?",
-    a: "We handle name registration, incorporation filings, and statutory registrations."
-  },
-  {
-    q: "Is post-incorporation support available?",
-    a: "Yes, we provide compliance guidance and advisory support after incorporation."
-  },
-  {
-    q: "Can you support startups?",
-    a: "Yes, our incorporation services are ideal for startups and growing businesses."
-  }
-]
+    {
+      q: "Do you help decide the right business structure?",
+      a: "Yes, we provide advisory guidance on selecting the most suitable structure based on tax, compliance, liability, and growth considerations."
+    },
+    {
+      q: "Do you complete incorporation filings on behalf of clients?",
+      a: "We operate strictly in an advisory capacity, offering guidance, review, and planning support while execution and submissions are handled by the client or their designated providers."
+    },
+    {
+      q: "Is post-incorporation support available?",
+      a: "Yes, we provide advisory support to help businesses understand compliance requirements, reporting timelines, and governance expectations after incorporation."
+    },
+    {
+      q: "Is this service suitable for startups?",
+      a: "Absolutely. Our advisory-led approach is ideal for startups and growing businesses seeking a compliant and scalable foundation."
+    }
+  ]
+},
 
-
-  },
 
   "tax-planning": {
-    eyebrow: "Business Advisory",
-    title: "Smart Tax Planning for",
-    highlight: "Long-Term Savings",
-    subtitle:
-      "Smart tax planning helps you keep more of what you earn. We look at your income and expenses to find better ways to manage taxes. Planning is done thoughtfully and clearly, without complexity. Regular reviews help you stay on track as things change. You gain long-term clarity, balance, and financial comfort.",
-    cta: "Get Started",
-    image: officeFront,
+  eyebrow: "Business Advisory",
+  title: "Smart Tax Planning for",
+  highlight: "Long-Term Savings",
+  subtitle:
+    "Effective tax planning is a strategic exercise that balances compliance, risk management, and long-term financial goals. Our tax planning advisory services help individuals and businesses understand their tax position, evaluate available planning options, and make informed decisions with clarity. We focus on structured analysis and forward-looking guidance so tax strategies remain compliant, sustainable, and aligned with changing financial circumstances. With thoughtful planning and regular reviews, tax outcomes become predictable and well-controlled.",
+  cta: "Get Started",
+  image: officeFront,
 
-    process: [
-      {
-        step: "01",
-        title: "Financial Assessment",
-        desc: `
-We review your financial position and tax exposure.
+  process: [
+    {
+      step: "01",
+      title: "Financial & Tax Position Assessment",
+      desc: `
+We begin with a comprehensive advisory review of your financial position and overall tax exposure.
 
-- Income analysis
-- Expense review
-- Compliance assessment
-- Opportunity identification
-        `,
-        image: officeFront,
-      },
-      {
-        step: "02",
-        title: "Strategy Design",
-        desc: `
-We design a compliant and efficient tax strategy.
+- Analysis of income sources and expense patterns
+- Review of existing tax positions and obligations
+- Compliance and risk assessment
+- Identification of potential planning opportunities
+      `,
+      image: officeFront,
+    },
+    {
+      step: "02",
+      title: "Tax Strategy Design & Advisory",
+      desc: `
+We design compliant and well-structured tax strategies tailored to your financial goals and risk profile.
 
-- Tax-saving instrument selection
-- Risk-balanced planning
-- Regulation alignment
-- Clear strategy roadmap
-        `,
-        image: officeFront,
-      },
-      {
-        step: "03",
-        title: "Implementation",
-        desc: `
-We execute the tax strategy accurately.
+- Evaluation of applicable tax-saving provisions
+- Risk-balanced planning aligned with regulations
+- Clear explanation of strategy options and outcomes
+- Roadmap outlining short-term and long-term considerations
+      `,
+      image: officeFront,
+    },
+    {
+      step: "03",
+      title: "Implementation Guidance & Oversight",
+      desc: `
+We provide advisory guidance to support informed implementation by you or your designated service providers.
 
-- Documentation support
-- Investment execution
-- Filing coordination
-- Compliance checks
-        `,
-        image: officeFront,
-      },
-      {
-        step: "04",
-        title: "Periodic Review",
-        desc: `
-We continuously review and optimize your tax plan.
+- Explanation of documentation and procedural requirements
+- Guidance on sequencing and timing considerations
+- Review of implementation readiness
+- Compliance-focused oversight and validation
+      `,
+      image: officeFront,
+    },
+    {
+      step: "04",
+      title: "Periodic Review & Ongoing Optimization",
+      desc: `
+We conduct regular reviews to ensure tax strategies remain effective and aligned with evolving circumstances.
 
-- Law change monitoring
-- Strategy adjustment
-- Savings optimization
-- Long-term efficiency
-        `,
-        image: officeFront,
-      },
-    ],
-    longContent: [
-  "Our tax planning services focus on long-term efficiency and compliance.",
-  "We analyze your financial position to identify tax-saving opportunities.",
-  "Strategies are designed to align with your goals and risk profile.",
-  "All recommendations comply with current tax regulations.",
-  "We help reduce tax exposure through structured planning.",
-  "Periodic reviews ensure strategies remain effective.",
-  "Changes in laws are monitored continuously.",
-  "This approach supports sustainable financial growth.",
-  "Clear planning reduces uncertainty and surprises.",
-  "The result is optimized tax outcomes and peace of mind."
-],
-longSummary:
-  "Our tax planning services are designed to reduce tax exposure while supporting long-term financial goals. We assess your income, expenses, and compliance position to identify efficient planning opportunities. Strategies are fully compliant, structured, and aligned with changing regulations. With regular reviews and optimization, you achieve sustainable tax savings and financial clarity.",
+- Monitoring of changes in tax laws and regulations
+- Advisory adjustments based on income or business changes
+- Evaluation of strategy effectiveness over time
+- Long-term optimization and planning continuity
+      `,
+      image: officeFront,
+    },
+  ],
+
+  longContent: [
+    "Our tax planning advisory services focus on building long-term efficiency rather than short-term outcomes.",
+    "We begin by helping clients understand their current tax position clearly.",
+    "Structured analysis allows identification of compliant tax planning opportunities.",
+    "All strategies are designed with regulatory alignment and risk management in mind.",
+    "We provide clear explanations so clients can make informed decisions confidently.",
+    "Regular reviews ensure strategies remain relevant as laws and financial situations change.",
+    "Our advisory approach supports sustainable and defensible tax outcomes.",
+    "Clear planning reduces uncertainty and unexpected tax exposure.",
+    "We help align tax strategies with broader financial and business goals.",
+    "The result is long-term tax efficiency, compliance confidence, and financial clarity."
+  ],
+
+  longSummary:
+    "Tax planning is most effective when approached as an ongoing strategic process rather than a one-time exercise. Our tax planning advisory services help individuals and businesses understand their tax position, evaluate compliant planning options, and adapt strategies over time. Through structured analysis, clear guidance, and periodic reviews, we support sustainable tax efficiency while maintaining full regulatory alignment and long-term financial clarity.",
+
   benefitImage: officeFront,
+
   faqs: [
-  {
-    q: "How does tax planning benefit my business?",
-    a: "Tax planning helps reduce tax exposure while remaining fully compliant with regulations."
-  },
-  {
-    q: "Are strategies compliant with tax laws?",
-    a: "Yes, all strategies are designed in line with current tax regulations."
-  },
-  {
-    q: "Is tax planning a one-time service?",
-    a: "No, we provide periodic reviews to adapt strategies to law changes and business growth."
-  },
-  {
-    q: "Can individuals use this service?",
-    a: "Yes, our tax planning services are suitable for both individuals and businesses."
-  }
-]
-
-
-  },
+    {
+      q: "How does tax planning support long-term financial goals?",
+      a: "Tax planning helps align income, expenses, and financial decisions in a way that reduces tax exposure while remaining compliant and sustainable."
+    },
+    {
+      q: "Are tax planning strategies compliant with regulations?",
+      a: "Yes, all recommendations are advisory in nature and designed in line with current tax laws and regulatory requirements."
+    },
+    {
+      q: "Is tax planning a one-time activity?",
+      a: "No, effective tax planning requires periodic review and adjustment as laws, income levels, and business circumstances change."
+    },
+    {
+      q: "Who can benefit from tax planning advisory services?",
+      a: "Our tax planning services are suitable for individuals, business owners, and organizations seeking compliant and long-term tax efficiency."
+    }
+  ]
+},
 };

@@ -9,6 +9,8 @@
   overflow-x: clip;
 }
 
+
+
 /* =======================
    Section Title
    ======================= */
@@ -207,3 +209,15 @@
     max-width: 100%;
   }
 }
+
+.history-content::before {
+  content: attr(data-year);
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.04);
+  pointer-events: none;
+}
+

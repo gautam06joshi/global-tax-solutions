@@ -116,7 +116,7 @@ export function Hero() {
               <div className="stat">
                 <div className="stat__top">
                   <Users className="stat__icon" />
-                  <div className="stat__value">Canada-Wide</div>
+                  <div className="stat__value">500+</div>
                 </div>
                 <div className="stat__label">
                   Individuals & Businesses Served

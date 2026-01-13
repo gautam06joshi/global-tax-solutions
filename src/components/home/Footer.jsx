@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import Logo from "../../assets/brand-logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -90,10 +91,12 @@ export function Footer() {
           {/* BRAND */}
           <div className="footer-brand">
             <div className="brand-header">
-              <div className="brand-icon">TS</div>
+              <div className="brand-icon">
+                <img src={Logo} alt="Global tax solutions Logo" />
+              </div>
               <div className="brand-text">
-                <span className="brand-name">TaxSolutions</span>
-                <span className="brand-sub">& CONSULTING</span>
+                <span className="brand-name">Global tax solutions</span>
+                <span className="brand-sub">Advisory firm</span>
               </div>
             </div>
 
