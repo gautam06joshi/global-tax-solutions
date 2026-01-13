@@ -12,10 +12,17 @@
 
 /* Container + spacing */
 .about-section {
-  padding-top: 6rem;   /* py-24 */
+  padding-top: 6rem;
   padding-bottom: 0rem;
   background: var(--color-bg-muted);
 }
+
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 3.5rem;
+  }
+}
+
 
 .container {
   max-width: 1420px;   /* approx for max-w-7xl */
@@ -57,10 +64,17 @@
 
 .hero-image {
   width: 100%;
-  height: 600px; /* h-[600px] */
-  object-fit: cover; /* object-cover */
+  height: 600px;
+  object-fit: cover;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 320px;
+  }
+}
+
 
 /* top-to-transparent gradient overlay */
 .image-gradient {
@@ -72,14 +86,25 @@
 /* Floating stats card */
 .floating-card {
   position: absolute;
-  right: -2rem;  /* -right-8 (approx -32px) */
-  bottom: -2rem; /* -bottom-8 */
+  right: -2rem;
+  bottom: -2rem;
   background: white;
-  border-radius: 1rem; /* rounded-2xl */
+  border-radius: 1rem;
   box-shadow: var(--card-shadow);
-  padding: 1.5rem; /* p-6 */
-  max-width: 20rem; /* max-w-xs */
+  padding: 1.5rem;
+  max-width: 20rem;
 }
+
+@media (max-width: 768px) {
+  .floating-card {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+}
+
 
 /* Card content */
 .card-row {
@@ -184,11 +209,12 @@
 }
 
 .value-icon {
-  width: 1.5rem; /* w-6 */
+  width: 1.5rem;
   height: 1.5rem;
   color: #fff !important;
-  margin-top: 25px;
+  margin-top: 0;
 }
+
 
 .value-title {
   margin: 0 0 0.25rem;
@@ -208,15 +234,22 @@
   border-top: 1px solid var(--color-border); /* border-t border-border */
   margin-top: 1.25rem;
 }
-
 .cert-row {
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12rem;
-  align-items:center;
+  align-items: center;
   padding-bottom: 45px;
 }
+
+@media (max-width: 768px) {
+  .cert-row {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 
 .cert-item {
   display:flex;
