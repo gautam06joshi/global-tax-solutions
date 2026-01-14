@@ -137,16 +137,12 @@
     
   }
 
-body {
-  line-height: inherit;
-  font-family: Inter, sans-serif;
-  background-color: var(--background);
-  color: var(--foreground);
-
-  width: 100%;
+  body {
+    line-height: inherit;
+    width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
-}
-
+  }
 
   hr {
     height: 0;
@@ -223,16 +219,10 @@ body {
     list-style: none;
   }
 
-img, svg {
-  vertical-align: middle;
-  display: block;
-}
-
-video {
-  display: block;
-  max-width: 100%;
-}
-
+  img, svg, video, canvas, audio, iframe, embed, object {
+    vertical-align: middle;
+    display: block;
+  }
 
   img, video {
     max-width: 100%;
@@ -381,7 +371,7 @@ video {
     color: var(--foreground);
     width: 100%;
   max-width: 100%;
- 
+  overflow-x: hidden;
   }
 
   * {
@@ -401,7 +391,7 @@ video {
     font-family: Inter, sans-serif;
     width: 100%;
   max-width: 100%;
-
+  overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -1887,9 +1877,14 @@ html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
   width: 100%;
+  max-width: 100%;
 }
 
-
+.app,
+.layout,
+.page-wrapper {
+  overflow-x: hidden;
+}
 
 
 @property --tw-translate-x {
@@ -2181,14 +2176,8 @@ html {
 
 ::-webkit-scrollbar-track {
   background: transparent;
+  margin: 16px 0 !important;           /* moves scrollbar slightly inward */
 }
-
-@media (hover: hover) {
-  ::-webkit-scrollbar-track {
-    margin: 16px 0;
-  }
-}
-
 
 ::-webkit-scrollbar-thumb {
   background-color: #e14e08;   /* orange */

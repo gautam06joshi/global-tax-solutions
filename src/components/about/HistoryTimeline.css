@@ -189,6 +189,7 @@
     grid-template-columns: 1fr;
     gap: 48px;
     text-align: center;
+
   }
 
   .history-slide {
@@ -208,7 +209,21 @@
   .history-content p {
     max-width: 100%;
   }
+
+  .history-sticky{
+    margin-bottom: 450px;
+  }
+
+  .history-content h3 {
+    font-size: 2rem;
+  }
+
+  .history-content p{
+    font-size: 13px;
+    padding-bottom: 40px;
+  }
 }
+
 
 .history-content::before {
   content: attr(data-year);
