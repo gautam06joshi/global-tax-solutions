@@ -89,10 +89,6 @@
   color: var(--accent);
 }
 
-.stats-card span {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
 
 /* CONTENT */
 .team-content h2,
@@ -206,6 +202,6 @@
 }
 
 .stats-card span{
-  color: #0f172a;
+  color: #0f172a !important;
 }
 }

@@ -1,11 +1,9 @@
 .service-top-strip {
-  background: linear-gradient(
-    90deg,
-    #373737 0%,
-    #8b8c8e 100%
-  );
-  border-bottom: 1px solid rgba(184, 177, 177, 0.258);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+
 
 .service-top-inner {
   max-width: 1200px;

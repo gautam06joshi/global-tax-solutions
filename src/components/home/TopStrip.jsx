@@ -6,11 +6,6 @@ export default function TopStrip() {
   return (
     <div className="top-strip">
       <div className="top-strip__container">
-
-        {/* LEFT */}
-        
-
-        {/* RIGHT */}
         <div className="top-strip__right">
           <div className="top-strip__item">
             <Phone size={14} />
@@ -30,7 +25,7 @@ export default function TopStrip() {
 
           <div className="top-strip__socials">
             <a href="#">f</a>
-            <a href="#">t</a>
+            <a href="#">X</a>
             <a href="#">in</a>
           </div>
 

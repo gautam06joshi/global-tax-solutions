@@ -62,10 +62,42 @@
 }
 
 .top-strip__socials a {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;              /* white circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
   text-decoration: none;
-  color: #fff;
-  font-weight: 600;
+  transition: all 0.25s ease;
 }
+
+/* Default brand colors */
+.top-strip__socials a:nth-child(1) { color: #1877f2; } /* Facebook */
+.top-strip__socials a:nth-child(2) {
+  color: #000000;        /* X logo color */
+}
+.top-strip__socials a:nth-child(3) { color: #0a66c2; } /* LinkedIn */
+
+/* Hover state */
+.top-strip__socials a:nth-child(1):hover {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.top-strip__socials a:nth-child(2):hover {
+  background: #000000;  /* black circle */
+  color: #ffffff;      /* white X */
+}
+
+.top-strip__socials a:nth-child(3):hover {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
 
 /* LANGUAGE */
 .top-strip__lang {
