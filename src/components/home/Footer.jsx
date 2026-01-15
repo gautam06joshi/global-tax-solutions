@@ -1,6 +1,6 @@
 import {
   Facebook,
-  Twitter,
+  X,
   Linkedin,
   Instagram,
   Mail,
@@ -75,11 +75,12 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "#", label: "Facebook", brand: "#1877F2" },
+  { icon: X, href: "#", label: "X", brand: "#000000" },
+  { icon: Linkedin, href: "#", label: "LinkedIn", brand: "#0A66C2" },
+  { icon: Instagram, href: "#", label: "Instagram", brand: "#E4405F" },
   ];
+
 
   return (
     <footer className="footer">
@@ -124,16 +125,18 @@ export function Footer() {
 
             {/* SOCIAL */}
             <div className="social-links">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                >
-                  <social.icon />
-                </a>
-              ))}
-            </div>
+  {socialLinks.map((social) => (
+    <a
+      key={social.label}
+      href={social.href}
+      aria-label={social.label}
+      style={{ "--brand": social.brand }}
+    >
+      <social.icon />
+    </a>
+  ))}
+</div>
+
           </div>
 
           {/* COLUMNS */}

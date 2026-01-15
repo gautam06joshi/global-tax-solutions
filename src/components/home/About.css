@@ -183,11 +183,10 @@
   
 }
 
-.value-icon {
-  width: 1.5rem; /* w-6 */
-  height: 1.5rem;
+.value-icon-about {
+  width: 1.7rem; /* w-6 */
+  height: 1.7rem;
   color: #fff !important;
-  margin-top: 25px;
 }
 
 .value-title {

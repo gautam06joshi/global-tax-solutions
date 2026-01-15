@@ -168,9 +168,20 @@ input, select, textarea {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
+
+.send-icon {
+  transition: transform 0.25s ease;
+}
+
+.submit-btn:hover .send-icon {
+  transform: rotate(45deg) translateX(3px);
+}
+
 
 .contact-cta {
   margin-top: 64px;
@@ -197,4 +208,29 @@ input, select, textarea {
   color: #6b7280;
   
   
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+
+  padding: 14px 28px;
+  background: var(--accent);
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.cta-btn:hover {
+  background: #762001;
+  transform: translateY(-1px);
 }

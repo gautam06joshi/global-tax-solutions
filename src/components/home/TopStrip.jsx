@@ -20,7 +20,7 @@ export default function TopStrip() {
 
           <div className="top-strip__item">
             <Mail size={14} />
-            <span>random@gmail.com</span>
+            <span>info@globaltaxsolutions.ca</span>
           </div>
 
           <div className="top-strip__socials">

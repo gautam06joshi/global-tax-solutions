@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./TeamBanner.css";
 import officeFront from '../../assets/officeFront.png';
+import TeamIllustrations from "../../assets/team-illustrations.jpg";
+
 export function TeamBanner() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -23,7 +25,7 @@ export function TeamBanner() {
         <div className="team-visual">
           <div className="visual-circle">
             <img
-              src= {officeFront}
+              src= {TeamIllustrations}
               alt="Professional collaboration"
             />
           </div>

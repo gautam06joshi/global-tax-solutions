@@ -150,7 +150,7 @@ export function AboutSection() {
                     className="value-row"
                   >
                     <div className="value-icon-wrap">
-                      <Icon className="value-icon" />
+                      <Icon className="value-icon-about"  />
                     </div>
                     <div>
                       <h4 className="value-title">{value.title}</h4>

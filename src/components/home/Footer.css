@@ -107,13 +107,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .social-links a:hover {
-  background: var(--accent);
-  transform: scale(1.1);
+  background: var(--brand);
+  transform: translateY(-3px) scale(1.05);
 }
+
+.social-links a:hover svg {
+  color: #fff;
+}
+
 
 .social-links svg {
   width: 20px;

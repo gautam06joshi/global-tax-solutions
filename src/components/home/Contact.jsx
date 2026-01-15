@@ -112,9 +112,10 @@ export function Contact() {
               <Textarea label="Message *" name="message" value={formData.message} onChange={handleChange} />
 
               <button type="submit" className="submit-btn">
-                <span>Send Message</span>
-                <Send />
-              </button>
+  <span>Send Message</span>
+  <Send className="send-icon" />
+</button>
+
 
               <p className="form-note">
                 By submitting this form, you agree to our privacy policy and terms
@@ -132,9 +133,10 @@ export function Contact() {
             certified tax professionals.
           </p>
           <a href="tel:1-800-TAX-HELP" className="cta-btn">
-            <Phone />
-            <span>1-800-TAX-HELP</span>
-          </a>
+  <Phone className="cta-icon" />
+  <span>1-800-TAX-HELP</span>
+</a>
+
         </div>
 
 
