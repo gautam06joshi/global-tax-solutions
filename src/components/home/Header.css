@@ -383,21 +383,42 @@ button:focus{
 
 .mobile-services-dropdown {
   padding-left: 12px;
-  display: flex;
+  display: block;
   flex-direction: column;
   gap: 6px;
 }
 
 .mobile-sub-link {
+  display: block;          /* ⬅️ MOST IMPORTANT */
+  width: 100%;
+  text-align: left;
+
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: #a25c0b;
+
   background: none;
   border: none;
-  text-align: left;
-  padding: 6px 0;
-  font-size: 0.9rem;
-  color: #475569;
-  cursor: pointer;
 }
+
 
 .mobile-sub-link:hover {
   color: var(--accent);
 }
+
+.mobile-service-group {
+  margin-bottom: 30px;
+}
+
+.mobile-service-heading {
+  display: block;
+  margin: 12px 0 8px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #64748b;
+}
+

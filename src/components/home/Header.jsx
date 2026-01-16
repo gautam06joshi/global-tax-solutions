@@ -1,36 +1,61 @@
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
+import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import Logo from '../../assets/logo1.png';
 
-const services = [
+const servicesData = [
   {
-    title: "Bookkeeping & Financial Statements",
-    desc: "Accurate bookkeeping and detailed financial statements to keep your business compliant and informed."
+    category: "Accounting & Compliance",
+    items: [
+      {
+        title: "Bookkeeping & Financial Statements",
+        route: "/services/bookkeeping-financial-statements",
+      },
+      {
+        title: "Payroll Management",
+        route: "/services/payroll-management",
+      },
+      {
+        title: "T4 Preparation",
+        route: "/services/t4-preparation",
+      },
+    ],
   },
   {
-    title: "Business Incorporation",
-    desc: "End-to-end incorporation services ensuring legal compliance and smooth setup."
+    category: "Tax Services",
+    items: [
+      {
+        title: "Corporate Tax Returns",
+        route: "/services/corporate-tax-returns",
+      },
+      {
+        title: "Personal Tax Returns",
+        route: "/services/personal-tax-returns",
+      },
+      {
+        title: "GST & WCB Returns",
+        route: "/services/gst-wcb-returns",
+      },
+    ],
   },
   {
-    title: "Corporate & Personal Tax Returns",
-    desc: "Strategic tax planning and timely filing to minimize liabilities."
+    category: "Business Advisory",
+    items: [
+      {
+        title: "Business Incorporation",
+        route: "/services/business-incorporation",
+      },
+      {
+        title: "Tax Planning",
+        route: "/services/tax-planning",
+      },
+    ],
   },
-  {
-    title: "Payroll Management",
-    desc: "Stress-free payroll processing with complete statutory compliance."
-  },
-  {
-    title: "WCB & GST Returns",
-    desc: "Accurate preparation and filing of WCB and GST returns."
-  },
-  {
-    title: "T4 Preparation",
-    desc: "Professional T4 preparation ensuring accuracy and compliance."
-  }
 ];
+
 
 
 export function Header() {
@@ -44,8 +69,10 @@ export function Header() {
     navigate(path);
     setMobileMenuOpen(false);
   };
+  
 
   return (
+    
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -289,27 +316,31 @@ export function Header() {
       transition={{ duration: 0.25, ease: 'easeOut' }}
       className="mobile-services-dropdown"
     >
-      {services.map((service, index) => (
-        <button
-          key={index}
-          className="mobile-sub-link"
-          onClick={() => {
-            setMobileMenuOpen(false);
-            setMobileServicesOpen(false);
-            goTo(
-              `/services/${service.title
-                .toLowerCase()
-                .replace(/ & /g, '-')
-                .replace(/\s+/g, '-')}`
-            );
-          }}
-        >
-          {service.title}
-        </button>
+      {servicesData.map((group, groupIndex) => (
+        <div key={groupIndex} className="mobile-service-group">
+          <span className="mobile-service-heading">
+            {group.category}
+          </span>
+
+          {group.items.map((service, index) => (
+            <button
+              key={index}
+              className="mobile-sub-link"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setMobileServicesOpen(false);
+                goTo(service.route);
+              }}
+            >
+              {service.title}
+            </button>
+          ))}
+        </div>
       ))}
     </motion.div>
   )}
 </AnimatePresence>
+
 
               <button onClick={() => goTo('/testimonials')} className="mobile-link">Testimonials</button>
               <button onClick={() => goTo('/contact')} className="mobile-link">Contact</button>

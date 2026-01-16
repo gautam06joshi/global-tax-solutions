@@ -1,4 +1,8 @@
 import officeFront from "../../../assets/officeFront.png";
+import BookkeepingImage from "../../../assets/bookkeeping.png";
+import PayrollImage from "../../../assets/payroll.png";
+import T4preparationImage from "../../../assets/t4.png";
+import corporatetaximage from "../../../assets/corporatetax.png";
 
 export const servicesData = {
   /* ================= ACCOUNTING & COMPLIANCE ================= */
@@ -10,7 +14,7 @@ export const servicesData = {
   subtitle:
     "Gain complete clarity and confidence in your financial data with advisory-led bookkeeping and financial statement support. We help businesses understand how their financial information is structured, interpreted, and used for decision-making. Our approach focuses on clarity, accuracy, and alignment with accounting standards, ensuring that your financial records reflect the true performance of your business. With structured financial insights and consistent reporting, you stay informed, prepared, and in control of your financial direction at every stage.",
   cta: "Get Started",
-  image: officeFront,
+  image: BookkeepingImage,
 
   process: [
     {
@@ -112,7 +116,7 @@ We help you interpret and understand your financial statements so they become to
   subtitle:
     "Payroll is more than salary processing—it is a critical function that affects employee trust, compliance posture, and operational stability. Our payroll advisory services help organizations design, review, and manage payroll structures that are accurate, compliant, and easy to oversee. We focus on clarity, consistency, and regulatory alignment so payroll cycles run smoothly and employees receive transparent, reliable outcomes. With structured guidance and ongoing oversight, payroll becomes predictable, controlled, and stress-free.",
   cta: "Get Started",
-  image: officeFront,
+  image: PayrollImage,
 
   process: [
     {
@@ -215,7 +219,7 @@ We support payroll compliance through structured reporting and regulatory alignm
   subtitle:
     "Year-end employee reporting requires accuracy, structure, and complete regulatory alignment. Our T4 preparation advisory services help organizations review, validate, and compile employee earnings information in a clear and compliant manner. We focus on ensuring that reported figures are consistent, well-documented, and aligned with payroll records. With a structured approach and careful review, T4 reporting becomes organized, predictable, and free from last-minute pressure.",
   cta: "Get Started",
-  image: officeFront,
+  image: T4preparationImage,
 
   process: [
     {
@@ -320,7 +324,7 @@ We help maintain organized and audit-ready documentation for ongoing compliance 
   subtitle:
     "Corporate tax reporting requires strategic planning, accurate interpretation of financial data, and strict regulatory alignment. Our corporate tax return advisory services help organizations review, structure, and validate their tax positions with clarity and confidence. We focus on ensuring that reported figures are accurate, well-supported, and aligned with applicable tax regulations. With a structured and advisory-led approach, corporate tax filing becomes predictable, controlled, and free from last-minute uncertainty.",
   cta: "Get Started",
-  image: officeFront,
+  image: corporatetaximage,
 
   process: [
     {
