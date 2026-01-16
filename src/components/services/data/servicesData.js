@@ -3,6 +3,10 @@ import BookkeepingImage from "../../../assets/bookkeeping.png";
 import PayrollImage from "../../../assets/payroll.png";
 import T4preparationImage from "../../../assets/t4.png";
 import corporatetaximage from "../../../assets/corporatetax.png";
+import personaltaxreturnsimage from "../../../assets/personaltaxreturn.png"; 
+import GstandWcbimage from "../../../assets/gstandwcb.png";
+import bussinessIncorporationimage from "../../../assets/buisnessincorporation.png";
+import taxplanningimage from "../../../assets/taxplanning.png";
 
 export const servicesData = {
   /* ================= ACCOUNTING & COMPLIANCE ================= */
@@ -427,7 +431,7 @@ We continue to support organizations after filing through structured advisory an
   subtitle:
     "Personal tax reporting requires careful review, accurate interpretation, and clear guidance rather than guesswork. Our personal tax advisory services help individuals understand their income, deductions, and overall tax position with confidence. We focus on reviewing financial information, identifying reporting considerations, and providing structured advice so tax decisions are well-informed and compliant. With a calm, transparent approach, personal tax obligations become clear, predictable, and manageable.",
   cta: "Get Started",
-  image: officeFront,
+  image: personaltaxreturnsimage,
 
   process: [
     {
@@ -530,7 +534,7 @@ We continue to support you after filing through advisory guidance and forward-lo
   subtitle:
     "Indirect tax reporting requires consistency, accurate interpretation, and disciplined record review. Our GST and WCB advisory services help organizations understand their transactional data, reporting obligations, and compliance position with clarity. We focus on reviewing, validating, and structuring information so returns are well-supported and aligned with regulatory requirements. With a clear advisory framework, ongoing compliance becomes predictable and well-controlled rather than reactive.",
   cta: "Get Started",
-  image: officeFront,
+  image: GstandWcbimage,
 
   process: [
     {
@@ -635,7 +639,7 @@ We help maintain organized and audit-ready records to support ongoing GST and WC
   subtitle:
     "Incorporating a business is a strategic decision that shapes taxation, compliance, ownership, and long-term growth. Our business incorporation advisory services help founders and business owners understand their options clearly and make informed decisions at every stage. We provide structured guidance on business structure, regulatory requirements, and setup considerations so the incorporation journey is well-planned, transparent, and aligned with future objectives. With the right advisory support, businesses start on a strong and compliant foundation.",
   cta: "Get Started",
-  image: officeFront,
+  image: bussinessIncorporationimage,
 
   process: [
     {
@@ -738,7 +742,7 @@ We continue to support businesses after incorporation through ongoing advisory a
   subtitle:
     "Effective tax planning is a strategic exercise that balances compliance, risk management, and long-term financial goals. Our tax planning advisory services help individuals and businesses understand their tax position, evaluate available planning options, and make informed decisions with clarity. We focus on structured analysis and forward-looking guidance so tax strategies remain compliant, sustainable, and aligned with changing financial circumstances. With thoughtful planning and regular reviews, tax outcomes become predictable and well-controlled.",
   cta: "Get Started",
-  image: officeFront,
+  image: taxplanningimage,
 
   process: [
     {
