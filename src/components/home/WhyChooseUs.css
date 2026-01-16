@@ -96,33 +96,51 @@
 /* Stats grid */
 .why-stats-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
   margin-bottom: 4rem;
   text-align: center;
+
+  /* default: 1 column (small phones) */
+  grid-template-columns: 1fr;
 }
+
+@media (min-width: 480px) {
+  .why-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
 @media (min-width: 1024px) {
   .why-stats-grid { grid-template-columns: repeat(4, 1fr); }
   
 }
 
-.why-stat { 
-  margin-top: -35px;
+.why-stat {
+  padding: 0.75rem 0;
+}
 
-}
+
 .why-stat-value {
-  
-  font-size: 2.25rem;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
   color: var(--accent);
-  margin-bottom: 0.25rem;
   font-weight: 700;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
 }
+
+
 @media (min-width: 1024px) {
   .why-stat-value { font-size: 2.5rem; 
   }
 }
-.why-stat-label { color: rgba(255,255,255,0.8); font-size: 0.875rem; }
+.why-stat-label {
+  font-size: clamp(0.8rem, 3vw, 0.95rem);
+  color: rgba(255,255,255,0.8);
+  line-height: 1.35;
+}
+
 
 /* Reasons grid (cards) */
 .why-reasons-grid {

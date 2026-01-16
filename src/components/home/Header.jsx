@@ -70,8 +70,21 @@ export function Header() {
     setMobileMenuOpen(false);
   };
   
+  useEffect(() => {
+  if (mobileMenuOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [mobileMenuOpen]);
+
 
   return (
+    <>
     
     <motion.header
       initial={{ y: -100 }}
@@ -284,82 +297,89 @@ export function Header() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="mobile-menu"
-          >
-            <nav className="mobile-nav">
-              <button onClick={() => goTo('/')} className="mobile-link">Home</button>
-              <button onClick={() => goTo('/about')} className="mobile-link">About</button>
-              <button
-  className="mobile-link mobile-services-toggle"
-  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
->
-  <span>Services</span>
-  <ChevronDown
-    size={16}
-    style={{
-      transform: mobileServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-      transition: 'transform 0.2s ease'
-    }}
-  />
-</button>
-<AnimatePresence>
-  {mobileServicesOpen && (
+        
+      </div>
+    </motion.header>
+    <AnimatePresence>
+  {mobileMenuOpen && (
     <motion.div
-      initial={{ height: 0, opacity: 0 }}
-      animate={{ height: 'auto', opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
-      transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="mobile-services-dropdown"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
+      className="mobile-menu"
     >
-      {servicesData.map((group, groupIndex) => (
-        <div key={groupIndex} className="mobile-service-group">
-          <span className="mobile-service-heading">
-            {group.category}
-          </span>
+      <nav className="mobile-nav">
+        <button onClick={() => goTo('/')} className="mobile-link">Home</button>
+        <button onClick={() => goTo('/about')} className="mobile-link">About</button>
 
-          {group.items.map((service, index) => (
-            <button
-              key={index}
-              className="mobile-sub-link"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                setMobileServicesOpen(false);
-                goTo(service.route);
-              }}
+        <button
+          className="mobile-link mobile-services-toggle"
+          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+        >
+          <span>Services</span>
+          <ChevronDown
+            size={16}
+            style={{
+              transform: mobileServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              transition: 'transform 0.2s ease'
+            }}
+          />
+        </button>
+
+        <AnimatePresence>
+          {mobileServicesOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="mobile-services-dropdown"
             >
-              {service.title}
-            </button>
-          ))}
+              {servicesData.map((group, groupIndex) => (
+                <div key={groupIndex} className="mobile-service-group">
+                  <span className="mobile-service-heading">{group.category}</span>
+
+                  {group.items.map((service, index) => (
+                    <button
+                      key={index}
+                      className="mobile-sub-link"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileServicesOpen(false);
+                        goTo(service.route);
+                      }}
+                    >
+                      {service.title}
+                    </button>
+                  ))}
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <button onClick={() => goTo('/testimonials')} className="mobile-link">
+          Testimonials
+        </button>
+
+        <button onClick={() => goTo('/contact')} className="mobile-link">
+          Contact
+        </button>
+
+        <div className="mobile-contact">
+          <Phone className="phone-icon" />
+          <span className="phone-text">1-800-TAX-HELP</span>
         </div>
-      ))}
+
+        <button onClick={() => goTo('/contact')} className="cta-button mobile-cta">
+          Book Consultation
+        </button>
+      </nav>
     </motion.div>
   )}
 </AnimatePresence>
 
-
-              <button onClick={() => goTo('/testimonials')} className="mobile-link">Testimonials</button>
-              <button onClick={() => goTo('/contact')} className="mobile-link">Contact</button>
-
-              <div className="mobile-contact">
-                <Phone className="phone-icon" />
-                <span className="phone-text">1-800-TAX-HELP</span>
-              </div>
-
-              <button
-                onClick={() => goTo('/contact')}
-                className="cta-button mobile-cta"
-              >
-                Book Consultation
-              </button>
-            </nav>
-          </motion.div>
-        )}
-      </div>
-    </motion.header>
+    </>
   );
 }

@@ -165,10 +165,20 @@
 }
 
 /* Mobile menu area: lg:hidden border-t border-border py-4 */
-.mobile-menu{
-  border-top: 1px solid var(--border);
-  padding: 1rem 0;
+.mobile-menu {
+  position: fixed;
+  top: 80px; /* header height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #ffffff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  z-index: 9999;
 }
+
 @media (min-width: 1024px){
   .mobile-menu { display: none; }
 }
@@ -366,8 +376,6 @@ button:focus{
 
   .mobile-menu{
   background-color: #ffffff;
-  margin-left: -1rem;
-    margin-right: -1rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
