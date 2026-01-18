@@ -8,6 +8,7 @@ import { AboutSection } from "../components/home/AboutSection";
 import ServicesStrip from "../components/home/ui/ServicesStrip";
 
 
+
 export function Home() {
   return (
     <main>

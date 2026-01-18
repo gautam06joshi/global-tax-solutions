@@ -2191,3 +2191,7 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e67600;
 }
+
+body.allow-sticky {
+  overflow-x: visible !important;
+}

@@ -2,29 +2,42 @@
 export function ContactInfo() {
   return (
     <div className="contact-info">
-      <span className="contact-eyebrow">Contact Us</span>
-      <h1 className="contact-title">
-        Let’s Discuss Your <br /> Tax & Compliance Needs
+      <span className="info-eyebrow">Contact Advisory</span>
+
+      <h1 className="info-title">
+        Trusted Tax & <br /> Compliance Advisors <br /> in Canada
       </h1>
-      <p className="contact-description">
-        Whether you need advisory support, compliance assistance, or
-        long-term tax planning, our team is ready to help you move forward
-        with clarity and confidence.
+
+      <p className="info-description">
+        We advise corporations, founders, and professionals on Canadian
+        taxation, regulatory compliance, and long-term financial structuring.
+        Our approach is discreet, strategic, and advisor-led.
       </p>
 
-      <div className="contact-details">
-        <div>
-          <strong>Email</strong>
-          <p>info@yourfirm.com</p>
+      <div className="info-accent">
+        Serving clients across Ontario, British Columbia, Alberta,
+        and nationwide.
+      </div>
+
+      <div className="info-grid">
+        <div className="info-box">
+          <span>Email</span>
+          <p>info@globaltaxsolutions.ca</p>
         </div>
-        <div>
-          <strong>Phone</strong>
-          <p>+91 98765 43210</p>
+
+        <div className="info-box">
+          <span>Phone</span>
+          <p>+1 (403) 450-3582</p>
         </div>
-        <div>
-          <strong>Office</strong>
-          <p>Jaipur, Rajasthan</p>
+
+        <div className="info-box">
+          <span>Office</span>
+          <p>Calgary,<br />Canada</p>
         </div>
+      </div>
+
+      <div className="info-footer">
+        Confidential • Secure • CRA-Compliant
       </div>
     </div>
   );

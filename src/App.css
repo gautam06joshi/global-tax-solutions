@@ -2,3 +2,7 @@
   min-height: 100vh;
   background: #ffffff;
 }
+
+body.allow-sticky {
+  overflow-x: visible;
+}

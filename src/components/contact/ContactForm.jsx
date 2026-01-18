@@ -1,85 +1,186 @@
-// components/contact/ContactForm.jsx
 import { useState } from "react";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebase";
 
 export function ContactForm() {
   const [form, setForm] = useState({
-    name: "",
-    company: "",
-    jobTitle: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    countryCode: "+91",
     phone: "",
-    country: "",
+    company: "",
+    service: "",
+    province: "",
     message: "",
   });
 
-  const handleChange = e =>
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const payload = {
-      ...form,
-      createdAt: new Date().toISOString(),
-    };
+    try {
+      await addDoc(collection(db, "formSubmissions"), {
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        phone: form.phone,
+        company: form.company,
+        service: form.service,
+        province: form.province,
+        message: form.message,
+        createdAt: serverTimestamp(),
+        source: "website",
+      });
 
-    console.log(payload); // backend later
+      alert("Thank you! Your request has been submitted.");
+
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        province: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
-    <form className="contact-card" onSubmit={handleSubmit}>
-      <Field label="Full Name" required>
-        <input name="name" onChange={handleChange} />
-      </Field>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <h2>Request a Consultation</h2>
+      <p className="form-note">
+        Submit your details and a senior tax advisor will contact you
+        within one business day.
+      </p>
 
-      <Field label="Company" required>
-        <input name="company" onChange={handleChange} />
-      </Field>
+      {/* Personal Information */}
+      <div className="form-section">
+        <h4>Personal Information</h4>
 
-      <Field label="Job Title" required>
-        <input name="jobTitle" onChange={handleChange} />
-      </Field>
+        <div className="two-col">
+          <Field label="First Name" required>
+            <input
+              name="firstName"
+              value={form.firstName}
+              onChange={handleChange}
+              required
+            />
+          </Field>
 
-      <Field label="Email" required>
-        <input type="email" name="email" onChange={handleChange} />
-      </Field>
+          <Field label="Last Name" required>
+            <input
+              name="lastName"
+              value={form.lastName}
+              onChange={handleChange}
+              required
+            />
+          </Field>
+        </div>
 
-      <div className="phone-row">
-        <Field label="Code" required small>
-          <select name="countryCode" onChange={handleChange}>
-            <option>+91</option>
-            <option>+1</option>
-            <option>+44</option>
+        <div className="two-col">
+          <Field label="Email Address" required>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+          </Field>
+
+          <Field label="Phone Number" required>
+            <input
+              name="phone"
+              placeholder="+1 416 555 1234"
+              value={form.phone}
+              onChange={handleChange}
+              required
+            />
+          </Field>
+        </div>
+      </div>
+
+      {/* Engagement Details */}
+      <div className="form-section">
+        <h4>Engagement Details</h4>
+
+        <div className="two-col">
+          <Field label="Company / Individual Name">
+            <input
+              name="company"
+              value={form.company}
+              onChange={handleChange}
+            />
+          </Field>
+
+          <Field label="Service Required" required>
+            <select
+              name="service"
+              value={form.service}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Service</option>
+              <option>Bookkeeping and financial statements</option>
+              <option>Payroll Management</option>
+              <option>T4 Preparation</option>
+              <option>Corporate Tax Returns</option>
+              <option>Personal Tax Returns</option>
+              <option>GST and WCB Returns</option>
+              <option>Business Incorporation</option>
+              <option>Tax Planning</option>
+            </select>
+          </Field>
+        </div>
+
+        <Field label="Province / Territory" required>
+          <select
+            name="province"
+            value={form.province}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select Province</option>
+            <option>Ontario</option>
+            <option>British Columbia</option>
+            <option>Alberta</option>
+            <option>Quebec</option>
+            <option>Other</option>
           </select>
-        </Field>
-
-        <Field label="Phone Number" required>
-          <input name="phone" onChange={handleChange} />
         </Field>
       </div>
 
-      <Field label="Country" required>
-        <select name="country" onChange={handleChange}>
-          <option value="">Select Country</option>
-          <option>India</option>
-          <option>Canada</option>
-          <option>USA</option>
-        </select>
-      </Field>
+      {/* Message */}
+      <div className="form-section">
+        <h4>Message</h4>
 
-      <Field label="Your Message" required>
-        <textarea rows="3" name="message" onChange={handleChange} />
-      </Field>
+        <Field label="How can we assist you?" required>
+          <textarea
+            rows="4"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            required
+          />
+        </Field>
+      </div>
 
-      <button className="submit-btn">Submit</button>
+      <button className="submit-btn">Submit Request</button>
     </form>
   );
 }
 
-function Field({ label, required, children, small }) {
+function Field({ label, required, children }) {
   return (
-    <div className={`field ${small ? "small" : ""}`}>
+    <div className="field">
       <label>
         {label} {required && <span>*</span>}
       </label>

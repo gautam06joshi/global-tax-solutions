@@ -1,0 +1,107 @@
+.muted {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: var(--card);
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.dashboard-card h4 {
+  margin-bottom: 6px;
+}
+
+.status-live {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.stat-title {
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Accent borders like SaaS dashboards */
+.stat-card.blue {
+  border-left: 4px solid #2563eb;
+}
+
+.stat-card.green {
+  border-left: 4px solid #16a34a;
+}
+
+.stat-card.purple {
+  border-left: 4px solid #7c3aed;
+}
+
+.stat-card.orange {
+  border-left: 4px solid #f97316;
+}
+
+.trend {
+  font-size: 13px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.trend.up {
+  color: #16a34a;
+}
+
+.trend.down {
+  color: #dc2626;
+}
+
+.chart-card {
+  margin-top: 30px;
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.chart-card h3 {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.province-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}

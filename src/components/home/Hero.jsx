@@ -8,6 +8,7 @@ import { ArrowRight, Shield, TrendingUp, Users } from 'lucide-react';
 import './Hero.css';
 import heroVideo from "../../assets/hero-bg-compressed.mp4";
 
+
 export function Hero() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
