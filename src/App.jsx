@@ -34,7 +34,7 @@ function LayoutWrapper({ children }) {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
 
       <LayoutWrapper>
@@ -49,6 +49,6 @@ export default function App() {
           <Route path="/admin/*" element={<AdminRoutes />} />
         </Routes>
       </LayoutWrapper>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
