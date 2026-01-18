@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import { Header } from "./components/home/Header";
 import { Footer } from "./components/home/Footer";
@@ -34,7 +34,7 @@ function LayoutWrapper({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
 
       <LayoutWrapper>
@@ -49,6 +49,6 @@ export default function App() {
           <Route path="/admin/*" element={<AdminRoutes />} />
         </Routes>
       </LayoutWrapper>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
