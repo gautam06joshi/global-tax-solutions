@@ -12,6 +12,10 @@ export default function Sidebar() {
       <nav>
         <NavLink to="/admin/dashboard">Dashboard</NavLink>
         <NavLink to="/admin/forms">Form Submissions</NavLink>
+        <NavLink to="/admin/contact-leads">
+  Contact Leads
+</NavLink>
+
       </nav>
     </aside>
   );

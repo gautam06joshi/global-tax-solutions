@@ -170,7 +170,7 @@ export function Services() {
             <p>
               Book a consultation and gain clarity on tax matters, planning strategies, and next steps tailored to your situation.
             </p>
-            <button>Schedule Consultation</button>
+            <a href="/contact"><button>Schedule Consultation</button></a>
           </div>
         </div>
       </div>

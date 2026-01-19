@@ -36,7 +36,7 @@ export function TeamBanner() {
               <span>Clients</span>
             </div>
             <div>
-              <strong>400+</strong>
+              <strong>50+</strong>
               <span>Professionals</span>
             </div>
             <div>

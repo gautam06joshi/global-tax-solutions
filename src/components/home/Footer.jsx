@@ -111,15 +111,15 @@ export function Footer() {
             <div className="brand-contact">
               <div>
                 <Phone />
-                <span>1-800-TAX-HELP</span>
+                <span>+1 (403) 542-0370 / +1 (403) 450-3582</span>
               </div>
               <div>
                 <Mail />
-                <span>info@taxsolutions.com</span>
+                <span>info@globaltaxsolutions.ca</span>
               </div>
               <div>
                 <MapPin />
-                <span>123 Financial District, New York, NY 10004</span>
+                <span>Global Tax Solutions, 4818 Westwinds Dr NE, Calgary AB</span>
               </div>
             </div>
 
@@ -149,7 +149,7 @@ export function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-row">
             <span>
-              © {currentYear} TaxSolutions & Consulting. All rights reserved.
+              © 2015 Global Tax Solutions. All rights reserved.
             </span>
 
             <div className="legal-links">
@@ -162,12 +162,7 @@ export function Footer() {
           </div>
 
           <div className="footer-disclaimer">
-            Professional Disclaimer: TaxSolutions & Consulting provides general
-            tax and financial consulting services. The information provided on
-            this website is for informational purposes only and should not be
-            construed as legal or financial advice. Please consult with a
-            certified professional for advice specific to your situation.
-            TaxSolutions is a certified CPA firm and IRS-approved tax preparer.
+            Professional Disclaimer: Global Tax Solutions is a tax consulting and advisory firm based in Calgary, Canada, offering general tax, accounting, and business advisory services. The content on this website is provided for general informational purposes only and does not constitute legal, tax, or financial advice. Tax matters can be complex and vary depending on individual circumstances. Clients are encouraged to seek advice from a qualified Canadian tax professional before making any financial or tax-related decisions.
           </div>
         </div>
 

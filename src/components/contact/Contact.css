@@ -57,7 +57,7 @@
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #cbd5f5;
+  color: #64748b;
 }
 
 .info-title {
@@ -80,7 +80,7 @@
   padding-left: 18px;
   border-left: 3px solid #d4af37;
   font-size: 0.95rem;
-  color: #f1f5f9;
+  color: #64748b;
 }
 
 .info-grid {
@@ -114,26 +114,28 @@
 .info-footer {
   margin-top: 50px;
   font-size: 0.85rem;
-  color: #cbd5f5;
+  color: #64748b;
 }
 
 /* ================= RIGHT ================= */
 
-.contact-form {
+.contactpage-form {
+  width: 35rem;
   background: #ffffff;
   border-radius: 22px;
   padding: 56px;
   box-shadow: 0 40px 80px rgba(15, 23, 42, 0.12);
+  
 }
 
-.contact-form h2 {
+.contactpage-form h2 {
   font-size: 1.8rem;
   font-weight: 500;
   color: #0f172a;
 }
 
 .form-note {
-  margin-top: 10px;
+  margin-top: -10px;
   font-size: 0.95rem;
   color: #475569;
 }
@@ -213,7 +215,7 @@
     gap: 60px;
   }
 
-  .contact-form {
+  .contactpage-form {
     padding: 36px;
   }
 

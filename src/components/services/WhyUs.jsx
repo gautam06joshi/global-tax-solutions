@@ -2,17 +2,18 @@
 import "./WhyUs.css";
 
 const items = [
-  "Regulatory-Compliant Tax Advisory",
-  "Accurate Financial Review & Analysis",
-  "Timely Statutory Filings",
-  "Audit-Ready Documentation",
-  "Risk Assessment & Mitigation",
-  "Transparent Reporting & Communication",
-  "Industry-Specific Tax Expertise",
-  "Secure Handling of Sensitive Data",
-  "Scalable Solutions for Growing Businesses",
-  "Ongoing Compliance & Advisory Support",
+  "Regulation-Aligned Tax Advisory",
+  "Accurate Financial Review & Planning",
+  "Timely Statutory Compliance Filings",
+  "Audit-Prepared Documentation Standards",
+  "Risk Evaluation & Compliance Support",
+  "Clear Reporting & Client Communication",
+  "Sector-Specific Tax Advisory Insight",
+  "Confidential Handling of Client Data",
+  "Scalable Advisory for Growing Enterprises",
+  "Ongoing Compliance & Advisory Guidance",
 ];
+
 
 export function WhyUs() {
   return (
@@ -23,10 +24,10 @@ export function WhyUs() {
           <span className="whyus-eyebrow">Why Choose Us</span>
           <h2 className="whyus-title">Our Delivery Principles</h2>
           <p className="whyus-subtitle">
-            A structured advisory framework built on regulatory compliance, financial accuracy,
-and consistent delivery across every engagement.
+  A structured advisory framework built on regulatory alignment, financial accuracy,
+  and consistent advisory delivery across every engagement.
+</p>
 
-          </p>
         </div>
 
         <div className="whyus-columns">

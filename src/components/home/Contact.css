@@ -9,8 +9,32 @@
 
 .contact {
   padding: 96px 0;
-  background: #fff;
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #ffffff 60%
+  );
 }
+
+.contact-info {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.contact-info p {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #5a5b5d;
+}
+
 
 @media (max-width: 768px) {
   .contact {
@@ -32,7 +56,7 @@
 }
 
 .contact-label {
-  color: var(--accent);
+  color: #64748b;
   font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -48,7 +72,6 @@
     font-size: 32px;
   }
 }
-
 
 .contact-header p {
   font-size: 18px;
@@ -76,11 +99,10 @@
   }
 }
 
-
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 2px;
 }
 
 .info-item {
@@ -89,13 +111,14 @@
 }
 
 .info-icon {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   background: rgba(59,130,246,0.1);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .map-box {
@@ -216,7 +239,6 @@ input, select, textarea {
   justify-content: center;
   gap: 12px;
   margin-top: 25px;
-
   padding: 14px 28px;
   background: var(--accent);
   border-radius: 10px;
@@ -224,6 +246,7 @@ input, select, textarea {
   text-decoration: none;
   font-weight: 500;
 }
+
 
 .cta-icon {
   width: 20px;
@@ -233,4 +256,58 @@ input, select, textarea {
 .cta-btn:hover {
   background: #762001;
   transform: translateY(-1px);
+}
+
+.info-title{
+  color: #ba6138 !important;
+  font-size: 20px !important;
+}
+
+.info-main{
+  margin-top: -20px;
+  font-size: 15px;
+  color: #53565c;
+}
+
+.info-sub{
+  font-size: 12px;
+  color: #53565c;
+  padding-top: 5px;
+}
+
+.form-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: -12px;
+}
+
+.form-subtitle{
+  font-size: 0.9rem;
+  color: #64748b;
+  padding-top: 10px;
+  margin-bottom: 24px;
+  max-width: 1000px;
+}
+
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

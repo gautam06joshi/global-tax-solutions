@@ -4,6 +4,8 @@ import Dashboard from "./pages/Dashboard";
 import FormSubmissions from "./pages/FormSubmissions";
 import AdminLayout from "./components/AdminLayout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ContactLeads from "./pages/ContactLeads";
+
 
 export default function AdminRoutes() {
   return (
@@ -34,6 +36,15 @@ export default function AdminRoutes() {
           </ProtectedRoute>
         }
       />
+      <Route
+  path="contact-leads"
+  element={
+    <AdminLayout>
+      <ContactLeads />
+    </AdminLayout>
+  }
+/>
+
     </Routes>
   );
 }

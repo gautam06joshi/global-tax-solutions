@@ -3,6 +3,9 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export function ContactForm() {
+
+  const [loading, setLoading] = useState(false);
+
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -19,42 +22,46 @@ export function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      await addDoc(collection(db, "formSubmissions"), {
-        firstName: form.firstName,
-        lastName: form.lastName,
-        email: form.email,
-        phone: form.phone,
-        company: form.company,
-        service: form.service,
-        province: form.province,
-        message: form.message,
-        createdAt: serverTimestamp(),
-        source: "website",
-      });
+  try {
+    await addDoc(collection(db, "formSubmissions"), {
+      firstName: form.firstName,
+      lastName: form.lastName,
+      email: form.email,
+      phone: form.phone,
+      company: form.company,
+      service: form.service,
+      province: form.province,
+      message: form.message,
+      createdAt: serverTimestamp(),
+      source: "website",
+    });
 
-      alert("Thank you! Your request has been submitted.");
+    alert("Thank you! Your request has been submitted.");
 
-      setForm({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        province: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Form submission error:", error);
-      alert("Something went wrong. Please try again.");
-    }
-  };
+    setForm({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      company: "",
+      service: "",
+      province: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error("Form submission error:", error);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contactpage-form" onSubmit={handleSubmit}>
       <h2>Request a Consultation</h2>
       <p className="form-note">
         Submit your details and a senior tax advisor will contact you
@@ -173,7 +180,14 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <button className="submit-btn">Submit Request</button>
+      <button className="submit-btn" disabled={loading}>
+  {loading ? (
+    <span className="spinner" aria-label="Loading" />
+  ) : (
+    "Submit Request"
+  )}
+</button>
+
     </form>
   );
 }
