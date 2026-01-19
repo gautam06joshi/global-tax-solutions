@@ -1,0 +1,44 @@
+.backToTop {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #bc560c;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+.backToTop:hover {
+  transform: translateX(-50%) translateY(-6px) scale(1.05);
+  background: #000;
+}
+
+/* arrow animation */
+.backToTop:hover {
+  animation: bounce 0.8s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50%) translateY(-6px);
+  }
+  to {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}

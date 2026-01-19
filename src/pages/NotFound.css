@@ -1,0 +1,73 @@
+/* Full screen */
+.nf-minimal {
+  position: relative;
+  min-height: 100vh;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Huge background 404 */
+.nf-bg {
+  position: absolute;
+  font-size: clamp(12rem, 35vw, 28rem);
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.04); /* very light slate */
+  letter-spacing: 0.05em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Foreground content */
+.nf-content {
+  position: relative;
+  max-width: 420px;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.nf-content h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.nf-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 1.75rem;
+}
+
+/* Subtle link-style button */
+.nf-content button {
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #b04b1c; /* brand accent */
+
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nf-content button:hover {
+  opacity: 0.85;
+}
+
+/* Mobile tuning */
+@media (max-width: 480px) {
+  .nf-content h1 {
+    font-size: 1.35rem;
+  }
+
+  .nf-content p {
+    font-size: 0.95rem;
+  }
+}

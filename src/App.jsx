@@ -11,6 +11,8 @@ import { ServicePage } from "./pages/service";
 import { ContactPage } from "./pages/contactPage";
 
 import AdminRoutes from "./admin/AdminRoutes";
+import NotFound from "./pages/NotFound";
+import BackToTop from "./components/ui/BackToTop";
 
 function LayoutWrapper({ children }) {
   const location = useLocation();
@@ -34,7 +36,9 @@ function LayoutWrapper({ children }) {
 
 export default function App() {
   return (
+    
     <BrowserRouter>
+    <BackToTop/>
       <ScrollToTop />
 
       <LayoutWrapper>
@@ -47,8 +51,10 @@ export default function App() {
 
           {/* Admin Routes */}
           <Route path="/admin/*" element={<AdminRoutes />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </LayoutWrapper>
+      
     </BrowserRouter>
   );
 }
