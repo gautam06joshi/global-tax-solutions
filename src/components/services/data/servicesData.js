@@ -1,12 +1,12 @@
 import officeFront from "../../../assets/officeFront.png";
-import BookkeepingImage from "../../../assets/bookkeeping.png";
-import PayrollImage from "../../../assets/payroll.png";
-import T4preparationImage from "../../../assets/t4.png";
-import corporatetaximage from "../../../assets/corporatetax.png";
-import personaltaxreturnsimage from "../../../assets/personaltaxreturn.png"; 
-import GstandWcbimage from "../../../assets/gstandwcb.png";
-import bussinessIncorporationimage from "../../../assets/buisnessincorporation.png";
-import taxplanningimage from "../../../assets/taxplanning.png";
+import BookkeepingImage from "../../../assets/bookkeeping.webp";
+import PayrollImage from "../../../assets/payroll.webp";
+import T4preparationImage from "../../../assets/t4.webp";
+import corporatetaximage from "../../../assets/corporatetax.webp";
+import personaltaxreturnsimage from "../../../assets/personaltaxreturn.webp"; 
+import GstandWcbimage from "../../../assets/gstandwcb.webp";
+import bussinessIncorporationimage from "../../../assets/buisnessincorporation.webp";
+import taxplanningimage from "../../../assets/taxplanning.webp";
 
 export const servicesData = {
   /* ================= ACCOUNTING & COMPLIANCE ================= */

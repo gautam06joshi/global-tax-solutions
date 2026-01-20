@@ -430,3 +430,20 @@ button:focus{
   color: #64748b;
 }
 
+.nav-link.active {
+  color: #ff782a; /* brand color */
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff782a;
+  border-radius: 2px;
+}
+

@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import Logo from '../../assets/logo1.png';
+import { useLocation } from 'react-router-dom';
+
 
 const servicesData = [
   {
@@ -62,7 +64,10 @@ export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const isActive = (path) => currentPath === path;
+  const isServicesActive = currentPath.startsWith('/services');
   const navigate = useNavigate();
 
   const goTo = (path) => {
@@ -109,19 +114,32 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
             <img src={Logo} alt="TaxSolutions & Consulting Logo" className="logo-image" />
-            <button onClick={() => goTo('/')} className="nav-link">Home</button>
-            <button onClick={() => goTo('/about')} className="nav-link">About</button>
+            <button
+  onClick={() => goTo('/')}
+  className={`nav-link ${isActive('/') ? 'active' : ''}`}
+>
+  Home
+</button>
+
+<button
+  onClick={() => goTo('/about')}
+  className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+>
+  About
+</button>
+
             <div
   className="services-mega-wrapper"
   onMouseEnter={() => setServicesOpen(true)}
   onMouseLeave={() => setServicesOpen(false)}
 >
   <button
-    className="nav-link services-trigger"
-    onClick={() => setServicesOpen(!servicesOpen)}
-  >
-    Services <ChevronDown size={14} />
-  </button>
+  className={`nav-link services-trigger ${isServicesActive ? 'active' : ''}`}
+  onClick={() => setServicesOpen(!servicesOpen)}
+>
+  Services <ChevronDown size={14} />
+</button>
+
 
   <AnimatePresence>
     {servicesOpen && (
@@ -272,8 +290,20 @@ export function Header() {
   </AnimatePresence>
 </div>
 
-            <button onClick={() => goTo('/testimonials')} className="nav-link">Testimonials</button>
-            <button onClick={() => goTo('/contact')} className="nav-link">Contact</button>
+            <button
+  onClick={() => goTo('/testimonials')}
+  className={`nav-link ${isActive('/testimonials') ? 'active' : ''}`}
+>
+  Testimonials
+</button>
+
+<button
+  onClick={() => goTo('/contact')}
+  className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+>
+  Contact
+</button>
+
           </nav>
 
           {/* Contact Info */}

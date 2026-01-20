@@ -452,7 +452,7 @@
   }
 
   .hero__bg {
-    background: url("../../assets/calgary.jpg") center / cover no-repeat;
+    background: url("../../assets/calgary.webp") center / cover no-repeat;
   }
 
   .scroll-indicator {
