@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
+import { logFirestoreError } from "../utils/firestoreDebug";
+
 
 export function ContactForm() {
 
@@ -23,21 +25,23 @@ export function ContactForm() {
 
   const handleSubmit = async (e) => {
   e.preventDefault();
+
+  if (loading) return;
   setLoading(true);
+
+  console.group("📝 Contact Form Submit");
+  console.log("Form payload:", form);
+  console.log("Target collection:", "formSubmissions");
+  console.log("Timestamp:", new Date().toISOString());
 
   try {
     await addDoc(collection(db, "formSubmissions"), {
-      firstName: form.firstName,
-      lastName: form.lastName,
-      email: form.email,
-      phone: form.phone,
-      company: form.company,
-      service: form.service,
-      province: form.province,
-      message: form.message,
+      ...form,
       createdAt: serverTimestamp(),
       source: "website",
     });
+
+    console.log("✅ Firestore write SUCCESS");
 
     alert("Thank you! Your request has been submitted.");
 
@@ -51,13 +55,24 @@ export function ContactForm() {
       province: "",
       message: "",
     });
+
   } catch (error) {
-    console.error("Form submission error:", error);
-    alert("Something went wrong. Please try again.");
+    console.error("❌ Firestore write FAILED");
+    logFirestoreError(error, "ContactForm submission");
+
+    alert("Submission failed. Please check console.");
   } finally {
     setLoading(false);
+    console.groupEnd();
   }
 };
+
+window.addEventListener("unhandledrejection", (event) => {
+  console.group("🚨 Unhandled Promise Rejection");
+  console.error(event.reason);
+  console.groupEnd();
+});
+
 
 
   return (
