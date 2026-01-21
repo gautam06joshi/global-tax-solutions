@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import "./HistoryTimeline.css";
-import officeFront from "../../assets/officeFront.png";
 import foundationVideo from "../../assets/foundation.mp4";
 import StrengtheningExpertise from "../../assets/strengthening-expertise.mp4";
 import ExpandingReach from "../../assets/expanding-reach.mp4";

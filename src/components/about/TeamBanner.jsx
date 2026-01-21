@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./TeamBanner.css";
-import officeFront from '../../assets/officeFront.png';
-import TeamIllustrations from "../../assets/team-illustrations.jpg";
+import TeamIllustrations from "../../assets/team-illustrations.webp";
 
 export function TeamBanner() {
   const ref = useRef(null);

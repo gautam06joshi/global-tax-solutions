@@ -1,4 +1,4 @@
-import officeFront from "../../../assets/officeFront.png";
+import officeFront from "../../../assets/officeFront.webp";
 import BookkeepingImage from "../../../assets/bookkeeping.webp";
 import PayrollImage from "../../../assets/payroll.webp";
 import T4preparationImage from "../../../assets/t4.webp";

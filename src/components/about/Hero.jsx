@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import "./Hero.css";
 import { WordCycle } from "./animation/WordCycle";
-import officeFront from "../../assets/officeFront.png";
+import officeFront from "../../assets/officeFront.webp";
 
 export function Hero() {
   return (

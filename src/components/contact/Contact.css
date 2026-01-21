@@ -120,13 +120,16 @@
 /* ================= RIGHT ================= */
 
 .contactpage-form {
-  width: 35rem;
+  width: 100%;
+  max-width: 560px; /* desktop friendly */
   background: #ffffff;
   border-radius: 22px;
   padding: 56px;
   box-shadow: 0 40px 80px rgba(15, 23, 42, 0.12);
-  
+
+  margin: 0 auto; /* center on mobile */
 }
+
 
 .contactpage-form h2 {
   font-size: 1.8rem;
@@ -212,7 +215,8 @@
 @media (max-width: 900px) {
   .contact-shell {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 30px;
+    margin-top: 50px;
   }
 
   .contactpage-form {
@@ -232,6 +236,33 @@
   .contact-page {
     background-attachment: scroll;
     background-position: center top;
+    
+  }
+
+}
+
+@media (max-width: 600px) {
+  .contactpage-form {
+    padding: 28px 22px;
+    border-radius: 18px;
+    
+  }
+
+  .contactpage-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-note {
+    font-size: 0.9rem;
   }
 }
 
+@media (max-width: 400px) {
+  .contactpage-form {
+    padding: 22px 18px;
+  }
+
+  .info-title {
+    font-size: 2rem;
+  }
+}

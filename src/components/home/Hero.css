@@ -451,13 +451,16 @@
     display: none;
   }
 
-  .hero__bg {
-    background: url("../../assets/calgary.webp") center / cover no-repeat;
-  }
+
 
   .scroll-indicator {
     margin-bottom: 30px;
   }
 }
 
+.hero__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 

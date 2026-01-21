@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./GallerySection.css";
-import officeFront from "../../assets/officeFront.png";
+import officeFront from "../../assets/officeFront.webp";
 
 const IMAGES = [
   officeFront,

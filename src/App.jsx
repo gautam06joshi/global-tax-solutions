@@ -9,6 +9,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { ServicePage } from "./pages/service";
 import { ContactPage } from "./pages/contactPage";
+import Careers from "./components/career/Careers";
 
 import AdminRoutes from "./admin/AdminRoutes";
 import NotFound from "./pages/NotFound";
@@ -48,10 +49,12 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services/:serviceSlug" element={<ServicePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/careers" element={<Careers/>} />
 
           {/* Admin Routes */}
           <Route path="/admin/*" element={<AdminRoutes />} />
           <Route path="*" element={<NotFound />} />
+          
         </Routes>
       </LayoutWrapper>
       

@@ -1,0 +1,172 @@
+.careers-root {
+  background: #ffffff;
+  color: #3c2915;
+}
+
+/* HERO */
+.careers-hero {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  background: radial-gradient(circle at top, #453322, #020617);
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(177, 112, 20, 0.4),
+    rgba(155, 91, 8, 0.9)
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 720px;
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #93c5fd;
+}
+
+.careers-hero h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.careers-hero p {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+/* VALUES */
+.careers-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 120px 8%;
+}
+
+.values-text h2 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.values-text p {
+  font-size: 18px;
+  color: #475569;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.values-grid span {
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 16px;
+  border-left: 3px solid #2563eb;
+}
+
+/* STRIP */
+.careers-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #020617;
+  color: #fff;
+}
+
+.strip-item {
+  padding: 64px 48px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.strip-item h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+/* ROLES */
+.careers-roles {
+  padding: 120px 8%;
+}
+
+.careers-roles h2 {
+  font-size: 40px;
+  margin-bottom: 48px;
+}
+
+.role-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.role-row h4 {
+  font-size: 22px;
+}
+
+.role-row span {
+  color: #64748b;
+}
+
+.role-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* FINAL CTA */
+.careers-final {
+  padding: 120px 8%;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+}
+
+.careers-final h3 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.careers-final p {
+  font-size: 18px;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.final-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .careers-values,
+  .careers-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-hero h1 {
+    font-size: 42px;
+  }
+}

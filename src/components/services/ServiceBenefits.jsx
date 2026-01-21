@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { servicesData } from "./data/servicesData";
-import officeFront from "../../assets/officeFront.png";   // fallback if you need it
+import officeFront from "../../assets/officeFront.webp";   // fallback if you need it
 import "./ServiceBenefits.css";
 
 export function ServiceBenefits() {

@@ -1,39 +1,58 @@
-// File: Hero.jsx
-// Advisory & Consultation focused hero section
-// Company: Global Tax Solutions (Calgary, Canada)
+import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
+import "./Hero.css";
 
-import React from 'react';
-import { motion } from 'motion/react';
-import { ArrowRight, Shield, TrendingUp, Users } from 'lucide-react';
-import './Hero.css';
-import heroVideo from "../../assets/hero-bg-compressed.mp4";
-
+import heroImage from "../../assets/calgary.webp"; // mobile image
 
 export function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [heroVideo, setHeroVideo] = useState(null);
+
+  useEffect(() => {
+    const mobile = window.innerWidth < 768;
+    setIsMobile(mobile);
+
+    if (!mobile) {
+      import("../../assets/hero-bg-compressed.mp4").then((mod) => {
+        setHeroVideo(mod.default);
+      });
+    }
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
-
-    
   };
 
   return (
     <section id="home" className="hero">
       {/* Background */}
-      {/* Background */}
-<div className="hero__bg">
-  <video
-    className="hero__bg-video"
-    src={heroVideo}
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="metadata"
-  />
-</div>
+      <div className="hero__bg">
+        {!isMobile && heroVideo ? (
+          <video
+            className="hero__bg-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={heroImage}
+            className="hero__bg-image"
+            width="360"
+            height="640"
+            alt="Calgary cityscape representing professional tax advisory"
+            loading="eager"
+          />
+        )}
+      </div>
 
 
       {/* Content */}
