@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 import "./Hero.css";
 
-import heroImage from "../../assets/calgary.webp"; // mobile image
+import heroMobile from "../../assets/hero-mobile.webp";
 
 export function Hero() {
   const [isMobile, setIsMobile] = useState(false);
@@ -44,13 +44,15 @@ export function Hero() {
           </video>
         ) : (
           <img
-            src={heroImage}
-            className="hero__bg-image"
-            width="360"
-            height="640"
-            alt="Calgary cityscape representing professional tax advisory"
-            loading="eager"
-          />
+  src={heroMobile}
+  className="hero__bg-image"
+  width="360"
+  height="640"
+  alt="Calgary tax advisory background"
+  loading="eager"
+  decoding="async"
+/>
+
         )}
       </div>
 
