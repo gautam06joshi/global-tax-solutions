@@ -6,25 +6,31 @@ import "./Hero.css";
 import heroMobile from "../../assets/hero-mobile.webp";
 
 export function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const [heroVideo, setHeroVideo] = useState(null);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const mobile = window.innerWidth < 768;
     setIsMobile(mobile);
 
+    // ✅ Let LCP paint first
+    requestAnimationFrame(() => setAnimate(true));
+
+    // ✅ Load video AFTER initial paint
     if (!mobile) {
-      import("../../assets/hero-bg-compressed.mp4").then((mod) => {
-        setHeroVideo(mod.default);
-      });
+      setTimeout(() => {
+        import("../../assets/hero-bg-compressed.mp4").then((mod) => {
+          setHeroVideo(mod.default);
+        });
+      }, 1500);
     }
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "auto" });
   };
 
   return (
@@ -38,199 +44,140 @@ export function Hero() {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
         ) : (
           <img
-  src={heroMobile}
-  className="hero__bg-image"
-  width="360"
-  height="640"
-  alt="Calgary tax advisory background"
-  loading="eager"
-  decoding="async"
-/>
-
+            src={heroMobile}
+            className="hero__bg-image"
+            width="360"
+            height="640"
+            alt="Calgary tax advisory background"
+            loading="eager"
+            decoding="async"
+          />
         )}
       </div>
-
 
       {/* Content */}
       <div className="hero__content">
         <div className="hero__grid">
-          {/* Left Column */}
+          {/* LEFT SIDE */}
           <div className="hero__left">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="badge"
-            >
-              <Shield className="badge__icon" />
-              <span className="badge__text">
-                Trusted Tax Advisory & Consultation Since 2015
-              </span>
-            </motion.div>
+            {animate && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="badge"
+              >
+                <Shield className="badge__icon" />
+                <span className="badge__text">
+                  Trusted Tax Advisory & Consultation Since 2015
+                </span>
+              </motion.div>
+            )}
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hero__title"
-            >
+            <h1 className="hero__title">
               Clear, Reliable Tax Guidance for Confident Decisions
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="hero__subtitle"
-            >
+            {/* 🔥 LCP ELEMENT (STATIC FIRST PAINT) */}
+            <p className="hero__subtitle lcp-text">
               Global Tax Solutions is a Calgary-based tax consultation firm
               providing clear, practical guidance to individuals, families,
               and businesses across Canada. We help you understand tax rules,
               obligations, and planning strategies — so you can make informed
               decisions with confidence.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="hero__actions"
-            >
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="btn btn--primary"
+            {animate && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="hero__actions"
               >
-                <span>Book a Consultation</span>
-                <ArrowRight className="btn__icon" />
-              </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="btn btn--primary"
+                >
+                  <span>Book a Consultation</span>
+                  <ArrowRight className="btn__icon" />
+                </button>
 
-              <button
-                onClick={() => scrollToSection('services')}
-                className="btn btn--ghost"
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="btn btn--ghost"
+                >
+                  Advisory Services
+                </button>
+              </motion.div>
+            )}
+
+            {animate && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="hero__stats"
               >
-                Advisory Services
-              </button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="hero__stats"
-            >
-              <div className="stat">
-                <div className="stat__top">
-                  <TrendingUp className="stat__icon" />
-                  <div className="stat__value">10+</div>
-                </div>
-                <div className="stat__label">
-                  Years of Advisory Experience
-                </div>
-              </div>
-
-              <div className="stat">
-                <div className="stat__top">
-                  <Users className="stat__icon" />
-                  <div className="stat__value">500+</div>
-                </div>
-                <div className="stat__label">
-                  Individuals & Businesses Served
-                </div>
-              </div>
-
-              <div className="stat">
-                <div className="stat__top">
-                  <Shield className="stat__icon" />
-                  <div className="stat__value">100%</div>
-                </div>
-                <div className="stat__label">
-                  Advice-Only & Transparent
-                </div>
-              </div>
-            </motion.div>
+                <Stat icon={TrendingUp} value="10+" label="Years of Advisory Experience" />
+                <Stat icon={Users} value="500+" label="Individuals & Businesses Served" />
+                <Stat icon={Shield} value="100%" label="Advice-Only & Transparent" />
+              </motion.div>
+            )}
           </div>
 
-          {/* Right Column */}
+          {/* ✅ RIGHT SIDE GRAPHIC — UNCHANGED */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={animate ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="hero__right"
           >
             <div className="card--decor">
               <div className="card">
                 <div className="card__list">
-                  <div className="card__item">
-                    <div className="card__icon-wrap accent">
-                      <Shield className="card__icon" />
-                    </div>
-                    <div>
-                      <div className="card__title">
-                        Tax Consultation & Guidance
-                      </div>
-                      <div className="card__subtitle">
-                        Education & Clarity
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="card__item">
-                    <div className="card__icon-wrap emerald">
-                      <TrendingUp className="card__icon" />
-                    </div>
-                    <div>
-                      <div className="card__title">
-                        Strategic Tax Advisory
-                      </div>
-                      <div className="card__subtitle">
-                        Understand Your Options
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="card__item">
-                    <div className="card__icon-wrap accent">
-                      <Users className="card__icon" />
-                    </div>
-                    <div>
-                      <div className="card__title">
-                        Client-Focused Approach
-                      </div>
-                      <div className="card__subtitle">
-                        No Filing • No Representation
-                      </div>
-                    </div>
-                  </div>
+                  <CardItem icon={Shield} title="Tax Consultation & Guidance" subtitle="Education & Clarity" accent />
+                  <CardItem icon={TrendingUp} title="Strategic Tax Advisory" subtitle="Understand Your Options" emerald />
+                  <CardItem icon={Users} title="Client-Focused Approach" subtitle="No Filing • No Representation" accent />
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="scroll-indicator"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="scroll-indicator__outer"
-        >
-          <motion.div className="scroll-indicator__dot" />
-        </motion.div>
-      </motion.div>
     </section>
+  );
+}
+
+/* Helpers */
+function Stat({ icon: Icon, value, label }) {
+  return (
+    <div className="stat">
+      <div className="stat__top">
+        <Icon className="stat__icon" />
+        <div className="stat__value">{value}</div>
+      </div>
+      <div className="stat__label">{label}</div>
+    </div>
+  );
+}
+
+function CardItem({ icon: Icon, title, subtitle, accent, emerald }) {
+  return (
+    <div className="card__item">
+      <div className={`card__icon-wrap ${accent ? "accent" : ""} ${emerald ? "emerald" : ""}`}>
+        <Icon className="card__icon" />
+      </div>
+      <div>
+        <div className="card__title">{title}</div>
+        <div className="card__subtitle">{subtitle}</div>
+      </div>
+    </div>
   );
 }
 

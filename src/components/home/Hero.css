@@ -464,3 +464,8 @@
   object-fit: cover;
 }
 
+
+/* FAST initial paint for LCP */
+.lcp-text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
