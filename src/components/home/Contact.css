@@ -311,3 +311,83 @@ input, select, textarea {
     transform: rotate(360deg);
   }
 }
+
+@media (min-width: 1440px) {
+  .contact-container {
+    max-width: 1480px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .contact-container {
+    max-width: 1640px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .contact-container {
+    max-width: 1760px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact-header {
+    max-width: 820px;
+    margin-bottom: 80px;
+  }
+
+  .contact-header h2 {
+    font-size: 56px;
+  }
+
+  .contact-header p {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .contact-header h2 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact-grid {
+    grid-template-columns: 1.1fr 1.9fr;
+    gap: 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact-form {
+    padding: 56px;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+  }
+
+  .form-subtitle {
+    font-size: 1.05rem;
+    max-width: 760px;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 14px 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .submit-btn {
+    padding: 18px;
+    font-size: 1rem;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+  }
+}
+

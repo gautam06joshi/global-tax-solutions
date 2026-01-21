@@ -254,3 +254,87 @@
 .value-row {
   width: 100% !important;
 }
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1640px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1760px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid-two-cols {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .grid-two-cols {
+    gap: 6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-image {
+    height: 680px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-image {
+    height: 740px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .floating-card {
+    right: -3rem;
+    bottom: -3rem;
+    padding: 1.75rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .heading {
+    font-size: 3.4rem;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .heading {
+    font-size: 3.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lead {
+    font-size: 1.15rem;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .values-grid {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .value-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
