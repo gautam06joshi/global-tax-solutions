@@ -1,7 +1,8 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+// src/pages/auth/Login.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { getAuthLazy } from "../../firebase";
 import "../styles/login.css";
 import { logActivity } from "../utils/logActivity";
 
@@ -19,10 +20,13 @@ export default function Login() {
     setLoading(true);
 
     try {
+      // 🔥 Lazy-load Firebase Auth ONLY here
+      const auth = await getAuthLazy();
+
       await signInWithEmailAndPassword(auth, email, password);
 
-      // ✅ log activity AFTER successful login
-      logActivity("Admin logged in");
+      // ✅ Log activity after successful login
+      await logActivity("Admin logged in");
 
       navigate("/admin/dashboard");
     } catch (err) {
@@ -44,10 +48,11 @@ export default function Login() {
           {error && <div className="login-error">{error}</div>}
 
           <div className="login-field">
-            <label>Email Address</label>
+            <label htmlFor="email">Email Address</label>
             <input
+              id="email"
               type="email"
-              placeholder="username"
+              placeholder="admin@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -55,8 +60,9 @@ export default function Login() {
           </div>
 
           <div className="login-field">
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
             <input
+              id="password"
               type="password"
               placeholder="Enter your password"
               value={password}

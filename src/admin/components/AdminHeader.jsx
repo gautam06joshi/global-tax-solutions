@@ -1,11 +1,21 @@
+// src/components/admin/AdminHeader.jsx
 import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
+import { getAuthLazy } from "../../firebase";
 import "../styles/header.css";
 
 export default function AdminHeader() {
   const logout = async () => {
-    await signOut(auth);
-    window.location.href = "/admin";
+    try {
+      // 🔥 Lazy-load Firebase Auth only when logging out
+      const auth = await getAuthLazy();
+
+      await signOut(auth);
+
+      // Redirect after logout
+      window.location.href = "/admin";
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   };
 
   return (
