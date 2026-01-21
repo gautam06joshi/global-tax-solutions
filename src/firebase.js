@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -12,11 +13,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-// ✅ Firestore can be loaded eagerly (safe)
+export const auth = getAuth(app);
 export const db = getFirestore(app);
-
-// 🚀 Auth is loaded ONLY when needed (login / signup)
-export async function getAuthLazy() {
-  const { getAuth } = await import("firebase/auth");
-  return getAuth(app);
-}

@@ -50,22 +50,17 @@
 /* Image container */
 .image-wrap {
   position: relative;
-  border-radius: 1rem;
+  border-radius: 1rem; /* rounded-2xl */
   overflow: hidden;
-  box-shadow: var(--card-shadow);
-
-  /* ✅ ADD THIS */
-  aspect-ratio: 16 / 9;
+  box-shadow: var(--card-shadow); /* shadow-2xl */
 }
-
 
 .hero-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 600px; /* h-[600px] */
+  object-fit: cover; /* object-cover */
   display: block;
 }
-
 
 /* top-to-transparent gradient overlay */
 .image-gradient {
@@ -165,10 +160,6 @@
   margin-top: 1rem;
 }
 
-@media (min-width: 640px) {
-  .values-grid { grid-template-columns: repeat(2, 1fr); } /* sm:grid-cols-2 */
-}
-
 /* Each value row */
 .value-row {
   display:flex;
@@ -247,3 +238,19 @@
   color: var(--color-accent);
 }
 
+@media (max-width: 768px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* 🔒 FORCE single value per row on ALL screens */
+.values-grid {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.value-row {
+  width: 100% !important;
+}
