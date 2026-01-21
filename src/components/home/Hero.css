@@ -20,7 +20,7 @@
   align-items: center;
   overflow: visible;      /* ✅ allow triangle to show below hero */
   color: var(--white) !important;
-  margin-top: -100px !important;       /* 80px triangle + spacing */
+  margin-top: -80px !important;       /* 80px triangle + spacing */
   
 }
 
