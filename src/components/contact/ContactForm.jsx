@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
-import { logFirestoreError } from "../../firestoreDebug.js";
+import { logFirestoreError } from "../../firstoreDebug"
 
 
 export function ContactForm() {
