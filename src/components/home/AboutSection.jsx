@@ -136,7 +136,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="values-grid"
+              className="homeabout-values-grid"
             >
               {values.map((value, index) => {
                 const Icon = value.icon;

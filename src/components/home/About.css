@@ -246,10 +246,7 @@
 }
 
 /* 🔒 FORCE single value per row on ALL screens */
-.values-grid {
-  display: flex !important;
-  flex-direction: column !important;
-}
+
 
 .value-row {
   width: 100% !important;
@@ -336,5 +333,10 @@
     font-size: 0.9rem;
     line-height: 1.6;
   }
+}
+
+.homeabout-values-grid {
+  display: flex !important;
+  flex-direction: column !important;
 }
 

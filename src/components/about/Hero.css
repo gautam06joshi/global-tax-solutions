@@ -120,3 +120,94 @@
     margin: 48px 0 0;
   }
 }
+
+/* =========================================================
+   LARGE DESKTOP SCREENS (27" monitors and above)
+   Applies ONLY when viewport >= 1800px
+   ========================================================= */
+@media (min-width: 1800px) {
+
+  /* ---------- Container ---------- */
+  .about-hero-container {
+    max-width: 1650px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ✅ fills horizontal space */
+  }
+
+  /* ---------- Text Column ---------- */
+  .about-hero-content {
+    max-width: 900px;  /* wider text block */
+  }
+
+  .about-hero-title {
+    font-size: 4.4rem;
+    line-height: 1.12;
+    max-width: 920px;
+  }
+
+  .about-hero-description {
+    font-size: 1.2rem;
+    max-width: 840px;
+  }
+
+  /* ---------- Metadata ---------- */
+  .about-hero-metadata {
+    gap: 48px;
+    padding-top: 40px;
+  }
+
+  .about-hero-metadata span {
+    font-size: 1.1rem;
+  }
+
+  /* ---------- Image Column ---------- */
+  .about-hero-image {
+    width: 500px;
+    margin-left: 0; /* ✅ remove artificial spacing */
+  }
+
+  .about-hero-image img {
+    border-radius: 16px;
+  }
+
+  /* ---------- Section Spacing ---------- */
+  .about-hero {
+    padding-bottom: 140px;
+  }
+
+  .section-divider {
+    margin-top: 160px;
+  }
+}
+
+
+/* =========================================================
+   ULTRA-WIDE / 4K DISPLAYS
+   Applies ONLY when viewport >= 2200px
+   ========================================================= */
+@media (min-width: 2200px) {
+
+  .about-hero-container {
+    max-width: 1800px;
+  }
+
+  .about-hero-content {
+    max-width: 980px;
+  }
+
+  .about-hero-title {
+    font-size: 4.8rem;
+  }
+
+  .about-hero-image {
+    width: 540px;
+  }
+
+  .about-hero-description {
+    font-size: 1.25rem;
+  }
+}

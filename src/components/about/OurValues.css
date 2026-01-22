@@ -29,11 +29,40 @@
 }
 
 /* GRID */
+/* GRID BASE */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
 }
+
+/* ✅ MOBILE ONLY — 1 column */
+@media (max-width: 640px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ TABLET — ALWAYS 2 columns */
+@media (min-width: 800px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ✅ LAPTOP / DESKTOP — ALWAYS 3 columns */
+@media (min-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ✅ LARGE DESKTOP */
+@media (min-width: 1800px) {
+  .values-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
 /* CARD */
 .value-card {
