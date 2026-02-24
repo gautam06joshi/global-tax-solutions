@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
-import Logo from '../../assets/logo1.png';
+import Logo from '../../assets/logo1.webp';
 import { useLocation } from 'react-router-dom';
 
 

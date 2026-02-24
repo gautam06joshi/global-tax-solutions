@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import Logo from "../../assets/brand-logo.png";
+import Logo from "../../assets/brand-logo.webp";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
