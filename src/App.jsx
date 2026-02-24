@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-import Header from "./components/home/Header";
-import Footer  from "./components/home/Footer";
+import { Header } from "./components/home/Header";
+import { Footer } from "./components/home/Footer";
 import TopStrip from "./components/home/TopStrip";
 import ScrollToTop from "./components/scroll/scrolltotop";
 
