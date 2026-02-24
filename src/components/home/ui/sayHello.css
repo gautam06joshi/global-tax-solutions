@@ -1,0 +1,45 @@
+/* Outer wrapper keeps layout safe */
+.hello-marquee-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate; /* 🔥 prevents interference */
+  background: #ffffff;
+  margin-top: -100px;
+}
+
+/* Inner marquee */
+.hello-marquee {
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none; /* 🔥 DOES NOT block scroll/clicks */
+}
+
+/* Moving track */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+/* Text */
+.marquee-track span {
+  font-size: clamp(30px, 7vw, 10px);
+  font-weight: 800;
+  color: #d36e08;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-right: 80px;
+  white-space: nowrap;
+  margin-top: 80px;
+}
+
+/* Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

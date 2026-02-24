@@ -154,33 +154,7 @@ export function Testimonials() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="trust-indicators"
         >
-          <div className="trust-inner">
-            <div className="trust-item">
-              <div className="trust-number">5,000+</div>
-              <div className="trust-label">Happy Clients</div>
-            </div>
-
-            <div className="divider-vertical" />
-
-            <div className="trust-item">
-              <div className="trust-number">4.9/5</div>
-              <div className="trust-label">Average Rating</div>
-            </div>
-
-            <div className="divider-vertical" />
-
-            <div className="trust-item">
-              <div className="trust-number">98%</div>
-              <div className="trust-label">Client Retention</div>
-            </div>
-
-            <div className="divider-vertical" />
-
-            <div className="trust-item">
-              <div className="trust-number">25+</div>
-              <div className="trust-label">Years Experience</div>
-            </div>
-          </div>
+          
         </motion.div>
       </div>
     </section>

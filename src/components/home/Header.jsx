@@ -60,7 +60,7 @@ const servicesData = [
 
 
 
-export function Header() {
+function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -68,12 +68,30 @@ export function Header() {
   const currentPath = location.pathname;
   const isActive = (path) => currentPath === path;
   const isServicesActive = currentPath.startsWith('/services');
+  const isServicePage = location.pathname.startsWith("/services");
   const navigate = useNavigate();
 
   const goTo = (path) => {
     navigate(path);
     setMobileMenuOpen(false);
   };
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   
   useEffect(() => {
   if (mobileMenuOpen) {
@@ -95,7 +113,9 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="site-header"
+      className={`site-header ${
+    isScrolled && !isServicePage ? "scrolled" : ""
+  }`}
     >
       
       <div className="site-container">
@@ -103,6 +123,7 @@ export function Header() {
 
           {/* Mobile Logo */}
 <div className="mobile-logo" onClick={() => goTo('/')}>
+  
   <img
     src = {Logo}
     alt="Global Tax Solution"
@@ -113,7 +134,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
-            <img src={Logo} alt="TaxSolutions & Consulting Logo" className="logo-image" />
+            <a href="/"><img src={Logo} alt="TaxSolutions & Consulting Logo" className="logo-image" /></a>
             <button
   onClick={() => goTo('/')}
   className={`nav-link ${isActive('/') ? 'active' : ''}`}
@@ -413,3 +434,5 @@ export function Header() {
     </>
   );
 }
+
+export default Header;

@@ -1,34 +1,152 @@
+/* SIDEBAR CONTAINER */
 .admin-sidebar {
   width: 260px;
-  background: #020617;
-  color: #fff;
+  height: 100vh;
+  background: #f8fafc; /* light gray like image */
+  border-right: 1px solid #e2e8f0;
   padding: 24px 18px;
+  font-family: "Inter", sans-serif;
 }
 
-.sidebar-brand {
-  font-size: 18px;
+/* LOGO */
+.sidebar-logo {
+  font-size: 20px;
   font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 1px;
   margin-bottom: 40px;
 }
 
-.sidebar-brand span {
-  font-size: 13px;
-  font-weight: 400;
-  opacity: 0.8;
+/* SECTION TITLE */
+.sidebar-section {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
 }
 
-.admin-sidebar a {
-  display: block;
-  padding: 12px 14px;
+/* NAV WRAPPER */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LINKS */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
   margin-bottom: 6px;
-  color: #cbd5f5;
-  text-decoration: none;
   border-radius: 8px;
+  text-decoration: none;
   font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.2s ease;
 }
 
-.admin-sidebar a.active,
-.admin-sidebar a:hover {
-  background: #1e293b;
-  color: #fff;
+/* ICON COLOR */
+.sidebar-link svg {
+  color: #64748b;
+}
+
+/* HOVER */
+.sidebar-link:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.sidebar-link:hover svg {
+  color: #0f172a;
+}
+
+/* ACTIVE LINK */
+.sidebar-link.active {
+  background: #e2e8f0;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.sidebar-link.active svg {
+  color: #0f172a;
+}
+
+.admin-root.collapsed .sidebar-link span {
+  display: none;
+}
+
+.admin-root.collapsed .sidebar-brand {
+  font-size: 0;
+}
+
+.admin-root.collapsed .sidebar-brand::after {
+  content: "GT";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.admin-root.collapsed .sidebar-section{
+  display: none;
+}
+
+/* Default icon size */
+.sidebar-link svg {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s ease;
+}
+
+/* When sidebar collapsed → make icons bigger */
+.admin-root.collapsed .sidebar-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+.admin-root.collapsed .sidebar-link {
+  justify-content: center;
+  padding: 14px 0;
+}
+
+.sidebar-brand {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+/* FULL LOGO */
+.brand-full {
+  text-align: center;
+}
+
+.brand-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* MINI LOGO */
+.brand-mini {
+  display: none;
+}
+
+/* When sidebar collapsed */
+.admin-root.collapsed .brand-full {
+  display: none;
+}
+
+
+.admin-root.collapsed .brand-title{
+  display: none;
 }

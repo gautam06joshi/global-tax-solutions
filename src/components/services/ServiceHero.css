@@ -210,3 +210,39 @@
     padding: 14px;
   }
 }
+
+/* =========================================================
+   ULTRA-DESKTOP ENHANCEMENT (>= 1900px)
+   No effect below this width
+   ========================================================= */
+@media (min-width: 1900px) {
+
+  .service-hero {
+    padding: 120px 0;
+  }
+
+  .service-hero-inner {
+    max-width: 1600px;
+    gap: 100px;
+  }
+
+  /* LEFT */
+  .service-hero-content {
+    max-width: 720px;
+  }
+
+  .hero-title {
+    font-size: 52px;
+    line-height: 1.12;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    max-width: 640px;
+  }
+
+  /* RIGHT */
+  .service-hero-visual img {
+    max-width: 720px;
+  }
+}

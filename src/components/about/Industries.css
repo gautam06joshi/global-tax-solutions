@@ -169,3 +169,28 @@
     font-size: 15px;
   }
 }
+
+
+/* =========================================================
+   LARGE DESKTOP / ULTRA-WIDE (>= 1600px)
+   ========================================================= */
+@media (min-width: 1600px) {
+
+  .industries {
+    padding: 70px 60px;
+  }
+
+  .industries-row {
+    gap: 36px;
+  }
+
+  .industry-card {
+    min-width: 130px;
+    height: 560px;
+    margin-left: 20px;
+  }
+
+  .industry-card.active {
+    min-width: 420px;
+  }
+}

@@ -15,10 +15,8 @@
    fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm
 */
 .site-header{
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;   /* NOT fixed */
+  width: 100%;
   z-index: 50;
   background: #FFFFFF;
   -webkit-backdrop-filter: blur(6px);
@@ -447,3 +445,86 @@ button:focus{
   border-radius: 2px;
 }
 
+
+/* ======================================================
+   ULTRA-WIDE DESKTOP HEADER (>= 1900px)
+   SAFE — affects ONLY very large screens
+====================================================== */
+@media (min-width: 1900px) {
+
+  /* Header container */
+  .site-container {
+    max-width: 1600px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  /* Desktop nav spacing */
+  .nav-desktop {
+    gap: 5rem;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+  }
+
+  /* CTA button slightly larger */
+  .contact-area .cta-button {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  /* ================= MEGA MENU ================= */
+
+  /* Mega menu inner grid */
+  .mega-grid {
+    max-width: 1600px;
+    padding: 64px 48px;
+    gap: 64px;
+  }
+
+  .mega-col h4 {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .mega-item strong {
+    font-size: 15px;
+  }
+
+  .mega-item p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* CTA column */
+  .mega-cta p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mega-cta .cta-button {
+    margin-top: 8px;
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+  }
+}
+
+.site-header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: slideDown 0.3s ease forwards;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

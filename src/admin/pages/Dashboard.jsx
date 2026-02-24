@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import {
-  LineChart,
+  ComposedChart,
+  Bar,
   Line,
   XAxis,
   YAxis,
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+
 import "../styles/dashboard.css";
 
 export default function Dashboard() {
@@ -186,19 +188,60 @@ setProvinceStats(provinceArray);
         {loading ? (
           <div className="skeleton" style={{ height: 220 }} />
         ) : (
-          <ResponsiveContainer width="100%" height={240}>
-            <LineChart data={chartData}>
-              <XAxis dataKey="day" />
-              <YAxis allowDecimals={false} />
-              <Tooltip />
-              <Line
-                type="monotone"
-                dataKey="enquiries"
-                stroke="#2563eb"
-                strokeWidth={2}
-              />
-            </LineChart>
-          </ResponsiveContainer>
+
+          <ResponsiveContainer width="100%" height={300}>
+  <ComposedChart data={chartData}>
+    
+    <XAxis
+      dataKey="day"
+      tick={{ fill: "#94a3b8", fontSize: 12 }}
+      axisLine={false}
+      tickLine={false}
+    />
+
+    <YAxis
+      allowDecimals={false}
+      tick={{ fill: "#94a3b8", fontSize: 12 }}
+      axisLine={false}
+      tickLine={false}
+    />
+
+    <Tooltip
+      contentStyle={{
+        background: "var(--card)",
+        borderRadius: "12px",
+        border: "1px solid var(--border)",
+      }}
+    />
+
+    {/* Light gray background bars */}
+    <Bar
+      dataKey="enquiries"
+      fill="#e2e8f0"
+      radius={[8, 8, 0, 0]}
+      barSize={22}
+    />
+
+    {/* Blue bars */}
+    <Bar
+      dataKey="enquiries"
+      fill="#2563eb"
+      radius={[8, 8, 0, 0]}
+      barSize={12}
+    />
+
+    {/* Smooth curve line */}
+    <Line
+      type="monotone"
+      dataKey="enquiries"
+      stroke="#94a3b8"
+      strokeWidth={3}
+      dot={false}
+    />
+  </ComposedChart>
+</ResponsiveContainer>
+
+          
         )}
       </div>
 
@@ -221,24 +264,54 @@ setProvinceStats(provinceArray);
   );
 }
 
+import { DollarSign, CalendarDays, BarChart3, Star } from "lucide-react";
+
 function StatCard({ title, value, compare, loading, color }) {
+
+  const iconMap = {
+    green: <CalendarDays size={18} />,
+    purple: <BarChart3 size={18} />,
+    orange: <Star size={18} />,
+    blue: <DollarSign size={18} />,
+  };
+
   return (
     <div className={`stat-card ${color}`}>
-      <p className="stat-title">{title}</p>
+      <div className="stat-top">
+        <div className="stat-icon">
+          {iconMap[color]}
+        </div>
 
-      {loading ? (
-        <div className="skeleton" style={{ height: 32 }} />
-      ) : (
-        <>
-          <h2 className="stat-value">{value}</h2>
-          {compare !== undefined && (
-            <span
-              className={`trend ${compare >= 0 ? "up" : "down"}`}
-            >
-              {compare >= 0 ? "↑" : "↓"} {Math.abs(compare)}
-            </span>
+        <div className="stat-content">
+          {loading ? (
+            <div className="skeleton" style={{ height: 28 }} />
+          ) : (
+            <>
+              <h2 className="stat-value">{value}</h2>
+              <p className="stat-title">{title}</p>
+            </>
           )}
-        </>
+        </div>
+
+        <div className="stat-menu">⋮</div>
+      </div>
+
+      {!loading && compare !== undefined && (
+        <div className="stat-bottom">
+          <span className="progress-label">
+            {compare >= 0 ? "Increased" : "Decreased"}
+          </span>
+          <span className="progress-value">
+            {Math.abs(compare)}
+          </span>
+
+          <div className="progress-bar">
+            <div
+              className="progress-fill"
+              style={{ width: `${Math.min(Math.abs(compare) * 10, 100)}%` }}
+            />
+          </div>
+        </div>
       )}
     </div>
   );

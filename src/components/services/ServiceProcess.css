@@ -191,3 +191,83 @@ button {
     width: auto;
   }
 }
+
+/* =========================================================
+   ULTRA-DESKTOP ENHANCEMENT (>= 1900px)
+   No effect below this width
+   ========================================================= */
+@media (min-width: 1900px) {
+
+  /* Section spacing */
+  .process-showcase {
+    padding: 11rem 0;
+  }
+
+  /* Container */
+  .process-showcase__container {
+    max-width: 1600px;
+    gap: 5rem;
+  }
+
+  /* LEFT – steps panel */
+  .process-left {
+    padding: 4rem;
+    border-radius: 26px;
+  }
+
+  .process-left__header h2 {
+    font-size: 2rem;
+  }
+
+  .process-left__header p {
+    font-size: 1.05rem;
+  }
+
+  .process-step {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-index {
+    font-size: 1.15rem;
+  }
+
+  .step-content h4 {
+    font-size: 1.15rem;
+  }
+
+  /* RIGHT – card */
+  .process-right {
+    padding: 4rem;
+    border-radius: 26px;
+  }
+
+  .process-top {
+    gap: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-media img {
+    width: 140px;
+    height: 140px;
+    border-radius: 18px;
+  }
+
+  .process-intro h3 {
+    font-size: 1.6rem;
+  }
+
+  .process-short {
+    font-size: 1.05rem;
+  }
+
+  .process-detail {
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
+
+  .process-cta {
+    font-size: 1rem;
+    padding: 1rem 2.2rem;
+  }
+}

@@ -8,7 +8,7 @@ import ServiceProcess from "../components/services/ServiceProcess";
 import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import {WhyUs} from "../components/services/WhyUs";
 import { ServiceFAQ } from "../components/services/ServiceFAQ";
-import { Contact } from "../components/home/Contact";
+import  Contact  from "../components/home/Contact";
 import { useEffect } from "react";
 
 

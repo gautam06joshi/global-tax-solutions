@@ -1,21 +1,41 @@
 import { NavLink } from "react-router-dom";
+import {
+  LayoutDashboard,
+  FileText,
+  Mail,
+} from "lucide-react";
 import "../styles/sidebar.css";
 
 export default function Sidebar() {
   return (
     <aside className="admin-sidebar">
       <div className="sidebar-brand">
-        Global Tax<br />
-        <span>Solutions</span>
-      </div>
+  <div className="brand-full">
+    <span className="brand-title">GLOBAL TAX</span>
+    <span className="brand-sub">Solutions</span>
+  </div>
 
-      <nav>
-        <NavLink to="/admin/dashboard">Dashboard</NavLink>
-        <NavLink to="/admin/forms">Form Submissions</NavLink>
-        <NavLink to="/admin/contact-leads">
-  Contact Leads
-</NavLink>
+  
+</div>
 
+
+      <div className="sidebar-section">NAVIGATION</div>
+
+      <nav className="sidebar-nav">
+        <NavLink to="/admin/dashboard" className="sidebar-link">
+          <LayoutDashboard size={18} />
+          <span>Dashboard</span>
+        </NavLink>
+
+        <NavLink to="/admin/forms" className="sidebar-link">
+          <FileText size={18} />
+          <span>Form Submissions</span>
+        </NavLink>
+
+        <NavLink to="/admin/contact-leads" className="sidebar-link">
+          <Mail size={18} />
+          <span>Contact Leads</span>
+        </NavLink>
       </nav>
     </aside>
   );

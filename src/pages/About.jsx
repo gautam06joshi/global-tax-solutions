@@ -6,7 +6,7 @@ import Industries from "../components/about/Industries";
 import { MissionVision } from "../components/about/MissionVision";
 import { OurValues } from "../components/about/OurValues";
 import { TeamBanner } from "../components/about/TeamBanner";
-import { Contact } from "../components/home/Contact";
+import  Contact  from "../components/home/Contact";
 import { useEffect } from "react";
 
 export function About() {

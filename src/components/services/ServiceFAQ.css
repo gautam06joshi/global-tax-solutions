@@ -80,3 +80,59 @@
   line-height: 1.7;
   color: #475569;
 }
+
+/* =========================================================
+   ULTRA-WIDE DESKTOP ENHANCEMENT (>= 1900px)
+   Safe — does not affect smaller screens
+   ========================================================= */
+@media (min-width: 1900px) {
+
+  /* Section spacing */
+  .service-faq {
+    padding: 160px 0;
+  }
+
+  /* Container */
+  .service-faq-container {
+    max-width: 1200px;
+  }
+
+  /* Header */
+  .service-faq-header {
+    margin-bottom: 90px;
+  }
+
+  .service-faq-header h2 {
+    font-size: 3rem;
+  }
+
+  /* FAQ list spacing */
+  .service-faq-list {
+    gap: 22px;
+  }
+
+  /* FAQ item */
+  .faq-item {
+    padding: 28px 36px;
+    border-radius: 16px;
+  }
+
+  /* Question */
+  .faq-question h4 {
+    font-size: 1.1rem;
+  }
+
+  .faq-question span {
+    font-size: 1.6rem;
+  }
+
+  /* Answer */
+  .faq-item.active .faq-answer {
+    margin-top: 18px;
+  }
+
+  .faq-answer p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+}

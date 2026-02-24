@@ -5,9 +5,10 @@ import "./Contact.css";
 import OfficeMap from "../map/OfficeMap";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase"; // adjust path if needed
+import SayHello from "./ui/sayHello";
 
 
-export function Contact() {
+function Contact() {
 
   const [loading, setLoading] = useState(false);
 
@@ -87,6 +88,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="contact">
+      <SayHello/>
       <div className="contact-container">
 
         {/* Header */}
@@ -223,6 +225,8 @@ function Select({ label, ...props }) {
   );
 }
 
+
+
 function Textarea({ label, ...props }) {
   return (
     <div>
@@ -231,3 +235,5 @@ function Textarea({ label, ...props }) {
     </div>
   );
 }
+
+export default Contact;

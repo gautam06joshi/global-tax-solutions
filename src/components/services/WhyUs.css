@@ -216,3 +216,66 @@
     animation: none !important;
   }
 }
+
+/* ======================================================
+   ULTRA-WIDE DESKTOP ENHANCEMENT (>= 1900px)
+   Safe: affects ONLY very large screens
+====================================================== */
+@media (min-width: 1900px) {
+
+  /* Container */
+  .whyus-container {
+    max-width: 1600px;
+  }
+
+  /* Header */
+  .whyus-header {
+    max-width: 820px;
+    margin-bottom: 120px;
+  }
+
+  .whyus-title {
+    font-size: 3.2rem;
+  }
+
+  .whyus-subtitle {
+    font-size: 1.15rem;
+  }
+
+  /* Grid */
+  .whyus-columns {
+    gap: 72px;
+  }
+
+  /* Column staggering – more breathing room */
+  .whyus-col.up {
+    margin-top: -60px;
+  }
+
+  .whyus-col.down {
+    margin-top: 60px;
+  }
+
+  .whyus-col.center {
+    margin-top: -100px;
+  }
+
+  /* Cards */
+  .whyus-card {
+    padding: 64px 36px;
+    min-height: 200px;
+    border-radius: 22px;
+  }
+
+  .whyus-card h4 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Numbers */
+  .whyus-number {
+    font-size: 3.2rem;
+    top: 28px;
+    left: 28px;
+  }
+}
