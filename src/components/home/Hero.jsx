@@ -67,7 +67,7 @@ export function Hero() {
           {/* LEFT SIDE */}
           <div className="hero__left">
             {animate && (
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -77,7 +77,7 @@ export function Hero() {
                 <span className="badge__text">
                   Trusted Tax Advisory & Consultation Since 2015
                 </span>
-              </motion.div>
+              </div>
             )}
 
             <h1 className="hero__title">
@@ -94,7 +94,7 @@ export function Hero() {
             </p>
 
             {animate && (
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -114,11 +114,11 @@ export function Hero() {
                 >
                   Advisory Services
                 </button>
-              </motion.div>
+              </div>
             )}
 
             {animate && (
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -127,12 +127,12 @@ export function Hero() {
                 <Stat icon={TrendingUp} value="10+" label="Years of Advisory Experience" />
                 <Stat icon={Users} value="500+" label="Individuals & Businesses Served" />
                 <Stat icon={Shield} value="100%" label="Advice-Only & Transparent" />
-              </motion.div>
+              </div>
             )}
           </div>
 
           {/* ✅ RIGHT SIDE GRAPHIC — UNCHANGED */}
-          <motion.div
+          <div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={animate ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -147,7 +147,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
