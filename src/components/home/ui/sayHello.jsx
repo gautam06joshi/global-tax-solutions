@@ -1,4 +1,4 @@
-import "./SayHello.css";
+import "./sayHello.css";
 
 export default function SayHello() {
   return (
