@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 import Logo from "../../assets/brand-logo.png";
 
-function Footer() {
+export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
@@ -191,5 +191,3 @@ function FooterColumn({ title, links }) {
     </div>
   );
 }
-
-export default Footer;

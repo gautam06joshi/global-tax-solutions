@@ -60,7 +60,7 @@ const servicesData = [
 
 
 
-function Header() {
+export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -68,30 +68,12 @@ function Header() {
   const currentPath = location.pathname;
   const isActive = (path) => currentPath === path;
   const isServicesActive = currentPath.startsWith('/services');
-  const isServicePage = location.pathname.startsWith("/services");
   const navigate = useNavigate();
 
   const goTo = (path) => {
     navigate(path);
     setMobileMenuOpen(false);
   };
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
   
   useEffect(() => {
   if (mobileMenuOpen) {
@@ -113,9 +95,7 @@ useEffect(() => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`site-header ${
-    isScrolled && !isServicePage ? "scrolled" : ""
-  }`}
+      className="site-header"
     >
       
       <div className="site-container">
@@ -123,7 +103,6 @@ useEffect(() => {
 
           {/* Mobile Logo */}
 <div className="mobile-logo" onClick={() => goTo('/')}>
-  
   <img
     src = {Logo}
     alt="Global Tax Solution"
@@ -134,7 +113,7 @@ useEffect(() => {
 
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
-            <a href="/"><img src={Logo} alt="TaxSolutions & Consulting Logo" className="logo-image" /></a>
+            <img src={Logo} alt="TaxSolutions & Consulting Logo" className="logo-image" />
             <button
   onClick={() => goTo('/')}
   className={`nav-link ${isActive('/') ? 'active' : ''}`}
@@ -434,5 +413,3 @@ useEffect(() => {
     </>
   );
 }
-
-export default Header;

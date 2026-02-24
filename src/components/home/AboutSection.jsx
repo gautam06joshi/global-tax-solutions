@@ -4,7 +4,7 @@ import { Award, Target, Users, TrendingUp } from "lucide-react";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import "./About.css";
 
-function AboutSection() {
+export function AboutSection() {
   const values = [
     {
       icon: Award,
@@ -193,5 +193,3 @@ function AboutSection() {
     </section>
   );
 }
-
-export default AboutSection;

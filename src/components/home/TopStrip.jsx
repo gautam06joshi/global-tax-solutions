@@ -2,7 +2,7 @@ import React from "react";
 import "./TopStrip.css";
 import { Phone, Mail } from "lucide-react";
 
-function TopStrip() {
+export default function TopStrip() {
   return (
     <div className="top-strip">
       <div className="top-strip__container">
@@ -36,5 +36,3 @@ function TopStrip() {
     </div>
   );
 }
-
-export default TopStrip;

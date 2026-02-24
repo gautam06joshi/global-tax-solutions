@@ -10,7 +10,7 @@ import {
 import "./Services.css";
 import { useNavigate } from "react-router-dom";
 
-function Services() {
+export function Services() {
   // ✅ Hook MUST be here
   const navigate = useNavigate();
 
@@ -177,5 +177,3 @@ function Services() {
     </section>
   );
 }
-
-export default Services;
