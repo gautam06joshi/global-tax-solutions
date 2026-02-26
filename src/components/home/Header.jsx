@@ -102,18 +102,38 @@ export function Header() {
         <div className="header-row">
 
           {/* Mobile Logo */}
-<div className="mobile-logo" onClick={() => goTo('/')}>
-  <img
-    src = {Logo}
-    alt="Global Tax Solution"
-  />
-</div>
+ <div className="mobile-logo" onClick={() => goTo('/')}>
+            <img
+              src={Logo}
+              alt="Global Tax Solution"
+              width="155"      // ✅ ADD: Match actual display width
+              height="34"      // ✅ ADD: Match actual display height
+              decoding="async" // ✅ ADD: Decode asynchronously
+              style={{ 
+                maxWidth: '100%', 
+                height: 'auto',
+                aspectRatio: '155/34' // ✅ Prevent layout shift
+              }}
+            />
+          </div>
 
 
 
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
-            <img src={Logo} alt="TaxSolutions & Consulting Logo" className="logo-image" />
+            <img 
+              src={Logo} 
+              alt="TaxSolutions & Consulting Logo" 
+              className="logo-image"
+              width="200"      // ✅ ADD: Match actual display width
+              height="44"      // ✅ ADD: Match actual display height (adjust if different)
+              decoding="async" // ✅ ADD: Decode asynchronously
+              style={{ 
+                maxWidth: '100%', 
+                height: 'auto',
+                aspectRatio: '200/44' // ✅ Prevent layout shift
+              }}
+            />
             <button
   onClick={() => goTo('/')}
   className={`nav-link ${isActive('/') ? 'active' : ''}`}

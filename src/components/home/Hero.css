@@ -568,3 +568,29 @@
     transform: scale(1.22) translateY(-8%);
   }
 }
+
+/* ✅ CRITICAL: Reserve space for animated elements to prevent CLS */
+.badge-placeholder,
+.actions-placeholder,
+.stats-placeholder,
+.graphic-placeholder {
+  min-height: 50px; /* Adjust based on actual content height */
+  contain: layout;
+}
+
+/* ✅ Ensure LCP text doesn't cause layout shift */
+.hero__subtitle {
+  min-height: 6.5em; /* 5 lines × 1.3em line-height */
+  line-height: 1.3;
+  contain: layout;
+}
+
+/* ✅ Contain hero background to prevent reflow */
+.hero__bg {
+  contain: layout paint;
+}
+
+.hero__bg-image {
+  content-visibility: auto;
+  contain: strict;
+}
