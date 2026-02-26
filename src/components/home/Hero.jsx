@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 import "./Hero.css";
 
+// ✅ CRITICAL: Static import for LCP image (don't lazy load)
 import heroMobile from "../../assets/hero-mobile.webp";
+
+// ✅ Lazy load motion to reduce initial bundle
+const MotionDiv = lazy(() => 
+  import("motion/react").then(mod => ({ default: mod.motion.div }))
+);
 
 export function Hero() {
   const [isMobile, setIsMobile] = useState(true);
@@ -17,20 +22,27 @@ export function Hero() {
     // ✅ Let LCP paint first
     requestAnimationFrame(() => setAnimate(true));
 
-    // ✅ Load video AFTER initial paint
+    // ✅ Load video AFTER LCP (not just initial paint)
     if (!mobile) {
-      setTimeout(() => {
+      // Use requestIdleCallback if available, otherwise setTimeout
+      const loadVideo = () => {
         import("../../assets/hero-bg-compressed.mp4").then((mod) => {
           setHeroVideo(mod.default);
         });
-      }, 1500);
+      };
+      
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadVideo, { timeout: 2000 });
+      } else {
+        setTimeout(loadVideo, 2000); // Increased delay to ensure LCP is done
+      }
     }
   }, []);
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
-    el.scrollIntoView({ behavior: "auto" });
+    el.scrollIntoView({ behavior: "smooth" }); // Changed to smooth for better UX
   };
 
   return (
@@ -44,7 +56,7 @@ export function Hero() {
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata" // Changed from "none" to allow faster start
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
@@ -57,6 +69,11 @@ export function Hero() {
             alt="Calgary tax advisory background"
             loading="eager"
             decoding="async"
+            fetchpriority="high" // ✅ CRITICAL: Prioritize this image
+            style={{ 
+              contentVisibility: 'auto', // ✅ Performance optimization
+              contain: 'strict' // ✅ Layout containment
+            }}
           />
         )}
       </div>
@@ -67,25 +84,31 @@ export function Hero() {
           {/* LEFT SIDE */}
           <div className="hero__left">
             {animate && (
-              <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="badge"
-              >
-                <Shield className="badge__icon" />
-                <span className="badge__text">
-                  Trusted Tax Advisory & Consultation Since 2015
-                </span>
-              </div>
+              <Suspense fallback={<div className="badge-placeholder" />}>
+                <MotionDiv
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="badge"
+                >
+                  <Shield className="badge__icon" />
+                  <span className="badge__text">
+                    Trusted Tax Advisory & Consultation Since 2015
+                  </span>
+                </MotionDiv>
+              </Suspense>
             )}
 
             <h1 className="hero__title">
               Clear, Reliable Tax Guidance for Confident Decisions
             </h1>
 
-            {/* 🔥 LCP ELEMENT (STATIC FIRST PAINT) */}
-            <p className="hero__subtitle lcp-text">
+            {/* 🔥 LCP ELEMENT - STATIC (No motion wrapper to prevent layout shift) */}
+            <p className="hero__subtitle lcp-text" style={{ 
+              minHeight: '6.5em', // ✅ Reserve space: 5 lines × 1.3em line-height
+              lineHeight: 1.3,
+              contain: 'layout' // ✅ Prevent layout shift
+            }}>
               Global Tax Solutions is a Calgary-based tax consultation firm
               providing clear, practical guidance to individuals, families,
               and businesses across Canada. We help you understand tax rules,
@@ -94,60 +117,66 @@ export function Hero() {
             </p>
 
             {animate && (
-              <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="hero__actions"
-              >
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="btn btn--primary"
+              <Suspense fallback={<div className="actions-placeholder" />}>
+                <MotionDiv
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="hero__actions"
                 >
-                  <span>Book a Consultation</span>
-                  <ArrowRight className="btn__icon" />
-                </button>
+                  <button
+                    onClick={() => scrollToSection("contact")}
+                    className="btn btn--primary"
+                  >
+                    <span>Book a Consultation</span>
+                    <ArrowRight className="btn__icon" />
+                  </button>
 
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="btn btn--ghost"
-                >
-                  Advisory Services
-                </button>
-              </div>
+                  <button
+                    onClick={() => scrollToSection("services")}
+                    className="btn btn--ghost"
+                  >
+                    Advisory Services
+                  </button>
+                </MotionDiv>
+              </Suspense>
             )}
 
             {animate && (
-              <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="hero__stats"
-              >
-                <Stat icon={TrendingUp} value="10+" label="Years of Advisory Experience" />
-                <Stat icon={Users} value="500+" label="Individuals & Businesses Served" />
-                <Stat icon={Shield} value="100%" label="Advice-Only & Transparent" />
-              </div>
+              <Suspense fallback={<div className="stats-placeholder" />}>
+                <MotionDiv
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="hero__stats"
+                >
+                  <Stat icon={TrendingUp} value="10+" label="Years of Advisory Experience" />
+                  <Stat icon={Users} value="500+" label="Individuals & Businesses Served" />
+                  <Stat icon={Shield} value="100%" label="Advice-Only & Transparent" />
+                </MotionDiv>
+              </Suspense>
             )}
           </div>
 
-          {/* ✅ RIGHT SIDE GRAPHIC — UNCHANGED */}
-          <div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={animate ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hero__right"
-          >
-            <div className="card--decor">
-              <div className="card">
-                <div className="card__list">
-                  <CardItem icon={Shield} title="Tax Consultation & Guidance" subtitle="Education & Clarity" accent />
-                  <CardItem icon={TrendingUp} title="Strategic Tax Advisory" subtitle="Understand Your Options" emerald />
-                  <CardItem icon={Users} title="Client-Focused Approach" subtitle="No Filing • No Representation" accent />
+          {/* RIGHT SIDE GRAPHIC */}
+          <Suspense fallback={<div className="graphic-placeholder" />}>
+            <MotionDiv
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={animate ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hero__right"
+            >
+              <div className="card--decor">
+                <div className="card">
+                  <div className="card__list">
+                    <CardItem icon={Shield} title="Tax Consultation & Guidance" subtitle="Education & Clarity" accent />
+                    <CardItem icon={TrendingUp} title="Strategic Tax Advisory" subtitle="Understand Your Options" emerald />
+                    <CardItem icon={Users} title="Client-Focused Approach" subtitle="No Filing • No Representation" accent />
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </MotionDiv>
+          </Suspense>
         </div>
       </div>
     </section>
